@@ -1,3 +1,8 @@
+ColorRect
+HBoxContainer
+CanvasLayer
+TextureRect
+GridContainer
 TileMap
 CollisionShape2D
 Polygon2D

@@ -1,4 +1,3 @@
 res://Character/character.tscn
-res://World/world.tscn
-res://tile_map.tscn
+res://World/tile_map.tscn
 res://Character/Character.gd
