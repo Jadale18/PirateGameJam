@@ -37,4 +37,5 @@ func take_damage():
 func check_gameover():
 	if current_life_total == 0:
 		print('game over')
+		queue_free()
 		
