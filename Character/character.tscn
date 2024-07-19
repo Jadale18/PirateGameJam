@@ -1,0 +1,15 @@
+[gd_scene load_steps=3 format=3 uid="uid://b5btof2wbb7bl"]
+
+[ext_resource type="Script" path="res://Character/Character.gd" id="1_fifik"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_sw8l6"]
+
+[node name="Character" type="CharacterBody2D"]
+script = ExtResource("1_fifik")
+
+[node name="Polygon2D" type="Polygon2D" parent="."]
+color = Color(0.329412, 1, 1, 1)
+polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("RectangleShape2D_sw8l6")
