@@ -27,7 +27,6 @@ func _physics_process(delta):
 	take_damage()
 	check_gameover()
 
-
 func take_damage():
 	if Input.is_action_just_pressed("Take Damage"):
 		print('dmg')
@@ -38,4 +37,4 @@ func check_gameover():
 	if current_life_total == 0:
 		print('game over')
 		queue_free()
-		
+
