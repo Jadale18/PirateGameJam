@@ -1,8 +1,12 @@
 extends Node2D
 
-var max_life = 4
-var current_life_total = 4
+var max_life = 10
+var current_life_total = 10
 
+func _process(delta):
+	if current_life_total == 0:
+		print('game over')
+		queue_free()
 
 func _on_character_damage_taken():
 	current_life_total -= 1

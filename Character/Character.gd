@@ -27,7 +27,6 @@ func _physics_process(delta):
 		take_damage()
 
 func take_damage():
-	print('dmg')
 	emit_signal("damage_taken")
 
 
