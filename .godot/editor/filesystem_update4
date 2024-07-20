@@ -2,3 +2,4 @@ res://World/world.tscn
 res://Character/Character.gd
 res://Character/character.tscn
 res://World/tile_map.tscn
+res://World/spike.tscn

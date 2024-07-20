@@ -24,17 +24,21 @@ func _physics_process(delta):
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
-	take_damage()
+	if Input.is_action_just_pressed("Take Damage"):
+		take_damage()
 	check_gameover()
 
 func take_damage():
-	if Input.is_action_just_pressed("Take Damage"):
-		print('dmg')
-		current_life_total -= 1
-		$CanvasLayer/HBoxContainer.get_child(current_life_total).visible = false
+	print('dmg')
+	current_life_total -= 1
+	$CanvasLayer/HBoxContainer.get_child(current_life_total).visible = false
 
 func check_gameover():
 	if current_life_total == 0:
 		print('game over')
 		queue_free()
 
+
+
+func _on_area_2d_area_entered(area):
+	take_damage()
