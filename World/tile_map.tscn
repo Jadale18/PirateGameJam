@@ -1,14 +1,14 @@
 [gd_scene load_steps=4 format=3 uid="uid://dytaw7axsp7xb"]
 
-[ext_resource type="Texture2D" uid="uid://cb3lltsb6akq8" path="res://icon.svg" id="1_i1376"]
+[ext_resource type="Texture2D" uid="uid://c7rts82id34mw" path="res://Assets/BlackSquare.png" id="2_w3xek"]
 
-[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_5b6u3"]
-texture = ExtResource("1_i1376")
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_b5r6q"]
+texture = ExtResource("2_w3xek")
 texture_region_size = Vector2i(128, 128)
 0:0/0 = 0
 0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_0/angular_velocity = 0.0
-0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-61, -61, 59, -62, 58, 57, -63, 59)
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
 0:0/0/physics_layer_1/linear_velocity = Vector2(0, 0)
 0:0/0/physics_layer_1/angular_velocity = 0.0
 
@@ -17,7 +17,7 @@ tile_size = Vector2i(128, 128)
 physics_layer_0/collision_layer = 1
 physics_layer_1/collision_layer = 2
 physics_layer_1/collision_mask = 0
-sources/0 = SubResource("TileSetAtlasSource_5b6u3")
+sources/1 = SubResource("TileSetAtlasSource_b5r6q")
 
 [node name="TileMap" type="TileMap"]
 scale = Vector2(0.1, 0.1)
