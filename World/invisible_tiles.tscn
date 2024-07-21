@@ -1,0 +1,26 @@
+[gd_scene load_steps=4 format=3 uid="uid://c6c7e03i41pda"]
+
+[ext_resource type="Texture2D" uid="uid://c7rts82id34mw" path="res://Assets/BlackSquare.png" id="1_mmmdw"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_fus0o"]
+texture = ExtResource("1_mmmdw")
+texture_region_size = Vector2i(128, 128)
+6:4/0 = 0
+6:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+6:4/0/physics_layer_0/angular_velocity = 0.0
+5:4/0 = 0
+5:4/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+5:4/0/physics_layer_0/angular_velocity = 0.0
+0:0/0 = 0
+0:0/0/physics_layer_0/linear_velocity = Vector2(0, 0)
+0:0/0/physics_layer_0/angular_velocity = 0.0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-64, -64, 64, -64, 64, 64, -64, 64)
+
+[sub_resource type="TileSet" id="TileSet_epbp3"]
+tile_size = Vector2i(128, 128)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_fus0o")
+
+[node name="InvisibleTiles" type="TileMap"]
+tile_set = SubResource("TileSet_epbp3")
+format = 2

@@ -1,3 +1,4 @@
+TileMap
 Timer
 ColorRect
 CanvasLayer
@@ -10,6 +11,4 @@ Sprite2D
 HBoxContainer
 TextureRect
 GridContainer
-TileMap
 CollisionShape2D
-Polygon2D

@@ -1,12 +1,8 @@
-res://World/world.tscn
 res://Character/character.tscn
 res://World/tile_map.tscn
+res://World/world.tscn
 res://World/spike.tscn
-res://UI/life_ui.tscn
-res://Character/Character.gd
-res://UI/life_ui.gd
-res://Character/shadow.tscn
-res://Character/shadow.gd
-res://World/darkness.tscn
 res://UI/gui.tscn
-res://UI/gui.gd
+res://Character/shadow.tscn
+res://invisible_tiles.tscn
+res://World/invisible_tiles.tscn
