@@ -2,3 +2,7 @@ res://Character/character.tscn
 res://World/tile_map.tscn
 res://World/world.tscn
 res://World/spike.tscn
+res://UI/gui.tscn
+res://Character/shadow.tscn
+res://invisible_tiles.tscn
+res://World/invisible_tiles.tscn
