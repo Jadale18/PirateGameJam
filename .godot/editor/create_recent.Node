@@ -1,9 +1,9 @@
+CharacterBody2D
+Node2D
 TileMap
 Timer
 ColorRect
 CanvasLayer
-CharacterBody2D
-Node2D
 Camera2D
 Area2D
 CollisionPolygon2D

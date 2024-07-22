@@ -6,3 +6,5 @@ res://UI/gui.tscn
 res://Character/shadow.tscn
 res://invisible_tiles.tscn
 res://World/invisible_tiles.tscn
+res://Character/shadow.gd
+res://Character/Character.gd
