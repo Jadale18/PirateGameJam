@@ -1,10 +1,11 @@
+res://textbox.gd
+res://textbox.tscn
+res://World/lore.gd
 res://Character/character.tscn
+res://Character/shadow.tscn
 res://World/tile_map.tscn
 res://World/world.tscn
-res://World/spike.tscn
-res://UI/gui.tscn
-res://Character/shadow.tscn
-res://invisible_tiles.tscn
 res://World/invisible_tiles.tscn
-res://Character/shadow.gd
-res://Character/Character.gd
+res://World/lore.tscn
+res://UI/textbox.tscn
+res://UI/textbox.gd
