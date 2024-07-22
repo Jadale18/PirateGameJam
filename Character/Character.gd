@@ -26,6 +26,8 @@ func _physics_process(delta):
 	move_and_slide()
 	if Input.is_action_just_pressed("Take Damage"):
 		take_damage()
+		
+	Global.character_position = global_position
 
 func take_damage():
 	emit_signal("damage_taken")
