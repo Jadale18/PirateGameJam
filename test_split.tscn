@@ -1,16 +1,29 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0rootinnwopu"]
+[gd_scene load_steps=3 format=3 uid="uid://i1wayaok4l0h"]
 
-[ext_resource type="PackedScene" uid="uid://ccgjxj8a8gf3v" path="res://World/level_1.tscn" id="1_ff3do"]
-[ext_resource type="PackedScene" uid="uid://dx3024dclalnm" path="res://World/level_2.tscn" id="2_ybcvh"]
+[ext_resource type="PackedScene" uid="uid://cnfkee410n10a" path="res://World/level_1.tscn" id="1_ff3do"]
+[ext_resource type="PackedScene" uid="uid://ducv2awyri3mc" path="res://World/level_2.tscn" id="2_ybcvh"]
 
-[node name="TestSplit" type="Node"]
+[node name="TestSplit" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
-offset_right = 40.0
-offset_bottom = 40.0
+custom_minimum_size = Vector2(1152, 576)
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+size_flags_stretch_ratio = 2.0
 
 [node name="TopViewportContainer" type="SubViewportContainer" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_vertical = 3
 
 [node name="TopViewport" type="SubViewport" parent="VBoxContainer/TopViewportContainer"]
 disable_3d = true

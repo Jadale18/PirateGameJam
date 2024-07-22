@@ -1,7 +1,3 @@
-res://Character/character.tscn
-res://Character/shadow.tscn
-res://World/tile_map.tscn
-res://World/world.tscn
-res://World/invisible_tiles.tscn
-res://World/lore.tscn
-res://UI/textbox.tscn
+res://test_split.tscn
+res://World/level_1.tscn
+res://World/level_2.tscn
