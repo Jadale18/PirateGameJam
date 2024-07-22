@@ -8,7 +8,6 @@ const JUMP_VELOCITY = -300.0
 @export_range(-1, 1, 2) var gravity_multiplier = 1
 @onready var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * gravity_multiplier
 
-
 func _physics_process(delta):
 	if not is_on_floor():
 		velocity.y += gravity * delta
@@ -21,6 +20,8 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
+		
+	Global.character_position = global_position
 
 	move_and_slide()
 	if Input.is_action_just_pressed("Take Damage"):

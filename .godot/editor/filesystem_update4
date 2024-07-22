@@ -1,8 +1,14 @@
+res://World/world.tscn
 res://Character/character.tscn
 res://World/tile_map.tscn
-res://World/world.tscn
 res://World/spike.tscn
 res://UI/gui.tscn
 res://Character/shadow.tscn
-res://invisible_tiles.tscn
 res://World/invisible_tiles.tscn
+res://level_1.tscn
+res://level_2.tscn
+res://test_split.tscn
+res://Character/Character.gd
+res://Character/shadow.gd
+res://test_split.gd
+res://Global.gd
