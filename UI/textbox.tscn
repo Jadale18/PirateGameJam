@@ -40,7 +40,7 @@ theme_override_constants/margin_bottom = 30
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/MarginContainer"]
 layout_mode = 2
 theme_override_font_sizes/normal_font_size = 45
-text = "This is dialogue. "
+text = "This is dialogue. Hee Hee Hoo Haa Hee  Hoo Hoo Heauo!"
 visible_characters = 0
 visible_ratio = 0.0
 
