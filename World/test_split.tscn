@@ -11,6 +11,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+mouse_filter = 2
 
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 custom_minimum_size = Vector2(1152, 576)
@@ -21,10 +22,12 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 size_flags_stretch_ratio = 2.0
+mouse_filter = 2
 
 [node name="TopViewportContainer" type="SubViewportContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_vertical = 3
+mouse_filter = 2
 
 [node name="TopViewport" type="SubViewport" parent="VBoxContainer/TopViewportContainer"]
 disable_3d = true
@@ -35,6 +38,7 @@ render_target_update_mode = 4
 
 [node name="BottomViewportContainer" type="SubViewportContainer" parent="VBoxContainer"]
 layout_mode = 2
+mouse_filter = 2
 
 [node name="BottomViewport" type="SubViewport" parent="VBoxContainer/BottomViewportContainer"]
 disable_3d = true

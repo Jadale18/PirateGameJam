@@ -1,10 +1,5 @@
-res://main_menu.tscn
-res://test_split.tscn
+res://World/test_split.tscn
 res://World/level_1.tscn
 res://World/level_2.tscn
-res://main_menu.gd
-res://UI/main_menu.gd
 res://UI/main_menu.tscn
-res://World/test_split.tscn
-res://UI/pause_menu.gd
 res://UI/pause_menu.tscn
