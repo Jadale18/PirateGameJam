@@ -10,6 +10,7 @@ const JUMP_VELOCITY = -300.0
 
 
 func _physics_process(delta):
+	
 	if not is_on_floor():
 		velocity.y += gravity * delta
 
@@ -31,4 +32,5 @@ func take_damage():
 
 
 func _on_area_2d_area_entered(area):
-	take_damage()
+	if "Spike" in area.name:
+		take_damage()

@@ -1,0 +1,57 @@
+[gd_scene load_steps=3 format=3 uid="uid://bxql2yksy1w7o"]
+
+[ext_resource type="Script" path="res://UI/textbox.gd" id="1_jt4ht"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_woj6p"]
+bg_color = Color(0, 0, 0, 1)
+border_width_left = 4
+border_width_top = 4
+border_width_right = 4
+border_width_bottom = 4
+
+[node name="Textbox" type="Node2D"]
+script = ExtResource("1_jt4ht")
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
+visible = false
+anchors_preset = 10
+anchor_right = 1.0
+offset_left = -50.5
+offset_right = -50.5
+offset_bottom = 289.0
+grow_horizontal = 2
+size_flags_vertical = 0
+theme_override_constants/margin_left = 20
+theme_override_constants/margin_top = 20
+theme_override_constants/margin_right = 20
+theme_override_constants/margin_bottom = 20
+
+[node name="Panel" type="Panel" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+theme_override_styles/panel = SubResource("StyleBoxFlat_woj6p")
+
+[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer"]
+layout_mode = 2
+theme_override_constants/margin_left = 30
+theme_override_constants/margin_top = 30
+theme_override_constants/margin_right = 30
+theme_override_constants/margin_bottom = 30
+
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/MarginContainer"]
+layout_mode = 2
+theme_override_font_sizes/normal_font_size = 45
+text = "This is dialogue. "
+visible_characters = 0
+visible_ratio = 0.0
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 0.05
+one_shot = true
+
+[node name="WaitTimer" type="Timer" parent="."]
+one_shot = true
+
+[connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_timer_timeout"]
+[connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]

@@ -1,0 +1,22 @@
+[gd_scene load_steps=4 format=3 uid="uid://coevt6b41as4g"]
+
+[ext_resource type="Script" path="res://World/lore.gd" id="1_uqv53"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_b2ih8"]
+radius = 16.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_unjc3"]
+
+[node name="Lore" type="Area2D"]
+z_index = -1
+script = ExtResource("1_uqv53")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CircleShape2D_b2ih8")
+
+[node name="MeshInstance2D" type="MeshInstance2D" parent="."]
+modulate = Color(0.560955, 0.560955, 0.560955, 1)
+scale = Vector2(31.6151, 31.8163)
+mesh = SubResource("SphereMesh_unjc3")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
