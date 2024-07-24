@@ -1,5 +1,4 @@
-res://Character/character.tscn
 res://World/world.tscn
-res://Character/Character.gd
+res://Character/character.tscn
 res://UI/gui.tscn
-res://UI/gui.gd
+res://Character/Character.gd

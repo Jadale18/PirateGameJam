@@ -1378,7 +1378,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_8pnk4")
 }],
-"loop": true,
+"loop": false,
 "name": &"Air_Look_Down",
 "speed": 25.0
 }, {
@@ -1422,7 +1422,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_gq0b6")
 }],
-"loop": true,
+"loop": false,
 "name": &"Damaged",
 "speed": 25.0
 }, {
@@ -1502,7 +1502,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_tfgsy")
 }],
-"loop": true,
+"loop": false,
 "name": &"Death",
 "speed": 25.0
 }, {
@@ -1546,7 +1546,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_842fm")
 }],
-"loop": true,
+"loop": false,
 "name": &"Edge_Up",
 "speed": 25.0
 }, {
@@ -1566,7 +1566,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_ai6sp")
 }],
-"loop": true,
+"loop": false,
 "name": &"Grab_Edge",
 "speed": 25.0
 }, {
@@ -1762,7 +1762,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_klgg8")
 }],
-"loop": true,
+"loop": false,
 "name": &"Interact",
 "speed": 25.0
 }, {
@@ -1860,7 +1860,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_amrij")
 }],
-"loop": true,
+"loop": false,
 "name": &"Jump",
 "speed": 25.0
 }, {
@@ -1916,7 +1916,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_mml8t")
 }],
-"loop": true,
+"loop": false,
 "name": &"Land",
 "speed": 25.0
 }, {
@@ -2126,7 +2126,7 @@ animations = [{
 "duration": 1.0,
 "texture": SubResource("AtlasTexture_la6hv")
 }],
-"loop": true,
+"loop": false,
 "name": &"Self_Damage",
 "speed": 25.0
 }, {
@@ -2262,8 +2262,7 @@ polygon = PackedVector2Array(-43, 128, 38, 128, 20, -19, 26, -105, 6, -125, -10,
 
 [node name="Anims" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hfmdo")
-animation = &"Air_Look_Down"
-frame_progress = 0.472897
+animation = &"Death"
 
 [connection signal="area_entered" from="CharArea" to="." method="_on_area_2d_area_entered"]
-[connection signal="animation_looped" from="Anims" to="." method="_on_anims_animation_looped"]
+[connection signal="animation_finished" from="Anims" to="." method="_on_anims_animation_finished"]
