@@ -1,3 +1,5 @@
+CollisionPolygon2D
+AnimatedSprite2D
 ColorRect
 TextureRect
 RichTextLabel
@@ -11,5 +13,3 @@ Label
 HBoxContainer
 Panel
 MarginContainer
-MeshInstance2D
-ShapeCast2D
