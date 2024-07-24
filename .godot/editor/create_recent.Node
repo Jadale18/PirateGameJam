@@ -1,3 +1,5 @@
+Timer
+RayCast2D
 CollisionPolygon2D
 AnimatedSprite2D
 ColorRect
@@ -6,10 +8,7 @@ RichTextLabel
 Button
 VBoxContainer
 Control
-Timer
 CanvasLayer
 Node2D
 Label
 HBoxContainer
-Panel
-MarginContainer
