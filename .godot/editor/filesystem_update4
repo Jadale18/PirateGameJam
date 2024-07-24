@@ -1,5 +1,4 @@
-res://World/test_split.tscn
-res://World/level_1.tscn
-res://World/level_2.tscn
-res://UI/main_menu.tscn
-res://UI/pause_menu.tscn
+res://World/world.tscn
+res://Character/character.tscn
+res://UI/gui.tscn
+res://Character/Character.gd
