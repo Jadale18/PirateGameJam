@@ -30,4 +30,5 @@ func take_damage():
 
 
 func _on_area_2d_area_entered(area):
-	take_damage()
+	if "Spike" in area.name:
+		take_damage()

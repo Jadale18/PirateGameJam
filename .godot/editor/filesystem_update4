@@ -5,3 +5,4 @@ res://Character/Character.gd
 res://Global.gd
 res://Character/shadow.gd
 res://Character/shadow.tscn
+res://World/test_split.tscn
