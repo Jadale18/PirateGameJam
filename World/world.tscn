@@ -47,9 +47,6 @@ position = Vector2(-12.5955, -267.655)
 [node name="Character" parent="GUI" instance=ExtResource("1_fw4kl")]
 position = Vector2(205.598, 107.736)
 
-[node name="Camera2D" type="Camera2D" parent="GUI/Character"]
-position = Vector2(394.62, 74.126)
-
 [node name="Shadow" parent="GUI" instance=ExtResource("5_gw4fn")]
 position = Vector2(227.839, 486.383)
 

@@ -1,6 +1,7 @@
+ColorRect
+Camera2D
 CollisionPolygon2D
 AnimatedSprite2D
-ColorRect
 TextureRect
 RichTextLabel
 Button
@@ -11,5 +12,3 @@ CanvasLayer
 Node2D
 Label
 HBoxContainer
-Panel
-MarginContainer

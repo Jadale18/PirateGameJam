@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 signal damage_taken
 
-const SPEED = 400.0
-const JUMP_VELOCITY = -800.0
+const SPEED = 600.0
+const JUMP_VELOCITY = -1000.0
 var current_life = 10
 
 @export_range(-1, 1, 2) var gravity_multiplier = 1

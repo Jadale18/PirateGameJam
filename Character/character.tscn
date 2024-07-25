@@ -1351,7 +1351,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Air_Idle",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1380,7 +1380,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Air_Look_Down",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1424,7 +1424,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Damaged",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1504,7 +1504,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Death",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1548,7 +1548,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Edge_Up",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1568,7 +1568,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Grab_Edge",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1696,7 +1696,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1764,7 +1764,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Interact",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1862,7 +1862,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Jump",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1918,7 +1918,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Land",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1926,7 +1926,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Ledge_Hang",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2078,7 +2078,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2128,7 +2128,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Self_Damage",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2241,7 +2241,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk",
-"speed": 25.0
+"speed": 40.0
 }]
 
 [node name="Character" type="CharacterBody2D"]
@@ -2262,7 +2262,8 @@ polygon = PackedVector2Array(-43, 128, 38, 128, 20, -19, 26, -105, 6, -125, -10,
 
 [node name="Anims" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hfmdo")
-animation = &"Death"
+animation = &"Idle"
+frame_progress = 0.450912
 
 [connection signal="area_entered" from="CharArea" to="." method="_on_area_2d_area_entered"]
 [connection signal="animation_finished" from="Anims" to="." method="_on_anims_animation_finished"]
