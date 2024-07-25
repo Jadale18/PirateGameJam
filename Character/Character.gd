@@ -20,6 +20,7 @@ var gravity_on = true
 var hit_point_1
 var hit_point_2
 var climbing = false
+var facing_left = -1
 
 func _ready():
 	$Anims.play("Idle")
@@ -33,7 +34,7 @@ func _physics_process(delta):
 		$Anims.play("Death")
 		dead = true
 		checking_input = false
-	if is_on_floor() and falling and not animating and not jumping:
+	if is_on_floor() and falling and not animating and not jumping and not climbing:
 		landing = true
 		$Anims.play("Land")
 		falling = false
@@ -46,8 +47,16 @@ func _physics_process(delta):
 		velocity.x = direction * SPEED
 		if direction < 0:
 			$Anims.flip_h = true
+			$LedgeChecker.target_position.x = -150
+			$Head.position.x = -150
+			$SpaceChecker.target_position.x = -150
+			facing_left = -1
 		else:
 			$Anims.flip_h = false
+			$LedgeChecker.target_position.x = 150
+			$Head.position.x = 150
+			$SpaceChecker.target_position.x = 150
+			facing_left = 1
 	else:
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
@@ -68,7 +77,7 @@ func _physics_process(delta):
 			on_ledge = false
 			$LedgeBuffer.start()
 	if climbing:
-		global_position.x = move_toward(global_position.x, hit_point_1.x + 30, 3)
+		global_position.x = move_toward(global_position.x, hit_point_1.x + (30 * facing_left), 3)
 		global_position.y = move_toward(global_position.y, hit_point_2.y - 53, 4)
 			
 	
@@ -90,7 +99,7 @@ func ledge_detect():
 		on_ledge = true
 
 func ledge_grab():
-	global_position.x = move_toward(global_position.x, hit_point_1.x - 50, 5)
+	global_position.x = move_toward(global_position.x, hit_point_1.x - (50 * facing_left), 5)
 	global_position.y = move_toward(global_position.y, hit_point_2.y + 45, 5)
 
 func _on_area_2d_area_entered(area):
@@ -106,7 +115,7 @@ func handle_anims():
 		landing = false
 	elif is_on_floor() and velocity.x == 0 and not landing and not climbing:
 		$Anims.play("Idle")
-	if Input.is_action_just_pressed("ui_accept") and is_on_floor():
+	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and not climbing:
 		$Anims.play("Jump")
 		landing = false
 		jumping = true
