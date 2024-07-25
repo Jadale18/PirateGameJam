@@ -95,7 +95,7 @@ func _physics_process(delta):
 			$Anims.play("Edge_Up")
 			on_ledge = false
 			$LedgeBuffer.start()
-		elif Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed(drop_inpu):
+		elif Input.is_action_just_pressed("ui_down") or Input.is_action_just_pressed(drop_inpu):
 			on_ledge = false
 			$LedgeBuffer.start()
 			$Anims.play("Air_Look_Down")
@@ -117,7 +117,7 @@ func take_damage():
 func ledge_detect():
 	hit_point_1 = $LedgeChecker.get_collision_point()
 	hit_point_2 = $Head.get_collision_point()
-	if $LedgeChecker.is_colliding() and not $SpaceChecker.is_colliding() and not on_ledge and detecting_ledge:
+	if $LedgeChecker.is_colliding() and not $SpaceChecker.is_colliding() and not on_ledge and detecting_ledge and not is_on_floor():
 		$Anims.play("Grab_Edge")
 		detecting_ledge = false
 		gravity_on = false
