@@ -15,6 +15,14 @@ func _physics_process(delta):
 	if global_position.x != Global.character_position.x:
 		global_position.x = Global.character_position.x
 	
+	if Global.current_animation != $Anims.animation:
+		$Anims.play(Global.current_animation)
+	
+	if Global.facing == -1:
+		$Anims.flip_h = true
+	else:
+		$Anims.flip_h = false
+	
 	move_and_slide()
 
 func take_damage():
@@ -22,4 +30,5 @@ func take_damage():
 
 
 func _on_area_2d_area_entered(area):
-	take_damage()
+	if "Spike" in area.name:
+		take_damage()

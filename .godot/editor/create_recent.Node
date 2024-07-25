@@ -1,13 +1,8 @@
-ColorRect
-Camera2D
-CollisionPolygon2D
-AnimatedSprite2D
 TextureRect
 RichTextLabel
 Button
 VBoxContainer
 Control
-Timer
 CanvasLayer
 Node2D
 Label

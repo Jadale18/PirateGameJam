@@ -5,5 +5,3 @@ res://World/level_1.tscn
 res://World/test_split.tscn
 res://World/level_2.tscn
 res://Character/Character.gd
-res://Character/shadow.tscn
-res://World/test_split.gd
