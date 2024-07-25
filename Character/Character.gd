@@ -106,8 +106,9 @@ func _physics_process(delta):
 		global_position.y = move_toward(global_position.y, hit_point_2.y - 53, 10)
 	
 	
-	
+	Global.current_animation = $Anims.animation
 	Global.character_position = global_position
+	Global.facing = facing_left
 
 func take_damage():
 	emit_signal("damage_taken")

@@ -1,7 +1,7 @@
+AnimatedSprite2D
 Timer
 RayCast2D
 CollisionPolygon2D
-AnimatedSprite2D
 ColorRect
 TextureRect
 RichTextLabel
