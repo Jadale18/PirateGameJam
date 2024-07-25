@@ -21,11 +21,15 @@ var hit_point_1
 var hit_point_2
 var climbing = false
 var facing_left = -1
+var last_floor = true
 
 func _ready():
 	$Anims.play("Idle")
 
 func _physics_process(delta):
+	if $Anims.animation != "Jump":
+		jumping = false
+	coyote()
 	if not animating:
 		handle_anims()
 	if not is_on_floor() and gravity_on:
@@ -38,9 +42,11 @@ func _physics_process(delta):
 		landing = true
 		$Anims.play("Land")
 		falling = false
+		jumping = false
 
 	if Input.is_action_just_pressed("ui_accept") and is_on_floor() and checking_input:
 		velocity.y = JUMP_VELOCITY * gravity_multiplier
+		jumping = true
 
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction and checking_input:
@@ -68,18 +74,38 @@ func _physics_process(delta):
 		$Anims.play("Self_Damage")
 		checking_input = false
 		take_damage()
+		
+	if Input.is_action_just_pressed("Interact") and is_on_floor() and checking_input:
+		animating = true
+		$Anims.play('Interact')
+		checking_input = false
 	
 	if on_ledge:
 		ledge_grab()
-		if Input.is_action_just_pressed("ui_accept"):
+		var climb_inpu
+		var drop_inpu
+		if facing_left == -1:
+			climb_inpu = "ui_left"
+			drop_inpu = "ui_right"
+		else:
+			climb_inpu = "ui_right"
+			drop_inpu = "ui_left"
+		if Input.is_action_just_pressed("ui_accept") or Input.is_action_just_pressed(climb_inpu):
 			climbing = true
 			$Anims.play("Edge_Up")
 			on_ledge = false
 			$LedgeBuffer.start()
+		elif Input.is_action_just_pressed("ui_left") or Input.is_action_just_pressed(drop_inpu):
+			on_ledge = false
+			$LedgeBuffer.start()
+			$Anims.play("Air_Look_Down")
+			checking_input = true
+			gravity_on = true
 	if climbing:
 		global_position.x = move_toward(global_position.x, hit_point_1.x + (30 * facing_left), 10)
 		global_position.y = move_toward(global_position.y, hit_point_2.y - 53, 10)
-			
+	
+	
 	
 	Global.character_position = global_position
 
@@ -101,6 +127,11 @@ func ledge_detect():
 func ledge_grab():
 	global_position.x = move_toward(global_position.x, hit_point_1.x - (50 * facing_left), 5)
 	global_position.y = move_toward(global_position.y, hit_point_2.y + 45, 5)
+
+func coyote():
+	if not is_on_floor() and last_floor and not climbing and not jumping:
+		$Anims.play("Air_Look_Down")
+	last_floor = is_on_floor()
 
 func _on_area_2d_area_entered(area):
 	if "Spike" in area.name:
@@ -133,14 +164,11 @@ func _on_anims_animation_finished():
 		checking_input = true
 		gravity_on = true
 		climbing = false
-	elif $Anims.animation in ["Damaged", "Self_Damage"]:
+	elif $Anims.animation in ["Damaged", "Self_Damage", "Interact"]:
 		animating = false
 		checking_input = true
 		if is_on_floor():
 			falling = false
-	
-
-
 
 func _on_ledge_buffer_timeout():
 	detecting_ledge = true

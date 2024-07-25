@@ -2277,6 +2277,7 @@ target_position = Vector2(2.08165e-12, 150)
 target_position = Vector2(150, -150)
 
 [node name="LedgeBuffer" type="Timer" parent="."]
+wait_time = 0.3
 one_shot = true
 
 [connection signal="area_entered" from="CharArea" to="." method="_on_area_2d_area_entered"]
