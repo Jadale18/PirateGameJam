@@ -2254,14 +2254,16 @@ color = Color(0.329412, 1, 1, 1)
 polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
-polygon = PackedVector2Array(-43, 128, 38, 128, 20, -19, 26, -105, 6, -125, -10, -113, -30, -88, -18, -38, -36, 31)
+polygon = PackedVector2Array(-40, 127.5, 40, 127.5, 20, -20, 25, -87.5, 10, -112.5, -10, -112.5, -25, -87.5, -20, -20)
 
 [node name="CharArea" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CharArea"]
-polygon = PackedVector2Array(-43, 128, 38, 128, 20, -19, 26, -105, 6, -125, -10, -113, -30, -88, -18, -38, -36, 31)
+scale = Vector2(1, 1)
+polygon = PackedVector2Array(-40, 127.5, 40, 127.5, 20, -20, 25, -87.5, 10, -112.5, -10, -112.5, -25, -87.5, -20, -20)
 
 [node name="Anims" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, 2.5)
 sprite_frames = SubResource("SpriteFrames_hfmdo")
 animation = &"Walk"
 
