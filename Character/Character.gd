@@ -77,8 +77,8 @@ func _physics_process(delta):
 			on_ledge = false
 			$LedgeBuffer.start()
 	if climbing:
-		global_position.x = move_toward(global_position.x, hit_point_1.x + (30 * facing_left), 3)
-		global_position.y = move_toward(global_position.y, hit_point_2.y - 53, 4)
+		global_position.x = move_toward(global_position.x, hit_point_1.x + (30 * facing_left), 10)
+		global_position.y = move_toward(global_position.y, hit_point_2.y - 53, 10)
 			
 	
 	Global.character_position = global_position
