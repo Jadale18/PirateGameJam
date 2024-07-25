@@ -1504,7 +1504,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Death",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1548,7 +1548,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Edge_Up",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1568,7 +1568,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Grab_Edge",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1696,7 +1696,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Idle",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1764,7 +1764,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Interact",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1862,7 +1862,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Jump",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1918,7 +1918,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Land",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -1926,7 +1926,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Ledge_Hang",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2078,7 +2078,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Run",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2128,7 +2128,7 @@ animations = [{
 }],
 "loop": false,
 "name": &"Self_Damage",
-"speed": 25.0
+"speed": 40.0
 }, {
 "frames": [{
 "duration": 1.0,
@@ -2241,7 +2241,7 @@ animations = [{
 }],
 "loop": true,
 "name": &"Walk",
-"speed": 25.0
+"speed": 40.0
 }]
 
 [node name="Character" type="CharacterBody2D"]
@@ -2263,9 +2263,7 @@ polygon = PackedVector2Array(-43, 128, 38, 128, 20, -19, 26, -105, 6, -125, -10,
 
 [node name="Anims" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_hfmdo")
-animation = &"Edge_Up"
-frame = 12
-frame_progress = 1.0
+animation = &"Walk"
 
 [node name="LedgeChecker" type="RayCast2D" parent="."]
 target_position = Vector2(150, 2.08165e-12)
@@ -2279,6 +2277,7 @@ target_position = Vector2(2.08165e-12, 150)
 target_position = Vector2(150, -150)
 
 [node name="LedgeBuffer" type="Timer" parent="."]
+wait_time = 0.3
 one_shot = true
 
 [connection signal="area_entered" from="CharArea" to="." method="_on_area_2d_area_entered"]
