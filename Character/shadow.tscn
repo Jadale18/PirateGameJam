@@ -2256,20 +2256,18 @@ polygon = PackedVector2Array(-10, -10, 10, -10, 10, 10, -10, 10)
 
 [node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="."]
 rotation = 3.14159
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(-40, 127.5, 40, 127.5, 20, -20, 25, -87.5, 10, -112.5, -10, -112.5, -25, -87.5, -20, -20)
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="Area2D"]
 rotation = -3.14159
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(-40, 127.5, 40, 127.5, 20, -20, 25, -87.5, 10, -112.5, -10, -112.5, -25, -87.5, -20, -20)
 
 [node name="Anims" type="AnimatedSprite2D" parent="."]
 sprite_frames = SubResource("SpriteFrames_ocxgg")
-animation = &"Self_Damage"
-frame = 14
+animation = &"Interact"
+frame = 20
 frame_progress = 1.0
 flip_h = true
 flip_v = true

@@ -2259,20 +2259,20 @@ polygon = PackedVector2Array(-40, 127.5, 40, 127.5, 20, -20, 25, -87.5, 10, -112
 [node name="CharArea" type="Area2D" parent="."]
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon2D" parent="CharArea"]
-scale = Vector2(1, 1)
 polygon = PackedVector2Array(-40, 127.5, 40, 127.5, 20, -20, 25, -87.5, 10, -112.5, -10, -112.5, -25, -87.5, -20, -20)
 
 [node name="Anims" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 2.5)
 sprite_frames = SubResource("SpriteFrames_hfmdo")
 animation = &"Walk"
+frame = 6
+frame_progress = 0.0894864
 
 [node name="LedgeChecker" type="RayCast2D" parent="."]
 target_position = Vector2(150, 2.08165e-12)
 
 [node name="Head" type="RayCast2D" parent="."]
 position = Vector2(150, -150)
-scale = Vector2(1, 1)
 target_position = Vector2(2.08165e-12, 150)
 
 [node name="SpaceChecker" type="RayCast2D" parent="."]

@@ -5,7 +5,7 @@ var current_life_total = 10
 
 func _process(delta):
 	if current_life_total == 0:
-		print('game over')
+		pass
 
 func _on_character_damage_taken():
 	current_life_total -= 1
