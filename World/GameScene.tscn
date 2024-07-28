@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://i1wayaok4l0h"]
 
-[ext_resource type="PackedScene" uid="uid://cnfkee410n10a" path="res://World/Levels/Level1.tscn" id="3_nn55m"]
-[ext_resource type="PackedScene" uid="uid://ducv2awyri3mc" path="res://World/ShadowLevels/ShadowLevel1.tscn" id="4_qrg7o"]
+[ext_resource type="PackedScene" uid="uid://dkega7n1b6e4k" path="res://World/Levels/Tutorial1.tscn" id="3_nn55m"]
+[ext_resource type="PackedScene" uid="uid://ducv2awyri3mc" path="res://World/ShadowLevels/SH_Tutorial1.tscn" id="4_qrg7o"]
 
 [node name="GameScene" type="Control"]
 process_mode = 1
@@ -30,7 +30,7 @@ handle_input_locally = false
 size = Vector2i(1152, 576)
 render_target_update_mode = 4
 
-[node name="CurrentLevel" parent="VBoxContainer/TopViewportContainer/TopViewport" instance=ExtResource("3_nn55m")]
+[node name="Level1" parent="VBoxContainer/TopViewportContainer/TopViewport" instance=ExtResource("3_nn55m")]
 
 [node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 2)

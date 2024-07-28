@@ -2,8 +2,8 @@ extends CharacterBody2D
 
 signal damage_taken
 
-const SPEED = 400.0
-const JUMP_VELOCITY = -800.0
+const SPEED = 200.0
+const JUMP_VELOCITY = -575.0
 var current_life = 10
 
 @export_range(-1, 1, 2) var gravity_multiplier = 1
@@ -102,8 +102,8 @@ func _physics_process(delta):
 			checking_input = true
 			gravity_on = true
 	if climbing:
-		global_position.x = move_toward(global_position.x, hit_point_1.x + (30 * facing_left), 10)
-		global_position.y = move_toward(global_position.y, hit_point_2.y - 53, 10)
+		global_position.x = move_toward(global_position.x, hit_point_1.x + (15 * facing_left), 10)
+		global_position.y = move_toward(global_position.y, hit_point_2.y - 26.5, 10)
 	
 	
 	Global.current_animation = $Anims.animation
@@ -126,8 +126,8 @@ func ledge_detect():
 		on_ledge = true
 
 func ledge_grab():
-	global_position.x = move_toward(global_position.x, hit_point_1.x - (50 * facing_left), 5)
-	global_position.y = move_toward(global_position.y, hit_point_2.y + 45, 5)
+	global_position.x = move_toward(global_position.x, hit_point_1.x - (25 * facing_left), 2.5)
+	global_position.y = move_toward(global_position.y, hit_point_2.y + 22.5, 2.5)
 
 func coyote():
 	if not is_on_floor() and last_floor and not climbing and not jumping:

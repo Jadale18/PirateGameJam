@@ -2245,7 +2245,7 @@ animations = [{
 }]
 
 [node name="Character" type="CharacterBody2D"]
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.2, 0.2)
 script = ExtResource("1_fifik")
 
 [node name="Polygon2D" type="Polygon2D" parent="."]
@@ -2264,12 +2264,10 @@ polygon = PackedVector2Array(-40, 127.5, 40, 127.5, 20, -20, 25, -87.5, 10, -112
 [node name="Anims" type="AnimatedSprite2D" parent="."]
 position = Vector2(0, 2.5)
 sprite_frames = SubResource("SpriteFrames_hfmdo")
-animation = &"Walk"
-frame = 6
-frame_progress = 0.0894864
+animation = &"Edge_Up"
 
 [node name="LedgeChecker" type="RayCast2D" parent="."]
-target_position = Vector2(150, 2.08165e-12)
+target_position = Vector2(120, 0)
 
 [node name="Head" type="RayCast2D" parent="."]
 position = Vector2(150, -150)
@@ -2283,6 +2281,8 @@ wait_time = 0.3
 one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+drag_vertical_enabled = true
 
 [connection signal="area_entered" from="CharArea" to="." method="_on_area_2d_area_entered"]
 [connection signal="animation_finished" from="Anims" to="." method="_on_anims_animation_finished"]
