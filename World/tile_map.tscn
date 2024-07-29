@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=3 uid="uid://dytaw7axsp7xb"]
 
-[ext_resource type="Texture2D" uid="uid://dgw8c8xlqabwg" path="res://Assets/World/Grass_block.png" id="1_arv1h"]
+[ext_resource type="Texture2D" uid="uid://coincny2j2t8u" path="res://Assets/World/Grass_block_2.png" id="1_s7srk"]
 [ext_resource type="Texture2D" uid="uid://c7rts82id34mw" path="res://Assets/BlackSquare.png" id="2_w3xek"]
 [ext_resource type="Texture2D" uid="uid://0bcrxdf3t30y" path="res://Assets/Brick_Block.png" id="3_7ijfq"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0y3s"]
-texture = ExtResource("1_arv1h")
+texture = ExtResource("1_s7srk")
 texture_region_size = Vector2i(256, 256)
 0:0/0 = 0
 0:0/0/terrain_set = 0

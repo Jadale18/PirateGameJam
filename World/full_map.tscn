@@ -4,11 +4,11 @@
 [ext_resource type="PackedScene" uid="uid://p4r7w4t7qewf" path="res://World/Levels/Tutorial2.tscn" id="2_st615"]
 [ext_resource type="PackedScene" uid="uid://bhqcn27kkdf4e" path="res://World/Levels/TowerBase.tscn" id="3_yn37d"]
 [ext_resource type="PackedScene" uid="uid://bbpsd4td5sxe8" path="res://World/Levels/Tower1.tscn" id="4_17j0o"]
+[ext_resource type="PackedScene" uid="uid://b8fxdcv04pavd" path="res://World/Levels/Tower2.tscn" id="5_1im6p"]
 [ext_resource type="PackedScene" uid="uid://ducv2awyri3mc" path="res://World/ShadowLevels/SH_Tutorial1.tscn" id="5_b4hq2"]
 [ext_resource type="PackedScene" uid="uid://dk843mko3tb50" path="res://World/ShadowLevels/SH_Tutorial2.tscn" id="6_4ts35"]
 [ext_resource type="PackedScene" uid="uid://dfdbern6eaeff" path="res://World/ShadowLevels/SH_TowerBase.tscn" id="7_6sdt8"]
 [ext_resource type="PackedScene" uid="uid://imjsdgfv04xc" path="res://World/ShadowLevels/SH_Tower1.tscn" id="8_hre4l"]
-[ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="9_fhib7"]
 
 [node name="Full Map" type="Node2D"]
 
@@ -25,6 +25,9 @@ position = Vector2(3072, 0)
 [node name="Tower1" parent="Character" instance=ExtResource("4_17j0o")]
 position = Vector2(3072, -1232)
 
+[node name="Tower2" parent="Character" instance=ExtResource("5_1im6p")]
+position = Vector2(1536, -2154)
+
 [node name="Shadow" type="Node2D" parent="."]
 
 [node name="ShadowLevel1" parent="Shadow" instance=ExtResource("5_b4hq2")]
@@ -37,6 +40,3 @@ position = Vector2(3072, 0)
 
 [node name="SH_Tower1" parent="Shadow" instance=ExtResource("8_hre4l")]
 position = Vector2(3072, 1224)
-
-[node name="Character2" parent="." instance=ExtResource("9_fhib7")]
-position = Vector2(77, -158)

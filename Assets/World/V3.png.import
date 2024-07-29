@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://buegaauh4n27q"
-path="res://.godot/imported/1_Start_room_and_tutorial_room_1.png-e16cbe15f73e8d9117cbe6d02bfb90d6.ctex"
+uid="uid://dshwe4rjie0lb"
+path="res://.godot/imported/V3.png-bfc673b9de1461006daaf604ed7864a5.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://World/Levels/1_Start_room_and_tutorial_room_1.png"
-dest_files=["res://.godot/imported/1_Start_room_and_tutorial_room_1.png-e16cbe15f73e8d9117cbe6d02bfb90d6.ctex"]
+source_file="res://Assets/World/V3.png"
+dest_files=["res://.godot/imported/V3.png-bfc673b9de1461006daaf604ed7864a5.ctex"]
 
 [params]
 
