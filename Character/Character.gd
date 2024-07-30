@@ -48,6 +48,8 @@ func _physics_process(delta):
 		jumping = true
 		falling = true
 		jump_buffer = false
+		$Anims.play("Jump")
+		landing = false
 
 	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or not $CoyoteTime.is_stopped()) and checking_input:
 		velocity.y = JUMP_VELOCITY * gravity_multiplier
@@ -82,6 +84,8 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Take Damage") and is_on_floor() and checking_input:
 		animating = true
 		$Anims.play("Self_Damage")
+		$Mercury.visible = true
+		$Mercury.play("default")
 		checking_input = false
 		take_damage()
 		
@@ -200,3 +204,7 @@ func _on_drop_buffer_timeout():
 
 func _on_jump_buffer_timeout():
 	jump_buffer = false
+
+
+func _on_mercury_animation_finished():
+	$Mercury.visible = false
