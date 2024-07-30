@@ -13,17 +13,16 @@ offset_right = 40.0
 offset_bottom = 40.0
 
 [node name="Control" type="Control" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(100, 2.08165e-12)
+custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
-scale = Vector2(0.4, 0.4)
-animation = &"Empty"
+animation = &"Idle"
 frame = 0
-frame_progress = 0.884785
+frame_progress = 0.0
 
 [node name="HealthAnims" parent="CanvasLayer/HBoxContainer/Control" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
@@ -32,7 +31,7 @@ frame = 0
 frame_progress = 0.0
 
 [node name="Control2" type="Control" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(100, 2.08165e-12)
+custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -50,7 +49,7 @@ frame = 0
 frame_progress = 0.194338
 
 [node name="Control3" type="Control" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(100, 2.08165e-12)
+custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -68,7 +67,7 @@ frame = 0
 frame_progress = 0.621363
 
 [node name="Control4" type="Control" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(100, 2.08165e-12)
+custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
@@ -87,160 +86,152 @@ frame_progress = 0.743358
 
 [node name="Control5" type="Control" parent="CanvasLayer/HBoxContainer"]
 visible = false
-custom_minimum_size = Vector2(100, 2.08165e-12)
+custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control5" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
-scale = Vector2(0.4, 0.4)
-animation = &"Empty"
+animation = &"Idle"
 frame = 0
-frame_progress = 0.884785
+frame_progress = 0.743358
 
 [node name="HealthAnims" parent="CanvasLayer/HBoxContainer/Control5" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
 animation = &"Idle"
 frame = 0
-frame_progress = 0.0
+frame_progress = 0.743358
 
 [node name="Control6" type="Control" parent="CanvasLayer/HBoxContainer"]
 visible = false
-custom_minimum_size = Vector2(100, 2.08165e-12)
+custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control6" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
-scale = Vector2(0.4, 0.4)
-animation = &"Empty"
+animation = &"Idle"
 frame = 0
-frame_progress = 0.884785
+frame_progress = 0.743358
 
 [node name="HealthAnims" parent="CanvasLayer/HBoxContainer/Control6" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
 animation = &"Idle"
 frame = 0
-frame_progress = 0.0
+frame_progress = 0.743358
 
 [node name="Control7" type="Control" parent="CanvasLayer/HBoxContainer"]
 visible = false
-custom_minimum_size = Vector2(100, 2.08165e-12)
+custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control7" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
-scale = Vector2(0.4, 0.4)
-animation = &"Empty"
+animation = &"Idle"
 frame = 0
-frame_progress = 0.884785
+frame_progress = 0.743358
 
 [node name="HealthAnims" parent="CanvasLayer/HBoxContainer/Control7" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
 animation = &"Idle"
 frame = 0
-frame_progress = 0.0
+frame_progress = 0.743358
 
 [node name="Control8" type="Control" parent="CanvasLayer/HBoxContainer"]
 visible = false
-custom_minimum_size = Vector2(100, 2.08165e-12)
+custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control8" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
-scale = Vector2(0.4, 0.4)
-animation = &"Empty"
+animation = &"Idle"
 frame = 0
-frame_progress = 0.884785
+frame_progress = 0.743358
 
 [node name="HealthAnims" parent="CanvasLayer/HBoxContainer/Control8" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
 animation = &"Idle"
 frame = 0
-frame_progress = 0.0
+frame_progress = 0.743358
 
 [node name="Control9" type="Control" parent="CanvasLayer/HBoxContainer"]
 visible = false
-custom_minimum_size = Vector2(100, 2.08165e-12)
+custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control9" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
-scale = Vector2(0.4, 0.4)
-animation = &"Empty"
+animation = &"Idle"
 frame = 0
-frame_progress = 0.884785
+frame_progress = 0.743358
 
 [node name="HealthAnims" parent="CanvasLayer/HBoxContainer/Control9" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
 animation = &"Idle"
 frame = 0
-frame_progress = 0.0
+frame_progress = 0.743358
 
 [node name="Control10" type="Control" parent="CanvasLayer/HBoxContainer"]
 visible = false
-custom_minimum_size = Vector2(100, 2.08165e-12)
+custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control10" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
-scale = Vector2(0.4, 0.4)
-animation = &"Empty"
+animation = &"Idle"
 frame = 0
-frame_progress = 0.884785
+frame_progress = 0.743358
 
 [node name="HealthAnims" parent="CanvasLayer/HBoxContainer/Control10" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
 animation = &"Idle"
 frame = 0
-frame_progress = 0.0
+frame_progress = 0.743358
 
 [node name="Control11" type="Control" parent="CanvasLayer/HBoxContainer"]
 visible = false
-custom_minimum_size = Vector2(100, 2.08165e-12)
+custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control11" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
-scale = Vector2(0.4, 0.4)
-animation = &"Empty"
+animation = &"Idle"
 frame = 0
-frame_progress = 0.884785
+frame_progress = 0.743358
 
 [node name="HealthAnims" parent="CanvasLayer/HBoxContainer/Control11" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
 animation = &"Idle"
 frame = 0
-frame_progress = 0.0
+frame_progress = 0.743358
 
 [node name="Control12" type="Control" parent="CanvasLayer/HBoxContainer"]
 visible = false
-custom_minimum_size = Vector2(100, 2.08165e-12)
+custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control12" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
-scale = Vector2(0.4, 0.4)
-animation = &"Empty"
+animation = &"Idle"
 frame = 0
-frame_progress = 0.884785
+frame_progress = 0.743358
 
 [node name="HealthAnims" parent="CanvasLayer/HBoxContainer/Control12" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
 animation = &"Idle"
 frame = 0
-frame_progress = 0.0
+frame_progress = 0.743358
