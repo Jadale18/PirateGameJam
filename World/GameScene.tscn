@@ -57,7 +57,7 @@ handle_input_locally = false
 size = Vector2i(1152, 576)
 render_target_update_mode = 4
 
-[node name="Level1" parent="VBoxContainer/TopViewportContainer/TopViewport" instance=ExtResource("3_nn55m")]
+[node name="CurrentLevel" parent="VBoxContainer/TopViewportContainer/TopViewport" instance=ExtResource("3_nn55m")]
 
 [node name="ColorRect" type="ColorRect" parent="VBoxContainer"]
 custom_minimum_size = Vector2(0, 2)
