@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://dajn7co2bu6e2"]
+
+[ext_resource type="Texture2D" uid="uid://blmogp23we4dm" path="res://Assets/World/Interactables/Combo_Tablet_Interactable.png" id="1_tdkte"]
+
+[node name="CrossTablet" type="Node2D"]
+
+[node name="ComboTabletInteractable" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_tdkte")

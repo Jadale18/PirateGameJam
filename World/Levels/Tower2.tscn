@@ -1,9 +1,10 @@
-[gd_scene load_steps=9 format=3 uid="uid://b8fxdcv04pavd"]
+[gd_scene load_steps=10 format=3 uid="uid://b8fxdcv04pavd"]
 
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_4irau"]
 [ext_resource type="Texture2D" uid="uid://kc31emky6x80" path="res://Assets/World/References/5_Tower_Room_2_.png" id="1_a3eut"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="2_8t5b3"]
 [ext_resource type="Texture2D" uid="uid://y6eirtgaypgy" path="res://Assets/World/BG_Elements/off_orb.png" id="2_uhejb"]
+[ext_resource type="Texture2D" uid="uid://ctqb0woe63nn7" path="res://Assets/World/BG_Elements/on_orb.png" id="3_3dhe7"]
 [ext_resource type="Texture2D" uid="uid://sfgtodng2e0r" path="res://Assets/World/BG_Elements/Tower_Rooms_2.png" id="3_540v7"]
 [ext_resource type="PackedScene" uid="uid://b7q2dumunkj15" path="res://World/Hazards/tall_spike.tscn" id="3_ajc1v"]
 [ext_resource type="PackedScene" uid="uid://b1k4m2xf10lkj" path="res://World/Hazards/spike.tscn" id="4_5rxix"]
@@ -22,6 +23,12 @@ texture = ExtResource("1_4irau")
 position = Vector2(772.4, -607)
 scale = Vector2(0.91, 0.917)
 texture = ExtResource("2_uhejb")
+
+[node name="OnOrb" type="Sprite2D" parent="Background"]
+visible = false
+position = Vector2(772.4, -607)
+scale = Vector2(0.91, 0.917)
+texture = ExtResource("3_3dhe7")
 
 [node name="Tower2BG" type="Sprite2D" parent="Background"]
 position = Vector2(772.4, -607)
