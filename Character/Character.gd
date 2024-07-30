@@ -117,6 +117,8 @@ func take_damage():
 func ledge_detect():
 	hit_point_1 = $LedgeChecker.get_collision_point()
 	hit_point_2 = $Head.get_collision_point()
+	print($SpaceChecker.get_collision_point())
+		
 	if $LedgeChecker.is_colliding() and not $SpaceChecker.is_colliding() and not on_ledge and detecting_ledge and not is_on_floor():
 		$Anims.play("Grab_Edge")
 		detecting_ledge = false
