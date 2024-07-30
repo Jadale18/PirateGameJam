@@ -1,6 +1,7 @@
-[gd_scene load_steps=2 format=3 uid="uid://d2db64w60iwo0"]
+[gd_scene load_steps=3 format=3 uid="uid://d2db64w60iwo0"]
 
 [ext_resource type="Script" path="res://UI/pause_menu.gd" id="1_akb1l"]
+[ext_resource type="FontFile" uid="uid://b35ikwltmsrxc" path="res://Assets/Font/CormorantGaramond-Regular.ttf" id="2_5pjrj"]
 
 [node name="PauseMenu" type="Control"]
 process_mode = 3
@@ -40,18 +41,21 @@ grow_vertical = 2
 
 [node name="Resume" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5pjrj")
 theme_override_font_sizes/font_size = 60
 text = "Resume
 "
 
 [node name="Settings" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5pjrj")
 theme_override_font_sizes/font_size = 60
 text = "Settings
 "
 
 [node name="Quit" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+theme_override_fonts/font = ExtResource("2_5pjrj")
 theme_override_font_sizes/font_size = 60
 text = "Quit
 "
