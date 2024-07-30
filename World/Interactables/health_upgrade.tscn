@@ -4,7 +4,7 @@
 [ext_resource type="PackedScene" uid="uid://0clj6a6fgcup" path="res://UI/health_anims.tscn" id="2_on106"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jwwop"]
-radius = 114.127
+radius = 110.05
 
 [sub_resource type="Animation" id="Animation_pp05r"]
 resource_name = "Idle"
