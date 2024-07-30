@@ -28,7 +28,6 @@ scale = Vector2(0.91, 0.917391)
 texture = ExtResource("3_k7gje")
 
 [node name="6TowerRoom3" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(767, -664)
 scale = Vector2(2.062, 2.062)
 texture = ExtResource("1_4tspy")
