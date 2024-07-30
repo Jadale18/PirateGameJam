@@ -2085,7 +2085,7 @@ animations = [{
 }]
 
 [node name="HealthAnims" type="AnimatedSprite2D"]
-scale = Vector2(0.4, 0.4)
+scale = Vector2(0.2, 0.2)
 sprite_frames = SubResource("SpriteFrames_bteij")
 animation = &"Damage"
 frame = 94
