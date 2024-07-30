@@ -23,6 +23,7 @@ layer_0/tile_data = PackedInt32Array(-327626, 327688, 3, -393162, 327688, 2, -45
 position = Vector2(1516, -205)
 
 [node name="Portal" parent="Portal" index="0"]
+position = Vector2(-4, 1)
 portal_exit = "res://World/Levels/Tutorial2.tscn"
 portal_spawn = Vector2(62, -195)
 

@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://b8fxdcv04pavd"]
+[gd_scene load_steps=10 format=3 uid="uid://b8fxdcv04pavd"]
 
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_4irau"]
 [ext_resource type="Texture2D" uid="uid://kc31emky6x80" path="res://Assets/World/References/5_Tower_Room_2_.png" id="1_a3eut"]
@@ -8,6 +8,7 @@
 [ext_resource type="Texture2D" uid="uid://sfgtodng2e0r" path="res://Assets/World/BG_Elements/Tower_Rooms_2.png" id="3_540v7"]
 [ext_resource type="PackedScene" uid="uid://b7q2dumunkj15" path="res://World/Hazards/tall_spike.tscn" id="3_ajc1v"]
 [ext_resource type="PackedScene" uid="uid://b1k4m2xf10lkj" path="res://World/Hazards/spike.tscn" id="4_5rxix"]
+[ext_resource type="PackedScene" uid="uid://w3eb10mo07sc" path="res://World/Interactables/Portals.tscn" id="9_62o20"]
 
 [node name="Tower2" type="Node2D"]
 
@@ -35,7 +36,6 @@ scale = Vector2(0.91, 0.917391)
 texture = ExtResource("3_540v7")
 
 [node name="5TowerRoom2" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(767, -664)
 scale = Vector2(2.06166, 2.06166)
 texture = ExtResource("1_a3eut")
@@ -316,3 +316,45 @@ position = Vector2(-744, -8)
 
 [node name="Spike40" parent="Spikes/Spike Pit" instance=ExtResource("4_5rxix")]
 position = Vector2(-720, -8)
+
+[node name="ToTower1" parent="." instance=ExtResource("9_62o20")]
+position = Vector2(1494, -145)
+
+[node name="Portal" parent="ToTower1" index="0"]
+portal_exit = "res://World/Levels/Tower1.tscn"
+
+[node name="CollisionShape2D" parent="ToTower1/Portal" index="0"]
+position = Vector2(21, -15)
+
+[node name="ToTower3" parent="." instance=ExtResource("9_62o20")]
+position = Vector2(1494, -670)
+
+[node name="Portal" parent="ToTower3" index="0"]
+portal_exit = "res://World/Levels/Tower3.tscn"
+
+[node name="CollisionShape2D" parent="ToTower3/Portal" index="0"]
+position = Vector2(21, -15)
+
+[node name="ToTower4" parent="." instance=ExtResource("9_62o20")]
+position = Vector2(1494, -1060)
+
+[node name="Portal" parent="ToTower4" index="0"]
+portal_exit = "res://World/Levels/Tower4.tscn"
+
+[node name="CollisionShape2D" parent="ToTower4/Portal" index="0"]
+position = Vector2(21, -15)
+
+[node name="ToTower5" parent="." instance=ExtResource("9_62o20")]
+position = Vector2(122, -1234)
+rotation = 1.5708
+
+[node name="Portal" parent="ToTower5" index="0"]
+portal_exit = "res://World/Levels/Tower5.tscn"
+
+[node name="CollisionShape2D" parent="ToTower5/Portal" index="0"]
+position = Vector2(21, -15)
+
+[editable path="ToTower1"]
+[editable path="ToTower3"]
+[editable path="ToTower4"]
+[editable path="ToTower5"]
