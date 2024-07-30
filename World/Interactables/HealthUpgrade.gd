@@ -11,6 +11,7 @@ func _process(delta):
 		Global.obtain_health()
 		$HealthAnims.play("Damage")
 		$RichTextLabel.visible = false
+		$CPUParticles2D.emitting = false
 
 
 func _on_area_entered(area):

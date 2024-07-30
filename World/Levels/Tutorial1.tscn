@@ -2,7 +2,7 @@
 
 [ext_resource type="Texture2D" uid="uid://dg1u4wst5l8q6" path="res://Assets/World/BG_Elements/V4.png" id="1_8w8cj"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_wke5o"]
-[ext_resource type="PackedScene" uid="uid://w3eb10mo07sc" path="res://World/Interactables/Portals.tscn" id="3_oaoqv"]
+[ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="3_oaoqv"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="3_vymie"]
 [ext_resource type="PackedScene" uid="uid://hvw2s3j0lnfu" path="res://World/Interactables/health_upgrade.tscn" id="4_n272j"]
 
@@ -23,14 +23,14 @@ layer_0/tile_data = PackedInt32Array(-327626, 327688, 3, -393162, 327688, 2, -45
 position = Vector2(1516, -205)
 
 [node name="Portal" parent="Portal" index="0"]
-position = Vector2(-4, 1)
 portal_exit = "res://World/Levels/Tutorial2.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_Tutorial2.tscn"
 portal_spawn = Vector2(62, -195)
 
 [node name="HealthUpgrade" parent="." instance=ExtResource("4_n272j")]
 position = Vector2(400, -170)
 
 [node name="Character" parent="." instance=ExtResource("3_vymie")]
-position = Vector2(706, -1110)
+position = Vector2(217, -207)
 
 [editable path="Portal"]
