@@ -1,10 +1,9 @@
 extends CharacterBody2D
 
-signal damage_taken
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -575.0
-var current_life = 10
+var current_life = 4
 
 @export_range(-1, 1, 2) var gravity_multiplier = 1
 @onready var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * gravity_multiplier
@@ -122,7 +121,7 @@ func _physics_process(delta):
 	Global.facing = facing_left
 
 func take_damage():
-	emit_signal("damage_taken")
+	Global.damage()
 	current_life -= 1
 
 func ledge_detect():
@@ -183,6 +182,7 @@ func _on_anims_animation_finished():
 	elif $Anims.animation in ["Damaged", "Self_Damage", "Interact"]:
 		animating = false
 		checking_input = true
+		$Anims.play("Idle")
 		if is_on_floor():
 			falling = false
 
