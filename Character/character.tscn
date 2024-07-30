@@ -1,4 +1,4 @@
-[gd_scene load_steps=325 format=3 uid="uid://b5btof2wbb7bl"]
+[gd_scene load_steps=324 format=3 uid="uid://b5btof2wbb7bl"]
 
 [ext_resource type="Script" path="res://Character/Character.gd" id="1_fifik"]
 [ext_resource type="Texture2D" uid="uid://cpdl2hd2oi6xn" path="res://Assets/CharacterSprites/Air_Idle.png" id="2_jswb8"]
@@ -2244,9 +2244,6 @@ animations = [{
 "speed": 40.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_rsr2q"]
-radius = 0.0
-
 [node name="Character" type="CharacterBody2D"]
 scale = Vector2(0.2, 0.2)
 collision_mask = 3
@@ -2288,12 +2285,6 @@ one_shot = true
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
 drag_vertical_enabled = true
-
-[node name="LedgeArea" type="Area2D" parent="."]
-position = Vector2(150, -150)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeArea"]
-shape = SubResource("CircleShape2D_rsr2q")
 
 [node name="DropBuffer" type="Timer" parent="."]
 wait_time = 0.23
