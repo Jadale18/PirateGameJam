@@ -1,7 +1,8 @@
 [gd_scene load_steps=3 format=3 uid="uid://bcyjdlveqaojj"]
 
-[ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/tile_map.tscn" id="1_akgqx"]
+[ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_akgqx"]
 [ext_resource type="PackedScene" uid="uid://do450nre62uwg" path="res://Character/shadow.tscn" id="2_5mvvs"]
+
 
 [node name="ShadowLevel1" type="Node2D"]
 
