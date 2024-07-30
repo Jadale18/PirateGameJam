@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://i1wayaok4l0h"]
+[gd_scene load_steps=4 format=3 uid="uid://i1wayaok4l0h"]
 
 [ext_resource type="PackedScene" uid="uid://dkega7n1b6e4k" path="res://World/Levels/Tutorial1.tscn" id="3_nn55m"]
+[ext_resource type="PackedScene" uid="uid://2e53kir1hppi" path="res://UI/gui.tscn" id="3_v0emb"]
 [ext_resource type="PackedScene" uid="uid://ducv2awyri3mc" path="res://World/ShadowLevels/SH_Tutorial1.tscn" id="4_qrg7o"]
 
 [node name="GameScene" type="Control"]
@@ -57,3 +58,6 @@ anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0.639216)
+
+[node name="GUI" parent="." instance=ExtResource("3_v0emb")]
+position = Vector2(256, 441)
