@@ -173,3 +173,7 @@ func _on_anims_animation_finished():
 
 func _on_ledge_buffer_timeout():
 	detecting_ledge = true
+	
+func _input(event : InputEvent):
+	if (event.is_action_pressed("ui_down")):
+		position.y += 1

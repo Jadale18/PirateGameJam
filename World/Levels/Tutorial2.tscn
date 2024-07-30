@@ -1,9 +1,9 @@
 [gd_scene load_steps=5 format=3 uid="uid://p4r7w4t7qewf"]
 
-[ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/tile_map.tscn" id="1_b4sdv"]
-[ext_resource type="Texture2D" uid="uid://dshwe4rjie0lb" path="res://Assets/World/V3.png" id="1_itlh5"]
-[ext_resource type="PackedScene" uid="uid://b1k4m2xf10lkj" path="res://World/spike.tscn" id="2_v60ti"]
-[ext_resource type="PackedScene" uid="uid://b7q2dumunkj15" path="res://World/tall_spike.tscn" id="5_2me3p"]
+[ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_b4sdv"]
+[ext_resource type="Texture2D" uid="uid://dshwe4rjie0lb" path="res://Assets/World/BG_Elements/V3.png" id="1_itlh5"]
+[ext_resource type="PackedScene" uid="uid://b1k4m2xf10lkj" path="res://World/Hazards/spike.tscn" id="2_v60ti"]
+[ext_resource type="PackedScene" uid="uid://b7q2dumunkj15" path="res://World/Hazards/tall_spike.tscn" id="5_2me3p"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -28,24 +28,6 @@ position = Vector2(16, -24)
 position = Vector2(-8, -24)
 
 [node name="Spike4" parent="IntegratedSpikes/TallSpike3" instance=ExtResource("5_2me3p")]
-position = Vector2(-32, -24)
-
-[node name="SH_IntegratedSpikes" type="Node2D" parent="."]
-
-[node name="TallSpike8" type="Node2D" parent="SH_IntegratedSpikes"]
-position = Vector2(936, -440)
-rotation = 1.5708
-
-[node name="Spike" parent="SH_IntegratedSpikes/TallSpike8" instance=ExtResource("5_2me3p")]
-position = Vector2(40, -24)
-
-[node name="Spike2" parent="SH_IntegratedSpikes/TallSpike8" instance=ExtResource("5_2me3p")]
-position = Vector2(16, -24)
-
-[node name="Spike3" parent="SH_IntegratedSpikes/TallSpike8" instance=ExtResource("5_2me3p")]
-position = Vector2(-8, -24)
-
-[node name="Spike4" parent="SH_IntegratedSpikes/TallSpike8" instance=ExtResource("5_2me3p")]
 position = Vector2(-32, -24)
 
 [node name="TileMap" parent="." instance=ExtResource("1_b4sdv")]
@@ -169,35 +151,3 @@ position = Vector2(1440, -356)
 
 [node name="Spike3" parent="NormalSpikes/TallSpike7" instance=ExtResource("5_2me3p")]
 position = Vector2(0, -24)
-
-[node name="ShadowBlocks" type="Node2D" parent="."]
-
-[node name="ShadowTiles" parent="ShadowBlocks" instance=ExtResource("1_b4sdv")]
-layer_0/tile_data = PackedInt32Array(-1900508, 131072, 1, -1900510, 65536, 1, -1900509, 65536, 1, -1900511, 0, 1, -2162665, 0, 1, -2097129, 0, 3, -2162664, 65536, 1, -2097128, 65536, 3, -2162663, 65536, 1, -2097127, 65536, 3, -2162662, 65536, 1, -2097126, 65536, 3, -2162661, 65536, 1, -2097125, 65536, 3, -2162660, 131072, 1, -2097124, 131072, 3, -2424814, 131072, 1, -2359278, 131072, 3, -2621418, 0, 1, -2621417, 65536, 1, -2621416, 65536, 1, -2621415, 65536, 1, -2621414, 65536, 1, -2621413, 131072, 1, -2818017, 0, 1, -2818016, 65536, 1, -2818015, 65536, 1, -2818014, 131072, 1, -2621402, 0, 1, -2621401, 65536, 1, -2621400, 65536, 1, -2621399, 65536, 1, -2621398, 65536, 1, -2621397, 131072, 1, -2424785, 0, 1, -2424784, 65536, 1, -2424783, 65536, 1, -2424782, 65536, 1, -2424781, 65536, 1, -2424780, 131072, 1, -2424818, 0, 1, -2359282, 0, 3, -2424817, 65536, 1, -2359281, 65536, 3, -2424816, 65536, 1, -2359280, 65536, 3, -2424815, 65536, 1, -2359279, 65536, 3, -2097110, 0, 1, -2031574, 0, 3, -2097109, 65536, 1, -2031573, 65536, 3, -2097108, 65536, 1, -2031572, 65536, 3, -2097107, 65536, 1, -2031571, 65536, 3, -2097106, 131072, 1, -2031570, 131072, 3, -1966047, 0, 0, -2228201, 0, 0, -2490354, 0, 0, -2686954, 0, 0, -2883553, 0, 0, -2686938, 0, 0, -2490321, 0, 0, -2162646, 0, 0, -1966044, 131072, 0, -2162642, 131072, 0, -2490316, 131072, 0, -2686933, 131072, 0, -2883550, 131072, 0, -2686949, 131072, 0, -2490350, 131072, 0, -2228196, 131072, 0, -1966046, 65536, 0, -1966045, 65536, 0, -2228200, 65536, 0, -2228199, 65536, 0, -2228198, 65536, 0, -2228197, 65536, 0, -2490353, 65536, 0, -2490352, 65536, 0, -2490351, 65536, 0, -2686953, 65536, 0, -2686952, 65536, 0, -2686951, 65536, 0, -2686950, 65536, 0, -2883552, 65536, 0, -2883551, 65536, 0, -2686937, 65536, 0, -2686936, 65536, 0, -2686935, 65536, 0, -2686934, 65536, 0, -2490320, 65536, 0, -2490319, 65536, 0, -2490318, 65536, 0, -2490317, 65536, 0, -2162645, 65536, 0, -2162644, 65536, 0, -2162643, 65536, 0)
-
-[node name="TallSpike9" type="Node2D" parent="ShadowBlocks"]
-position = Vector2(796, -560)
-
-[node name="Spike" parent="ShadowBlocks/TallSpike9" instance=ExtResource("5_2me3p")]
-position = Vector2(11, -24)
-
-[node name="Spike2" parent="ShadowBlocks/TallSpike9" instance=ExtResource("5_2me3p")]
-position = Vector2(-13, -24)
-
-[node name="TallSpike10" type="Node2D" parent="ShadowBlocks"]
-position = Vector2(640, -1024)
-
-[node name="Spike" parent="ShadowBlocks/TallSpike10" instance=ExtResource("5_2me3p")]
-position = Vector2(12, -24)
-
-[node name="Spike2" parent="ShadowBlocks/TallSpike10" instance=ExtResource("5_2me3p")]
-position = Vector2(-12, -24)
-
-[node name="TallSpike11" type="Node2D" parent="ShadowBlocks"]
-position = Vector2(1280, -944)
-
-[node name="Spike" parent="ShadowBlocks/TallSpike11" instance=ExtResource("5_2me3p")]
-position = Vector2(12, -24)
-
-[node name="Spike2" parent="ShadowBlocks/TallSpike11" instance=ExtResource("5_2me3p")]
-position = Vector2(-12, -24)

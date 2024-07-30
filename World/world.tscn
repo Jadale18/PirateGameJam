@@ -1,13 +1,14 @@
 [gd_scene load_steps=9 format=3 uid="uid://dulecstv26tgf"]
 
-[ext_resource type="PackedScene" uid="uid://c6c7e03i41pda" path="res://World/invisible_tiles.tscn" id="1_28hdn"]
+[ext_resource type="PackedScene" uid="uid://c6c7e03i41pda" path="res://World/Blocks/invisible_tiles.tscn" id="1_28hdn"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="1_fw4kl"]
-[ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/tile_map.tscn" id="2_hc3xs"]
+[ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="2_hc3xs"]
 [ext_resource type="PackedScene" uid="uid://2e53kir1hppi" path="res://UI/gui.tscn" id="3_3f8wp"]
-[ext_resource type="PackedScene" uid="uid://b1k4m2xf10lkj" path="res://World/spike.tscn" id="3_vp3du"]
+[ext_resource type="PackedScene" uid="uid://b1k4m2xf10lkj" path="res://World/Hazards/spike.tscn" id="3_vp3du"]
 [ext_resource type="PackedScene" uid="uid://do450nre62uwg" path="res://Character/shadow.tscn" id="5_gw4fn"]
 [ext_resource type="PackedScene" uid="uid://bn800t6i65hkj" path="res://UI/textbox.tscn" id="7_a1oq8"]
-[ext_resource type="PackedScene" uid="uid://8c2437a5vj08" path="res://World/lore.tscn" id="7_agm36"]
+[ext_resource type="PackedScene" uid="uid://8c2437a5vj08" path="res://World/Interactables/lore.tscn" id="7_agm36"]
+
 
 [node name="World" type="Node2D"]
 

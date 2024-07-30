@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=3 uid="uid://imjsdgfv04xc"]
 
-[ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/tile_map.tscn" id="1_hbg4w"]
-[ext_resource type="PackedScene" uid="uid://b7q2dumunkj15" path="res://World/tall_spike.tscn" id="2_4sa5y"]
+[ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_hbg4w"]
+[ext_resource type="PackedScene" uid="uid://b7q2dumunkj15" path="res://World/Hazards/tall_spike.tscn" id="2_4sa5y"]
 
 [node name="SH_Tower1" type="Node2D"]
 scale = Vector2(1, -1)
