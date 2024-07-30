@@ -2245,7 +2245,7 @@ animations = [{
 }]
 
 [node name="Shadow" type="CharacterBody2D"]
-scale = Vector2(0.2, 0.2)
+scale = Vector2(0.2, -0.2)
 script = ExtResource("1_61o4f")
 gravity_multiplier = -1
 
@@ -2274,5 +2274,6 @@ flip_v = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+drag_vertical_enabled = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

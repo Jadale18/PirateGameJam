@@ -1,10 +1,9 @@
 extends CharacterBody2D
 
-signal damage_taken
 
 const SPEED = 200.0
 const JUMP_VELOCITY = -575.0
-var current_life = 10
+var current_life = 4
 
 @export_range(-1, 1, 2) var gravity_multiplier = 1
 @onready var gravity = ProjectSettings.get_setting("physics/2d/default_gravity") * gravity_multiplier
@@ -46,11 +45,13 @@ func _physics_process(delta):
 		$Anims.play("Land")
 		falling = false
 		jumping = false
-	if is_on_floor() and jump_buffer:
+	if is_on_floor() and jump_buffer and not climbing:
 		velocity.y = JUMP_VELOCITY * gravity_multiplier
 		jumping = true
 		falling = true
 		jump_buffer = false
+		$Anims.play("Jump")
+		landing = false
 
 	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or not $CoyoteTime.is_stopped()) and checking_input:
 		velocity.y = JUMP_VELOCITY * gravity_multiplier
@@ -85,6 +86,9 @@ func _physics_process(delta):
 	if Input.is_action_just_pressed("Take Damage") and is_on_floor() and checking_input:
 		animating = true
 		$Anims.play("Self_Damage")
+		$Mercury.visible = true
+		$Mercury.frame = 0
+		$Mercury.play("default")
 		checking_input = false
 		take_damage()
 		
@@ -124,8 +128,9 @@ func _physics_process(delta):
 	Global.facing = facing_left
 
 func take_damage():
-	emit_signal("damage_taken")
-	current_life -= 1
+	Global.damage()
+	if current_life != Global.current_life_total:
+		current_life = Global.current_life_total
 
 func ledge_detect():
 	hit_point_1 = $LedgeChecker.get_collision_point()
@@ -185,6 +190,7 @@ func _on_anims_animation_finished():
 	elif $Anims.animation in ["Damaged", "Self_Damage", "Interact"]:
 		animating = false
 		checking_input = true
+		$Anims.play("Idle")
 		if is_on_floor():
 			falling = false
 
@@ -201,3 +207,7 @@ func _on_drop_buffer_timeout():
 
 func _on_jump_buffer_timeout():
 	jump_buffer = false
+
+
+func _on_mercury_animation_finished():
+	$Mercury.visible = false

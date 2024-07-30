@@ -1,4 +1,4 @@
-[gd_scene load_steps=325 format=3 uid="uid://b5btof2wbb7bl"]
+[gd_scene load_steps=625 format=3 uid="uid://b5btof2wbb7bl"]
 
 [ext_resource type="Script" path="res://Character/Character.gd" id="1_fifik"]
 [ext_resource type="Texture2D" uid="uid://cpdl2hd2oi6xn" path="res://Assets/CharacterSprites/Air_Idle.png" id="2_jswb8"]
@@ -14,6 +14,306 @@
 [ext_resource type="Texture2D" uid="uid://b2oax5m3a2ad0" path="res://Assets/CharacterSprites/Run.png" id="12_voype"]
 [ext_resource type="Texture2D" uid="uid://cxbhsoyhonh3g" path="res://Assets/CharacterSprites/Self_Damage.png" id="13_fnor3"]
 [ext_resource type="Texture2D" uid="uid://coxll5vl5rca6" path="res://Assets/CharacterSprites/Walk.png" id="14_pitc7"]
+[ext_resource type="Texture2D" uid="uid://b4htheef66av8" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision000.png" id="15_l2jss"]
+[ext_resource type="Texture2D" uid="uid://dx57tpmcw2et0" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision001.png" id="16_dv13a"]
+[ext_resource type="Texture2D" uid="uid://c2wefxjvrf07g" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision002.png" id="17_3hb0u"]
+[ext_resource type="Texture2D" uid="uid://drd43qebnwed1" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision003.png" id="18_cj76u"]
+[ext_resource type="Texture2D" uid="uid://duyawox4xinkf" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision004.png" id="19_qw2n6"]
+[ext_resource type="Texture2D" uid="uid://cll18aw61w16" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision005.png" id="20_557jk"]
+[ext_resource type="Texture2D" uid="uid://c2yfo6rr7mtko" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision006.png" id="21_rfns5"]
+[ext_resource type="Texture2D" uid="uid://bd4r66m1e051h" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision007.png" id="22_4widu"]
+[ext_resource type="Texture2D" uid="uid://bocpfd2op2cat" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision008.png" id="23_ocuq8"]
+[ext_resource type="Texture2D" uid="uid://btfwc4w3rpnlk" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision009.png" id="24_vltho"]
+[ext_resource type="Texture2D" uid="uid://clcrw54kkxyyh" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision010.png" id="25_dq3v6"]
+[ext_resource type="Texture2D" uid="uid://rpqifg8ohae7" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision011.png" id="26_rg148"]
+[ext_resource type="Texture2D" uid="uid://bjhhw5smsvbkc" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision012.png" id="27_yytkx"]
+[ext_resource type="Texture2D" uid="uid://vem4iaqg4ana" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision013.png" id="28_huy8l"]
+[ext_resource type="Texture2D" uid="uid://d226lq5p2bojt" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision014.png" id="29_1unaq"]
+[ext_resource type="Texture2D" uid="uid://wvrju6e8sprs" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision015.png" id="30_vvfov"]
+[ext_resource type="Texture2D" uid="uid://dpmguuxo6vy2p" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision016.png" id="31_81r27"]
+[ext_resource type="Texture2D" uid="uid://bpsk0n4m1mtrn" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision017.png" id="32_3iw80"]
+[ext_resource type="Texture2D" uid="uid://gjxv80aidcr2" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision018.png" id="33_05xvu"]
+[ext_resource type="Texture2D" uid="uid://dlf38b58xya3l" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision019.png" id="34_kukiy"]
+[ext_resource type="Texture2D" uid="uid://cfuaqus582wvv" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision020.png" id="35_m82tw"]
+[ext_resource type="Texture2D" uid="uid://cy0wk3ee6y2hu" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision021.png" id="36_qobu8"]
+[ext_resource type="Texture2D" uid="uid://bmih1l1wn6vog" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision022.png" id="37_fi8ku"]
+[ext_resource type="Texture2D" uid="uid://cfxfwwbbg1u3p" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision023.png" id="38_6bmq0"]
+[ext_resource type="Texture2D" uid="uid://bxbs85px13m15" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision024.png" id="39_ecn0d"]
+[ext_resource type="Texture2D" uid="uid://cbyqkl7bcb0ug" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision025.png" id="40_vnauk"]
+[ext_resource type="Texture2D" uid="uid://c1kjsmtfyy3x8" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision026.png" id="41_oxtgq"]
+[ext_resource type="Texture2D" uid="uid://bwn6lqh43vfjp" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision027.png" id="42_k0t57"]
+[ext_resource type="Texture2D" uid="uid://c7ylcw2n1fipu" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision028.png" id="43_dbbjb"]
+[ext_resource type="Texture2D" uid="uid://cmbodcjxdrko1" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision029.png" id="44_vmj7j"]
+[ext_resource type="Texture2D" uid="uid://1o8s03f1uh3v" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision030.png" id="45_pry0n"]
+[ext_resource type="Texture2D" uid="uid://dk8l0wkppmrx4" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision031.png" id="46_81dmg"]
+[ext_resource type="Texture2D" uid="uid://bvixwyv8dq3ww" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision032.png" id="47_ov2qo"]
+[ext_resource type="Texture2D" uid="uid://bg6qgrypvnbpu" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision033.png" id="48_b3bir"]
+[ext_resource type="Texture2D" uid="uid://c22u7lxq8cstb" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision034.png" id="49_ihqty"]
+[ext_resource type="Texture2D" uid="uid://dngs7xvwad5vp" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision035.png" id="50_dbocw"]
+[ext_resource type="Texture2D" uid="uid://gcpyctcqn25s" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision036.png" id="51_otjm0"]
+[ext_resource type="Texture2D" uid="uid://dlvscuti24uw8" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision037.png" id="52_llbu1"]
+[ext_resource type="Texture2D" uid="uid://c8f2an86ww8cf" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision038.png" id="53_cdanu"]
+[ext_resource type="Texture2D" uid="uid://8lvnkc1kcfg2" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision039.png" id="54_lv6cw"]
+[ext_resource type="Texture2D" uid="uid://cyqnamjopp07h" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision040.png" id="55_e0le1"]
+[ext_resource type="Texture2D" uid="uid://u7cy4m3sw37l" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision041.png" id="56_5wwto"]
+[ext_resource type="Texture2D" uid="uid://bbv0oduru615" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision042.png" id="57_qrn8o"]
+[ext_resource type="Texture2D" uid="uid://cpsaubiay0qy8" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision043.png" id="58_58xqx"]
+[ext_resource type="Texture2D" uid="uid://c50r8y4ksnj4d" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision044.png" id="59_qkehw"]
+[ext_resource type="Texture2D" uid="uid://dbav2mrtwq7d7" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision045.png" id="60_x80w2"]
+[ext_resource type="Texture2D" uid="uid://dl3wxirhjfp2q" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision046.png" id="61_jsvfd"]
+[ext_resource type="Texture2D" uid="uid://bh2t457ymy4xl" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision047.png" id="62_csvg3"]
+[ext_resource type="Texture2D" uid="uid://cswpd3xvwa3td" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision048.png" id="63_ljt3b"]
+[ext_resource type="Texture2D" uid="uid://6oai55rf4llu" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision049.png" id="64_u8ko5"]
+[ext_resource type="Texture2D" uid="uid://bruwf1basj2fx" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision050.png" id="65_c201c"]
+[ext_resource type="Texture2D" uid="uid://batw51mrsjbgc" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision051.png" id="66_4r3m2"]
+[ext_resource type="Texture2D" uid="uid://dg2jnfwmp3ar1" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision052.png" id="67_m7227"]
+[ext_resource type="Texture2D" uid="uid://bowf2xt78hjmy" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision053.png" id="68_6lr0l"]
+[ext_resource type="Texture2D" uid="uid://bcic681lrpxj1" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision054.png" id="69_15lfv"]
+[ext_resource type="Texture2D" uid="uid://blsdd1aw17ye7" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision055.png" id="70_yepyb"]
+[ext_resource type="Texture2D" uid="uid://d4c3c68oclkuj" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision056.png" id="71_aohtu"]
+[ext_resource type="Texture2D" uid="uid://n2qnx6glts0s" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision057.png" id="72_d06ff"]
+[ext_resource type="Texture2D" uid="uid://d25eb2bn2vgok" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision058.png" id="73_5pcgr"]
+[ext_resource type="Texture2D" uid="uid://c873uq7j80yjp" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision059.png" id="74_orffb"]
+[ext_resource type="Texture2D" uid="uid://bnoklebh1e56g" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision060.png" id="75_wmquq"]
+[ext_resource type="Texture2D" uid="uid://dcnwlrox3ww4u" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision061.png" id="76_hiqqv"]
+[ext_resource type="Texture2D" uid="uid://c0p7w1f4ujjyl" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision062.png" id="77_ye27x"]
+[ext_resource type="Texture2D" uid="uid://cj6wsqgg8saqf" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision063.png" id="78_ngmdd"]
+[ext_resource type="Texture2D" uid="uid://ck662jhj5h2up" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision064.png" id="79_s65dl"]
+[ext_resource type="Texture2D" uid="uid://dr4siopwvl81y" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision065.png" id="80_fiw1x"]
+[ext_resource type="Texture2D" uid="uid://db14b7nvgr8xi" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision066.png" id="81_kls5n"]
+[ext_resource type="Texture2D" uid="uid://bqgqnafjnee72" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision067.png" id="82_dbhbv"]
+[ext_resource type="Texture2D" uid="uid://nnpb7m8okfyo" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision068.png" id="83_5sxi3"]
+[ext_resource type="Texture2D" uid="uid://bcw5hqehunje" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision069.png" id="84_5e3it"]
+[ext_resource type="Texture2D" uid="uid://b23fcg2vl1x1o" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision070.png" id="85_jhr06"]
+[ext_resource type="Texture2D" uid="uid://tquro60galt" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision071.png" id="86_empcf"]
+[ext_resource type="Texture2D" uid="uid://nxtqb4r0any2" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision072.png" id="87_hcey8"]
+[ext_resource type="Texture2D" uid="uid://lchp3xc0lrco" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision073.png" id="88_xvoqw"]
+[ext_resource type="Texture2D" uid="uid://y4fmmqgf2ydx" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision074.png" id="89_l8ga3"]
+[ext_resource type="Texture2D" uid="uid://bq6o8kfqgbo78" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision075.png" id="90_mu27g"]
+[ext_resource type="Texture2D" uid="uid://jlvxtvgg00wb" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision076.png" id="91_vevax"]
+[ext_resource type="Texture2D" uid="uid://cxxgygi34l12d" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision077.png" id="92_kw37k"]
+[ext_resource type="Texture2D" uid="uid://cp2424urgapoo" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision078.png" id="93_1liaq"]
+[ext_resource type="Texture2D" uid="uid://hi1wxfqxgi20" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision079.png" id="94_e1c71"]
+[ext_resource type="Texture2D" uid="uid://yeky7cv64vhq" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision080.png" id="95_i50l8"]
+[ext_resource type="Texture2D" uid="uid://0jghuhowyv4i" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision081.png" id="96_gu2np"]
+[ext_resource type="Texture2D" uid="uid://cwiwitjpenuji" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision082.png" id="97_0oyvu"]
+[ext_resource type="Texture2D" uid="uid://brfmi5gbded37" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision083.png" id="98_ai8vo"]
+[ext_resource type="Texture2D" uid="uid://3v730ju0074d" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision084.png" id="99_5biol"]
+[ext_resource type="Texture2D" uid="uid://cnhb1vpq6gaws" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision085.png" id="100_64mfm"]
+[ext_resource type="Texture2D" uid="uid://dsmwsir6grhnb" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision086.png" id="101_88pn1"]
+[ext_resource type="Texture2D" uid="uid://itea5k3knbs2" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision087.png" id="102_8fxbb"]
+[ext_resource type="Texture2D" uid="uid://dlercdnliet64" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision088.png" id="103_vei7x"]
+[ext_resource type="Texture2D" uid="uid://ca6a8mnoail33" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision089.png" id="104_56yml"]
+[ext_resource type="Texture2D" uid="uid://dxlcl48y52bx" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision090.png" id="105_4atxq"]
+[ext_resource type="Texture2D" uid="uid://b10m275r5j6uw" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision091.png" id="106_jj8bi"]
+[ext_resource type="Texture2D" uid="uid://uiepgbeokuif" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision092.png" id="107_ujbb6"]
+[ext_resource type="Texture2D" uid="uid://cecqnydi2miqi" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision093.png" id="108_n2vw4"]
+[ext_resource type="Texture2D" uid="uid://lfjs1u6r88r2" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision094.png" id="109_hrseg"]
+[ext_resource type="Texture2D" uid="uid://c524x20tscf88" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision095.png" id="110_72vn7"]
+[ext_resource type="Texture2D" uid="uid://cgswdl6bpud0x" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision096.png" id="111_5wjim"]
+[ext_resource type="Texture2D" uid="uid://cc75p4gsbcevo" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision097.png" id="112_iehaq"]
+[ext_resource type="Texture2D" uid="uid://cvq6ij4v22003" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision098.png" id="113_ugls0"]
+[ext_resource type="Texture2D" uid="uid://brytepurwnah" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision099.png" id="114_ry6ql"]
+[ext_resource type="Texture2D" uid="uid://d2u3th0q7rqob" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision100.png" id="115_vgnyb"]
+[ext_resource type="Texture2D" uid="uid://lmka3bhmr333" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision101.png" id="116_jhvni"]
+[ext_resource type="Texture2D" uid="uid://cwqufsgw22dol" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision102.png" id="117_a82ns"]
+[ext_resource type="Texture2D" uid="uid://dlcmi6c05tkjq" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision103.png" id="118_ns8mv"]
+[ext_resource type="Texture2D" uid="uid://pjxwyd3b6wwn" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision104.png" id="119_yyqsq"]
+[ext_resource type="Texture2D" uid="uid://bnv62sv6txs26" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision105.png" id="120_sali0"]
+[ext_resource type="Texture2D" uid="uid://boxhd6rgni0ep" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision106.png" id="121_6gynq"]
+[ext_resource type="Texture2D" uid="uid://yckh34ucxosx" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision107.png" id="122_3f1xg"]
+[ext_resource type="Texture2D" uid="uid://twgcdho4h6hh" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision108.png" id="123_18173"]
+[ext_resource type="Texture2D" uid="uid://d2g8frgksnrce" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision109.png" id="124_7s02y"]
+[ext_resource type="Texture2D" uid="uid://bes56dma7hxoq" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision110.png" id="125_2uu6l"]
+[ext_resource type="Texture2D" uid="uid://chcuscdob5a46" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision111.png" id="126_u2x4w"]
+[ext_resource type="Texture2D" uid="uid://dcpk0gfiyg7yy" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision112.png" id="127_iarrs"]
+[ext_resource type="Texture2D" uid="uid://ba8gsiswhbrr8" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision113.png" id="128_mfmlf"]
+[ext_resource type="Texture2D" uid="uid://cvpm4dtusrbko" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision114.png" id="129_6hqwg"]
+[ext_resource type="Texture2D" uid="uid://b0sg7k8p7nv22" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision115.png" id="130_805pm"]
+[ext_resource type="Texture2D" uid="uid://c5cykgtahs3q3" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision116.png" id="131_5rw6b"]
+[ext_resource type="Texture2D" uid="uid://b3msxdmhr4d4e" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision117.png" id="132_vatns"]
+[ext_resource type="Texture2D" uid="uid://bfekh8y5fm2yh" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision118.png" id="133_6kc6q"]
+[ext_resource type="Texture2D" uid="uid://kjlr2xvjngqs" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision119.png" id="134_y842c"]
+[ext_resource type="Texture2D" uid="uid://bk0gpr68q7fmq" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision120.png" id="135_rttja"]
+[ext_resource type="Texture2D" uid="uid://8gqib4pyd6lj" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision121.png" id="136_hsdhg"]
+[ext_resource type="Texture2D" uid="uid://0tnqbgbybrsv" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision122.png" id="137_ed2w2"]
+[ext_resource type="Texture2D" uid="uid://dmbq5j1wg7k7a" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision123.png" id="138_mm6lg"]
+[ext_resource type="Texture2D" uid="uid://bebqekp20etoe" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision124.png" id="139_xjiug"]
+[ext_resource type="Texture2D" uid="uid://bxswnxmlrbv8b" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision125.png" id="140_qwqvi"]
+[ext_resource type="Texture2D" uid="uid://gda0djbiic6g" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision126.png" id="141_ni3tm"]
+[ext_resource type="Texture2D" uid="uid://dl4v2bs4w0f0" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision127.png" id="142_srkpq"]
+[ext_resource type="Texture2D" uid="uid://c0cr475vki85y" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision128.png" id="143_lxenl"]
+[ext_resource type="Texture2D" uid="uid://luttnhhfj6wk" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision129.png" id="144_u0x2k"]
+[ext_resource type="Texture2D" uid="uid://cdtvfvyn70ppu" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision130.png" id="145_mio3r"]
+[ext_resource type="Texture2D" uid="uid://voq1eh5787cc" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision131.png" id="146_jjy4y"]
+[ext_resource type="Texture2D" uid="uid://mm2x4wot2hv7" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision132.png" id="147_kvgy6"]
+[ext_resource type="Texture2D" uid="uid://cua412on12fcu" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision133.png" id="148_7wre6"]
+[ext_resource type="Texture2D" uid="uid://ufwsx1xtmyhh" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision134.png" id="149_e88qg"]
+[ext_resource type="Texture2D" uid="uid://bi4tnfq604qdy" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision135.png" id="150_0kijw"]
+[ext_resource type="Texture2D" uid="uid://bycj5r2ajtimd" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision136.png" id="151_22jgg"]
+[ext_resource type="Texture2D" uid="uid://bkw2wjya5nnda" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision137.png" id="152_246id"]
+[ext_resource type="Texture2D" uid="uid://dcqaywm5wnrg" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision138.png" id="153_bynep"]
+[ext_resource type="Texture2D" uid="uid://cgtyniikcc140" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision139.png" id="154_f2b0s"]
+[ext_resource type="Texture2D" uid="uid://cv6qgb5kiq5ob" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision140.png" id="155_cyu4c"]
+[ext_resource type="Texture2D" uid="uid://b2wwkmk1fw42e" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision141.png" id="156_b11p0"]
+[ext_resource type="Texture2D" uid="uid://cc7btx0n2dvgp" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision142.png" id="157_hic6s"]
+[ext_resource type="Texture2D" uid="uid://ets6qgh33y8e" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision143.png" id="158_1nkbe"]
+[ext_resource type="Texture2D" uid="uid://6b3fc1wbie21" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision144.png" id="159_u2byw"]
+[ext_resource type="Texture2D" uid="uid://d0xq3mtgiscyq" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision145.png" id="160_wjlar"]
+[ext_resource type="Texture2D" uid="uid://c41j4sl1scacb" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision146.png" id="161_2evsd"]
+[ext_resource type="Texture2D" uid="uid://2k4fkcbf0fhy" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision147.png" id="162_yq4rt"]
+[ext_resource type="Texture2D" uid="uid://8rsvnpog8nu8" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision148.png" id="163_6cqou"]
+[ext_resource type="Texture2D" uid="uid://bqnflud7g8yva" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision149.png" id="164_stdub"]
+[ext_resource type="Texture2D" uid="uid://cqob71135hfc" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision150.png" id="165_hbcae"]
+[ext_resource type="Texture2D" uid="uid://cng506x2awbk" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision151.png" id="166_hq4fb"]
+[ext_resource type="Texture2D" uid="uid://l2ofcm1nml36" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision152.png" id="167_43xtp"]
+[ext_resource type="Texture2D" uid="uid://cctdenm80fohm" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision153.png" id="168_tn3g5"]
+[ext_resource type="Texture2D" uid="uid://xw2y10u1rje3" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision154.png" id="169_2n434"]
+[ext_resource type="Texture2D" uid="uid://dooq85t6q4qh1" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision155.png" id="170_mw0h3"]
+[ext_resource type="Texture2D" uid="uid://xx1dfrw1a1au" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision156.png" id="171_21igt"]
+[ext_resource type="Texture2D" uid="uid://btllags21ltxv" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision157.png" id="172_w7ggs"]
+[ext_resource type="Texture2D" uid="uid://bstiflrr4uj7k" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision158.png" id="173_8kq8f"]
+[ext_resource type="Texture2D" uid="uid://dav0nnp20neek" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision159.png" id="174_rweol"]
+[ext_resource type="Texture2D" uid="uid://cp6r0wobj8atk" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision160.png" id="175_pjs1g"]
+[ext_resource type="Texture2D" uid="uid://cx1ci2t8dehkk" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision161.png" id="176_y700v"]
+[ext_resource type="Texture2D" uid="uid://cfqqym5olrm85" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision162.png" id="177_gyvu3"]
+[ext_resource type="Texture2D" uid="uid://cgd77h7mo77m5" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision163.png" id="178_edyj3"]
+[ext_resource type="Texture2D" uid="uid://cadt4od2e11ma" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision164.png" id="179_5q7i8"]
+[ext_resource type="Texture2D" uid="uid://dfp17rjco8jup" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision165.png" id="180_ddtdw"]
+[ext_resource type="Texture2D" uid="uid://ciftoapb1yp2k" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision166.png" id="181_mdy6u"]
+[ext_resource type="Texture2D" uid="uid://2llibx2e1aym" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision167.png" id="182_uhmtj"]
+[ext_resource type="Texture2D" uid="uid://c4y6ajshpvb5t" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision168.png" id="183_yjsqn"]
+[ext_resource type="Texture2D" uid="uid://dw6iehnw1gnqp" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision169.png" id="184_mcoki"]
+[ext_resource type="Texture2D" uid="uid://bodri7np0ovei" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision170.png" id="185_hj0yi"]
+[ext_resource type="Texture2D" uid="uid://dcokt40trixs" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision171.png" id="186_xeh28"]
+[ext_resource type="Texture2D" uid="uid://p7snoa3apxbc" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision172.png" id="187_x8y0t"]
+[ext_resource type="Texture2D" uid="uid://bvcv32j2tx0wx" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision173.png" id="188_c373l"]
+[ext_resource type="Texture2D" uid="uid://2gt7bcuyedei" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision174.png" id="189_dmtyh"]
+[ext_resource type="Texture2D" uid="uid://xyfp72ab8maa" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision175.png" id="190_lpdma"]
+[ext_resource type="Texture2D" uid="uid://c6d0v308agkh2" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision176.png" id="191_efr5b"]
+[ext_resource type="Texture2D" uid="uid://dltup0sevorbs" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision177.png" id="192_d3v43"]
+[ext_resource type="Texture2D" uid="uid://bmjeda0mswacu" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision178.png" id="193_soogi"]
+[ext_resource type="Texture2D" uid="uid://bhs1yutfhdg3h" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision179.png" id="194_htlih"]
+[ext_resource type="Texture2D" uid="uid://bmk8ayjebs32a" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision180.png" id="195_ccrb0"]
+[ext_resource type="Texture2D" uid="uid://bkicdgwccqsg4" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision181.png" id="196_adod6"]
+[ext_resource type="Texture2D" uid="uid://dxbq6su5vuyj6" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision182.png" id="197_ftypn"]
+[ext_resource type="Texture2D" uid="uid://bbrfanngwuu50" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision183.png" id="198_iuoce"]
+[ext_resource type="Texture2D" uid="uid://dcjij7tqrhgic" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision184.png" id="199_mt0ey"]
+[ext_resource type="Texture2D" uid="uid://s4di6fv5dn8f" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision185.png" id="200_l3xa6"]
+[ext_resource type="Texture2D" uid="uid://cvettfvmdx5xu" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision186.png" id="201_sis3e"]
+[ext_resource type="Texture2D" uid="uid://cie7qxh4sdo06" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision187.png" id="202_bu2mk"]
+[ext_resource type="Texture2D" uid="uid://cdvv5ttilxgp6" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision188.png" id="203_2fix2"]
+[ext_resource type="Texture2D" uid="uid://b37f5s6lsswlt" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision189.png" id="204_1lju8"]
+[ext_resource type="Texture2D" uid="uid://dyijicjh6f8pt" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision190.png" id="205_ydx4i"]
+[ext_resource type="Texture2D" uid="uid://4m0n2e8jgvnl" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision191.png" id="206_7ictx"]
+[ext_resource type="Texture2D" uid="uid://ddeuffuwidu2t" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision192.png" id="207_owuvt"]
+[ext_resource type="Texture2D" uid="uid://boetdv66apa4b" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision193.png" id="208_tnf0a"]
+[ext_resource type="Texture2D" uid="uid://baxb82gk7cdud" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision194.png" id="209_0ybiu"]
+[ext_resource type="Texture2D" uid="uid://8dyoden3gbq7" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision195.png" id="210_x5lbs"]
+[ext_resource type="Texture2D" uid="uid://btbymq2ycsraw" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision196.png" id="211_rpidf"]
+[ext_resource type="Texture2D" uid="uid://cqfh5rob3hiw5" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision197.png" id="212_ou27j"]
+[ext_resource type="Texture2D" uid="uid://dr1qu8lhwutaq" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision198.png" id="213_gjgd0"]
+[ext_resource type="Texture2D" uid="uid://b5trs51qu80v3" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision199.png" id="214_ewd54"]
+[ext_resource type="Texture2D" uid="uid://bwvr38nn4ggtn" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision200.png" id="215_8nd61"]
+[ext_resource type="Texture2D" uid="uid://bfvxt5obxqhqf" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision201.png" id="216_kcnd8"]
+[ext_resource type="Texture2D" uid="uid://bj5vqkito578t" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision202.png" id="217_4s0kv"]
+[ext_resource type="Texture2D" uid="uid://klbn0eqpuqlh" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision203.png" id="218_uwtpq"]
+[ext_resource type="Texture2D" uid="uid://5b5b85k7fgww" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision204.png" id="219_nvikf"]
+[ext_resource type="Texture2D" uid="uid://cmkjopor1v6" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision205.png" id="220_swsoc"]
+[ext_resource type="Texture2D" uid="uid://cqbang1ctfefe" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision206.png" id="221_elt3f"]
+[ext_resource type="Texture2D" uid="uid://bjrbito6x5o0d" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision207.png" id="222_xiv8t"]
+[ext_resource type="Texture2D" uid="uid://cl0qgcbmq1kie" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision208.png" id="223_owme8"]
+[ext_resource type="Texture2D" uid="uid://lgich1q3e5qo" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision209.png" id="224_heela"]
+[ext_resource type="Texture2D" uid="uid://dcv002t75ywyh" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision210.png" id="225_f1yn3"]
+[ext_resource type="Texture2D" uid="uid://2ucxkiqf2u18" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision211.png" id="226_87kqh"]
+[ext_resource type="Texture2D" uid="uid://b0wtnq3hla37r" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision212.png" id="227_wmflm"]
+[ext_resource type="Texture2D" uid="uid://c4exdnylururc" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision213.png" id="228_jo7k6"]
+[ext_resource type="Texture2D" uid="uid://ba2v28up74l34" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision214.png" id="229_1rwvf"]
+[ext_resource type="Texture2D" uid="uid://ddldyi8gy80c4" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision215.png" id="230_mwh8i"]
+[ext_resource type="Texture2D" uid="uid://b1lf7k4nkv4o1" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision216.png" id="231_eemid"]
+[ext_resource type="Texture2D" uid="uid://blhbtsyi4hy6o" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision217.png" id="232_var04"]
+[ext_resource type="Texture2D" uid="uid://bv1hna1e1kx1a" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision218.png" id="233_c7obr"]
+[ext_resource type="Texture2D" uid="uid://8wgytvm0wueb" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision219.png" id="234_wfdxv"]
+[ext_resource type="Texture2D" uid="uid://dtt8g45uyh08h" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision220.png" id="235_6ndra"]
+[ext_resource type="Texture2D" uid="uid://bwy7mk2fea8ci" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision221.png" id="236_k78td"]
+[ext_resource type="Texture2D" uid="uid://bsvaedubvh2mo" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision222.png" id="237_0yol3"]
+[ext_resource type="Texture2D" uid="uid://mv37w10cx887" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision223.png" id="238_w5owu"]
+[ext_resource type="Texture2D" uid="uid://dqawp23ipdtp1" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision224.png" id="239_cnmlm"]
+[ext_resource type="Texture2D" uid="uid://0x7boebowbfu" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision225.png" id="240_au38n"]
+[ext_resource type="Texture2D" uid="uid://bb6wx4w5bg41u" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision226.png" id="241_vwbxt"]
+[ext_resource type="Texture2D" uid="uid://bkjmnur0154a8" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision227.png" id="242_axqwj"]
+[ext_resource type="Texture2D" uid="uid://c8nelp2jqq205" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision228.png" id="243_x40hi"]
+[ext_resource type="Texture2D" uid="uid://bq14f4n8wgcml" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision229.png" id="244_40oq7"]
+[ext_resource type="Texture2D" uid="uid://cd1w8twfb4ex0" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision230.png" id="245_8im1v"]
+[ext_resource type="Texture2D" uid="uid://bvxsn3p50eabb" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision231.png" id="246_dps37"]
+[ext_resource type="Texture2D" uid="uid://dyb7xrhmf3y1" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision232.png" id="247_xl37i"]
+[ext_resource type="Texture2D" uid="uid://c70s5nkeh6ip6" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision233.png" id="248_2u01t"]
+[ext_resource type="Texture2D" uid="uid://bhw1a1vykhipt" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision234.png" id="249_smyk3"]
+[ext_resource type="Texture2D" uid="uid://cgq1y2netwfd4" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision235.png" id="250_jkscf"]
+[ext_resource type="Texture2D" uid="uid://dlvct8oril1j6" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision236.png" id="251_0b4f2"]
+[ext_resource type="Texture2D" uid="uid://s7el562yerue" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision237.png" id="252_bidhb"]
+[ext_resource type="Texture2D" uid="uid://cj1w6khw6bckj" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision238.png" id="253_m42vr"]
+[ext_resource type="Texture2D" uid="uid://cw4qg6le5ynoe" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision239.png" id="254_vky6n"]
+[ext_resource type="Texture2D" uid="uid://y7o5ak3j60m6" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision240.png" id="255_5hh0v"]
+[ext_resource type="Texture2D" uid="uid://cl7mdou4hes66" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision241.png" id="256_okj6n"]
+[ext_resource type="Texture2D" uid="uid://rvixuto1b8ya" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision242.png" id="257_ho2yd"]
+[ext_resource type="Texture2D" uid="uid://crhpq5ufdq7ix" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision243.png" id="258_qqtck"]
+[ext_resource type="Texture2D" uid="uid://bipdij873px2q" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision244.png" id="259_shgbg"]
+[ext_resource type="Texture2D" uid="uid://blo7ul04cp55w" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision245.png" id="260_v8k4s"]
+[ext_resource type="Texture2D" uid="uid://dphmul6x3koba" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision246.png" id="261_m1h8g"]
+[ext_resource type="Texture2D" uid="uid://betdhu6er4n51" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision247.png" id="262_re8ta"]
+[ext_resource type="Texture2D" uid="uid://d1xmjxp0q84yp" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision248.png" id="263_5qxqs"]
+[ext_resource type="Texture2D" uid="uid://bap1vgxsaqaap" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision249.png" id="264_ngu3j"]
+[ext_resource type="Texture2D" uid="uid://dr4lmuchp41qk" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision250.png" id="265_ivffb"]
+[ext_resource type="Texture2D" uid="uid://bpmv61c4yl4r0" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision251.png" id="266_fdlgb"]
+[ext_resource type="Texture2D" uid="uid://6wea7j6em52p" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision252.png" id="267_l6bpk"]
+[ext_resource type="Texture2D" uid="uid://b817nxmw2pmxl" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision253.png" id="268_s1b8p"]
+[ext_resource type="Texture2D" uid="uid://dwmv5evghgasd" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision254.png" id="269_t4g4t"]
+[ext_resource type="Texture2D" uid="uid://b8t3tn1pryy36" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision255.png" id="270_qjk8h"]
+[ext_resource type="Texture2D" uid="uid://d17vs41ipcegf" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision256.png" id="271_qc0k3"]
+[ext_resource type="Texture2D" uid="uid://b2totkjn7rxn4" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision257.png" id="272_ya36k"]
+[ext_resource type="Texture2D" uid="uid://cxsi071vkyvw1" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision258.png" id="273_3m3ku"]
+[ext_resource type="Texture2D" uid="uid://bvabyrm62i3ox" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision259.png" id="274_lywbg"]
+[ext_resource type="Texture2D" uid="uid://b7aq4msooxapj" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision260.png" id="275_uiwhs"]
+[ext_resource type="Texture2D" uid="uid://w5bt2276hqds" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision261.png" id="276_h5irc"]
+[ext_resource type="Texture2D" uid="uid://cqeo1y6neejqs" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision262.png" id="277_c6qc3"]
+[ext_resource type="Texture2D" uid="uid://wh518a5fn6al" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision263.png" id="278_7esr4"]
+[ext_resource type="Texture2D" uid="uid://bgm3r6ni3k5in" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision264.png" id="279_5h5fy"]
+[ext_resource type="Texture2D" uid="uid://ckvs418qji4oj" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision265.png" id="280_qsomb"]
+[ext_resource type="Texture2D" uid="uid://ckvx5dsqjddt7" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision266.png" id="281_kdguu"]
+[ext_resource type="Texture2D" uid="uid://c7d7chfyjqf8a" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision267.png" id="282_c2p35"]
+[ext_resource type="Texture2D" uid="uid://diqgay31s0qsm" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision268.png" id="283_e5vjx"]
+[ext_resource type="Texture2D" uid="uid://b70h7tlg8x8mt" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision269.png" id="284_cfd5d"]
+[ext_resource type="Texture2D" uid="uid://e0024x5l6syl" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision270.png" id="285_es1or"]
+[ext_resource type="Texture2D" uid="uid://cp5barl7n2dcf" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision271.png" id="286_5yxyk"]
+[ext_resource type="Texture2D" uid="uid://b527wmyuiq4eh" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision272.png" id="287_wtcny"]
+[ext_resource type="Texture2D" uid="uid://bgivnnbs0kfca" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision273.png" id="288_d6vld"]
+[ext_resource type="Texture2D" uid="uid://ece6fwqq56ry" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision274.png" id="289_rc445"]
+[ext_resource type="Texture2D" uid="uid://b1xivsa2ei44b" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision275.png" id="290_kpv58"]
+[ext_resource type="Texture2D" uid="uid://byvpnuwjabj2v" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision276.png" id="291_rpp1t"]
+[ext_resource type="Texture2D" uid="uid://ub7u012n7usm" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision277.png" id="292_v8mj8"]
+[ext_resource type="Texture2D" uid="uid://c8i342oj8wx0l" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision278.png" id="293_nv8ik"]
+[ext_resource type="Texture2D" uid="uid://b8tl5wi8h84o4" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision279.png" id="294_oi7je"]
+[ext_resource type="Texture2D" uid="uid://2xlj8f7aq17x" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision280.png" id="295_dxiir"]
+[ext_resource type="Texture2D" uid="uid://c8ewjwp8j8ol6" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision281.png" id="296_3gp5k"]
+[ext_resource type="Texture2D" uid="uid://dicixulrgwxix" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision282.png" id="297_d4xeh"]
+[ext_resource type="Texture2D" uid="uid://dfo3bvlkinw76" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision283.png" id="298_uc0cy"]
+[ext_resource type="Texture2D" uid="uid://bk84io1ljjcf4" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision284.png" id="299_gfh6g"]
+[ext_resource type="Texture2D" uid="uid://cc0vgpmn500j2" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision285.png" id="300_utdnk"]
+[ext_resource type="Texture2D" uid="uid://c3sb31b12o2bq" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision286.png" id="301_3cv55"]
+[ext_resource type="Texture2D" uid="uid://dct7bpxlgedt3" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision287.png" id="302_smp5n"]
+[ext_resource type="Texture2D" uid="uid://ip0tt72f2mdu" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision288.png" id="303_6hyk2"]
+[ext_resource type="Texture2D" uid="uid://44glcnd2sa2r" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision289.png" id="304_as5cr"]
+[ext_resource type="Texture2D" uid="uid://loyvk8hi44m0" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision290.png" id="305_1tcua"]
+[ext_resource type="Texture2D" uid="uid://5b644ivckptb" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision291.png" id="306_fah0q"]
+[ext_resource type="Texture2D" uid="uid://ljqou05npt5m" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision292.png" id="307_sjp3o"]
+[ext_resource type="Texture2D" uid="uid://ct64dvmiakn4t" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision293.png" id="308_ymv7v"]
+[ext_resource type="Texture2D" uid="uid://dv83yp55xmoyg" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision294.png" id="309_so2ij"]
+[ext_resource type="Texture2D" uid="uid://beee1ls0jkpom" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision295.png" id="310_5p8bd"]
+[ext_resource type="Texture2D" uid="uid://byxs56urceqv6" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision296.png" id="311_d5j46"]
+[ext_resource type="Texture2D" uid="uid://c2uyhqr501p8l" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision297.png" id="312_52heq"]
+[ext_resource type="Texture2D" uid="uid://b5tkhqed78jsc" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision298.png" id="313_sbrmj"]
+[ext_resource type="Texture2D" uid="uid://bakw2k58jwbgp" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision299.png" id="314_xgtvu"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qg1c4"]
 atlas = ExtResource("2_jswb8")
@@ -2244,8 +2544,913 @@ animations = [{
 "speed": 40.0
 }]
 
-[sub_resource type="CircleShape2D" id="CircleShape2D_rsr2q"]
-radius = 0.0
+[sub_resource type="SpriteFrames" id="SpriteFrames_wg5ss"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("15_l2jss")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_dv13a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3hb0u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_cj76u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_qw2n6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_557jk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_rfns5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_4widu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_ocuq8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_vltho")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_dq3v6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_rg148")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_yytkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_huy8l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_1unaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_vvfov")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_81r27")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_3iw80")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_05xvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_kukiy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_m82tw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_qobu8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_fi8ku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_6bmq0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_ecn0d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_vnauk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_oxtgq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_k0t57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_dbbjb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_vmj7j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_pry0n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_81dmg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_ov2qo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_b3bir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_ihqty")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_dbocw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_otjm0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_llbu1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_cdanu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_lv6cw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_e0le1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_5wwto")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_qrn8o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_58xqx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_qkehw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_x80w2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_jsvfd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_csvg3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_ljt3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_u8ko5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_c201c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_4r3m2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_m7227")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_6lr0l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_15lfv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_yepyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_aohtu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_d06ff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_5pcgr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_orffb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_wmquq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_hiqqv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_ye27x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_ngmdd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_s65dl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_fiw1x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_kls5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_dbhbv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_5sxi3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_5e3it")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_jhr06")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_empcf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_hcey8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_xvoqw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_l8ga3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_mu27g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_vevax")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_kw37k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_1liaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_e1c71")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_i50l8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_gu2np")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_0oyvu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_ai8vo")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_5biol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_64mfm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_88pn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_8fxbb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_vei7x")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_56yml")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_4atxq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_jj8bi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_ujbb6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_n2vw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_hrseg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_72vn7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_5wjim")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_iehaq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_ugls0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_ry6ql")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_vgnyb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_jhvni")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_a82ns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_ns8mv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_yyqsq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_sali0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_6gynq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("122_3f1xg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("123_18173")
+}, {
+"duration": 1.0,
+"texture": ExtResource("124_7s02y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("125_2uu6l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("126_u2x4w")
+}, {
+"duration": 1.0,
+"texture": ExtResource("127_iarrs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("128_mfmlf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("129_6hqwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("130_805pm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("131_5rw6b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("132_vatns")
+}, {
+"duration": 1.0,
+"texture": ExtResource("133_6kc6q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("134_y842c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("135_rttja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("136_hsdhg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("137_ed2w2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("138_mm6lg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("139_xjiug")
+}, {
+"duration": 1.0,
+"texture": ExtResource("140_qwqvi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("141_ni3tm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("142_srkpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("143_lxenl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("144_u0x2k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("145_mio3r")
+}, {
+"duration": 1.0,
+"texture": ExtResource("146_jjy4y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("147_kvgy6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("148_7wre6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("149_e88qg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("150_0kijw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("151_22jgg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("152_246id")
+}, {
+"duration": 1.0,
+"texture": ExtResource("153_bynep")
+}, {
+"duration": 1.0,
+"texture": ExtResource("154_f2b0s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("155_cyu4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("156_b11p0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("157_hic6s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("158_1nkbe")
+}, {
+"duration": 1.0,
+"texture": ExtResource("159_u2byw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("160_wjlar")
+}, {
+"duration": 1.0,
+"texture": ExtResource("161_2evsd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("162_yq4rt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("163_6cqou")
+}, {
+"duration": 1.0,
+"texture": ExtResource("164_stdub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("165_hbcae")
+}, {
+"duration": 1.0,
+"texture": ExtResource("166_hq4fb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("167_43xtp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("168_tn3g5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("169_2n434")
+}, {
+"duration": 1.0,
+"texture": ExtResource("170_mw0h3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("171_21igt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("172_w7ggs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("173_8kq8f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("174_rweol")
+}, {
+"duration": 1.0,
+"texture": ExtResource("175_pjs1g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("176_y700v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("177_gyvu3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("178_edyj3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("179_5q7i8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("180_ddtdw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("181_mdy6u")
+}, {
+"duration": 1.0,
+"texture": ExtResource("182_uhmtj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("183_yjsqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("184_mcoki")
+}, {
+"duration": 1.0,
+"texture": ExtResource("185_hj0yi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("186_xeh28")
+}, {
+"duration": 1.0,
+"texture": ExtResource("187_x8y0t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("188_c373l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("189_dmtyh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("190_lpdma")
+}, {
+"duration": 1.0,
+"texture": ExtResource("191_efr5b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("192_d3v43")
+}, {
+"duration": 1.0,
+"texture": ExtResource("193_soogi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("194_htlih")
+}, {
+"duration": 1.0,
+"texture": ExtResource("195_ccrb0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("196_adod6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("197_ftypn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("198_iuoce")
+}, {
+"duration": 1.0,
+"texture": ExtResource("199_mt0ey")
+}, {
+"duration": 1.0,
+"texture": ExtResource("200_l3xa6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("201_sis3e")
+}, {
+"duration": 1.0,
+"texture": ExtResource("202_bu2mk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("203_2fix2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("204_1lju8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("205_ydx4i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("206_7ictx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("207_owuvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("208_tnf0a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("209_0ybiu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("210_x5lbs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("211_rpidf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("212_ou27j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("213_gjgd0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("214_ewd54")
+}, {
+"duration": 1.0,
+"texture": ExtResource("215_8nd61")
+}, {
+"duration": 1.0,
+"texture": ExtResource("216_kcnd8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("217_4s0kv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("218_uwtpq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("219_nvikf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("220_swsoc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("221_elt3f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("222_xiv8t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("223_owme8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("224_heela")
+}, {
+"duration": 1.0,
+"texture": ExtResource("225_f1yn3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("226_87kqh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("227_wmflm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("228_jo7k6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("229_1rwvf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("230_mwh8i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("231_eemid")
+}, {
+"duration": 1.0,
+"texture": ExtResource("232_var04")
+}, {
+"duration": 1.0,
+"texture": ExtResource("233_c7obr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("234_wfdxv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("235_6ndra")
+}, {
+"duration": 1.0,
+"texture": ExtResource("236_k78td")
+}, {
+"duration": 1.0,
+"texture": ExtResource("237_0yol3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("238_w5owu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("239_cnmlm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("240_au38n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("241_vwbxt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("242_axqwj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("243_x40hi")
+}, {
+"duration": 1.0,
+"texture": ExtResource("244_40oq7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("245_8im1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("246_dps37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("247_xl37i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("248_2u01t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("249_smyk3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("250_jkscf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("251_0b4f2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("252_bidhb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("253_m42vr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("254_vky6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("255_5hh0v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("256_okj6n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("257_ho2yd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("258_qqtck")
+}, {
+"duration": 1.0,
+"texture": ExtResource("259_shgbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("260_v8k4s")
+}, {
+"duration": 1.0,
+"texture": ExtResource("261_m1h8g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("262_re8ta")
+}, {
+"duration": 1.0,
+"texture": ExtResource("263_5qxqs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("264_ngu3j")
+}, {
+"duration": 1.0,
+"texture": ExtResource("265_ivffb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("266_fdlgb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("267_l6bpk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("268_s1b8p")
+}, {
+"duration": 1.0,
+"texture": ExtResource("269_t4g4t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("270_qjk8h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("271_qc0k3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("272_ya36k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("273_3m3ku")
+}, {
+"duration": 1.0,
+"texture": ExtResource("274_lywbg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("275_uiwhs")
+}, {
+"duration": 1.0,
+"texture": ExtResource("276_h5irc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("277_c6qc3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("278_7esr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("279_5h5fy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("280_qsomb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("281_kdguu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("282_c2p35")
+}, {
+"duration": 1.0,
+"texture": ExtResource("283_e5vjx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("284_cfd5d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("285_es1or")
+}, {
+"duration": 1.0,
+"texture": ExtResource("286_5yxyk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("287_wtcny")
+}, {
+"duration": 1.0,
+"texture": ExtResource("288_d6vld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("289_rc445")
+}, {
+"duration": 1.0,
+"texture": ExtResource("290_kpv58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("291_rpp1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("292_v8mj8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("293_nv8ik")
+}, {
+"duration": 1.0,
+"texture": ExtResource("294_oi7je")
+}, {
+"duration": 1.0,
+"texture": ExtResource("295_dxiir")
+}, {
+"duration": 1.0,
+"texture": ExtResource("296_3gp5k")
+}, {
+"duration": 1.0,
+"texture": ExtResource("297_d4xeh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("298_uc0cy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("299_gfh6g")
+}, {
+"duration": 1.0,
+"texture": ExtResource("300_utdnk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("301_3cv55")
+}, {
+"duration": 1.0,
+"texture": ExtResource("302_smp5n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("303_6hyk2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("304_as5cr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("305_1tcua")
+}, {
+"duration": 1.0,
+"texture": ExtResource("306_fah0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("307_sjp3o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("308_ymv7v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("309_so2ij")
+}, {
+"duration": 1.0,
+"texture": ExtResource("310_5p8bd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("311_d5j46")
+}, {
+"duration": 1.0,
+"texture": ExtResource("312_52heq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("313_sbrmj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("314_xgtvu")
+}],
+"loop": false,
+"name": &"default",
+"speed": 60.0
+}]
 
 [node name="Character" type="CharacterBody2D"]
 scale = Vector2(0.2, 0.2)
@@ -2289,12 +3494,6 @@ one_shot = true
 zoom = Vector2(2, 2)
 drag_vertical_enabled = true
 
-[node name="LedgeArea" type="Area2D" parent="."]
-position = Vector2(150, -150)
-
-[node name="CollisionShape2D" type="CollisionShape2D" parent="LedgeArea"]
-shape = SubResource("CircleShape2D_rsr2q")
-
 [node name="DropBuffer" type="Timer" parent="."]
 wait_time = 0.23
 one_shot = true
@@ -2307,8 +3506,16 @@ one_shot = true
 wait_time = 0.15
 one_shot = true
 
+[node name="Mercury" type="AnimatedSprite2D" parent="."]
+visible = false
+position = Vector2(0, -255)
+sprite_frames = SubResource("SpriteFrames_wg5ss")
+frame = 299
+frame_progress = 1.0
+
 [connection signal="area_entered" from="CharArea" to="." method="_on_area_2d_area_entered"]
 [connection signal="animation_finished" from="Anims" to="." method="_on_anims_animation_finished"]
 [connection signal="timeout" from="LedgeBuffer" to="." method="_on_ledge_buffer_timeout"]
 [connection signal="timeout" from="DropBuffer" to="." method="_on_drop_buffer_timeout"]
 [connection signal="timeout" from="JumpBuffer" to="." method="_on_jump_buffer_timeout"]
+[connection signal="animation_finished" from="Mercury" to="." method="_on_mercury_animation_finished"]
