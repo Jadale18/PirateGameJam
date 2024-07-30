@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://bn800t6i65hkj"]
+[gd_scene load_steps=4 format=3 uid="uid://bn800t6i65hkj"]
 
 [ext_resource type="Script" path="res://UI/textbox.gd" id="1_jt4ht"]
+[ext_resource type="FontFile" uid="uid://b35ikwltmsrxc" path="res://Assets/Font/CormorantGaramond-Regular.ttf" id="2_yxuyf"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_woj6p"]
 bg_color = Color(0, 0, 0, 1)
@@ -39,6 +40,7 @@ theme_override_constants/margin_bottom = 30
 
 [node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/MarginContainer"]
 layout_mode = 2
+theme_override_fonts/normal_font = ExtResource("2_yxuyf")
 theme_override_font_sizes/normal_font_size = 45
 text = "This is dialogue. Hee Hee Hoo Haa Hee  Hoo Hoo Heauo!"
 visible_characters = 0
