@@ -43,7 +43,7 @@ func _physics_process(delta):
 		$Anims.play("Land")
 		falling = false
 		jumping = false
-	if is_on_floor() and jump_buffer:
+	if is_on_floor() and jump_buffer and not climbing:
 		velocity.y = JUMP_VELOCITY * gravity_multiplier
 		jumping = true
 		falling = true
@@ -85,6 +85,7 @@ func _physics_process(delta):
 		animating = true
 		$Anims.play("Self_Damage")
 		$Mercury.visible = true
+		$Mercury.frame = 0
 		$Mercury.play("default")
 		checking_input = false
 		take_damage()
