@@ -1,6 +1,494 @@
-[gd_scene load_steps=2 format=3 uid="uid://2e53kir1hppi"]
+[gd_scene load_steps=123 format=3 uid="uid://2e53kir1hppi"]
 
 [ext_resource type="Script" path="res://UI/gui.gd" id="1_xin5q"]
+[ext_resource type="Texture2D" uid="uid://c2ousg5em4pyy" path="res://Assets/UI/SaltIdle/Salt Health UI000.png" id="2_51myt"]
+[ext_resource type="Texture2D" uid="uid://d122g77eevkws" path="res://Assets/UI/SaltIdle/Salt Health UI001.png" id="3_a1wl1"]
+[ext_resource type="Texture2D" uid="uid://dsc52luttss5o" path="res://Assets/UI/SaltIdle/Salt Health UI002.png" id="4_n6kig"]
+[ext_resource type="Texture2D" uid="uid://c34twgbq4hepq" path="res://Assets/UI/SaltIdle/Salt Health UI003.png" id="5_5u46o"]
+[ext_resource type="Texture2D" uid="uid://dsv3mbb5hoj8b" path="res://Assets/UI/SaltIdle/Salt Health UI004.png" id="6_kwafg"]
+[ext_resource type="Texture2D" uid="uid://bcqahpel4asdk" path="res://Assets/UI/SaltIdle/Salt Health UI005.png" id="7_i16r6"]
+[ext_resource type="Texture2D" uid="uid://qqi7wp81gowq" path="res://Assets/UI/SaltIdle/Salt Health UI006.png" id="8_fr07i"]
+[ext_resource type="Texture2D" uid="uid://dxpw3b3xe2uh0" path="res://Assets/UI/SaltIdle/Salt Health UI007.png" id="9_4uiqn"]
+[ext_resource type="Texture2D" uid="uid://d31qry0tbsxfq" path="res://Assets/UI/SaltIdle/Salt Health UI008.png" id="10_iqrkx"]
+[ext_resource type="Texture2D" uid="uid://bgcvv4m58qqns" path="res://Assets/UI/SaltIdle/Salt Health UI009.png" id="11_iyqa4"]
+[ext_resource type="Texture2D" uid="uid://bvbls2wsm4ft8" path="res://Assets/UI/SaltIdle/Salt Health UI010.png" id="12_pxck8"]
+[ext_resource type="Texture2D" uid="uid://d2qchmhsltv1e" path="res://Assets/UI/SaltIdle/Salt Health UI011.png" id="13_lt8yy"]
+[ext_resource type="Texture2D" uid="uid://iwrhkyictxn0" path="res://Assets/UI/SaltIdle/Salt Health UI012.png" id="14_2wu57"]
+[ext_resource type="Texture2D" uid="uid://b55avu1aa5pop" path="res://Assets/UI/SaltIdle/Salt Health UI013.png" id="15_t1cmh"]
+[ext_resource type="Texture2D" uid="uid://47gn0s84r1sq" path="res://Assets/UI/SaltIdle/Salt Health UI014.png" id="16_muuut"]
+[ext_resource type="Texture2D" uid="uid://gsh22oq5bn71" path="res://Assets/UI/SaltIdle/Salt Health UI015.png" id="17_3fyok"]
+[ext_resource type="Texture2D" uid="uid://dmtqx4gcrjpj0" path="res://Assets/UI/SaltIdle/Salt Health UI016.png" id="18_5mc4b"]
+[ext_resource type="Texture2D" uid="uid://j3a3ssdgf1su" path="res://Assets/UI/SaltIdle/Salt Health UI017.png" id="19_gsgaa"]
+[ext_resource type="Texture2D" uid="uid://d4ns7l8np17n4" path="res://Assets/UI/SaltIdle/Salt Health UI018.png" id="20_hg155"]
+[ext_resource type="Texture2D" uid="uid://b5qj03xrhmadr" path="res://Assets/UI/SaltIdle/Salt Health UI019.png" id="21_6in0q"]
+[ext_resource type="Texture2D" uid="uid://cnediytkyk6y2" path="res://Assets/UI/SaltIdle/Salt Health UI020.png" id="22_7ulm6"]
+[ext_resource type="Texture2D" uid="uid://f8767ipmp0sq" path="res://Assets/UI/SaltIdle/Salt Health UI021.png" id="23_g31aj"]
+[ext_resource type="Texture2D" uid="uid://bfrt71vbs4roh" path="res://Assets/UI/SaltIdle/Salt Health UI022.png" id="24_ynlnr"]
+[ext_resource type="Texture2D" uid="uid://b76mcj6vh7bdh" path="res://Assets/UI/SaltIdle/Salt Health UI023.png" id="25_rd2ev"]
+[ext_resource type="Texture2D" uid="uid://bhvv0060shn2x" path="res://Assets/UI/SaltIdle/Salt Health UI024.png" id="26_iyktu"]
+[ext_resource type="Texture2D" uid="uid://blbawr67m284s" path="res://Assets/UI/SaltIdle/Salt Health UI025.png" id="27_8lgnx"]
+[ext_resource type="Texture2D" uid="uid://73fh65cro7oq" path="res://Assets/UI/SaltIdle/Salt Health UI026.png" id="28_qjr65"]
+[ext_resource type="Texture2D" uid="uid://dvov4qatdctq7" path="res://Assets/UI/SaltIdle/Salt Health UI027.png" id="29_8lysg"]
+[ext_resource type="Texture2D" uid="uid://dljc6fs8ybtep" path="res://Assets/UI/SaltIdle/Salt Health UI028.png" id="30_rinag"]
+[ext_resource type="Texture2D" uid="uid://b0vnoc67qpomt" path="res://Assets/UI/SaltIdle/Salt Health UI029.png" id="31_rq2b3"]
+[ext_resource type="Texture2D" uid="uid://7x5xdxot2pep" path="res://Assets/UI/SaltIdle/Salt Health UI030.png" id="32_rjcdh"]
+[ext_resource type="Texture2D" uid="uid://pmcgiqaw2kbr" path="res://Assets/UI/SaltIdle/Salt Health UI031.png" id="33_ahdrg"]
+[ext_resource type="Texture2D" uid="uid://bepmvt2lju6wo" path="res://Assets/UI/SaltIdle/Salt Health UI032.png" id="34_jj3m3"]
+[ext_resource type="Texture2D" uid="uid://rto727i2i5yx" path="res://Assets/UI/SaltIdle/Salt Health UI033.png" id="35_3idsp"]
+[ext_resource type="Texture2D" uid="uid://d38mhpfio53iv" path="res://Assets/UI/SaltIdle/Salt Health UI034.png" id="36_7yhtw"]
+[ext_resource type="Texture2D" uid="uid://dab5ymwhqu4oy" path="res://Assets/UI/SaltIdle/Salt Health UI035.png" id="37_ng1jl"]
+[ext_resource type="Texture2D" uid="uid://kpbkle6y1g5h" path="res://Assets/UI/SaltIdle/Salt Health UI036.png" id="38_j5sle"]
+[ext_resource type="Texture2D" uid="uid://5nwuyouvnrkw" path="res://Assets/UI/SaltIdle/Salt Health UI037.png" id="39_tjh4c"]
+[ext_resource type="Texture2D" uid="uid://evwgpdqes0e0" path="res://Assets/UI/SaltIdle/Salt Health UI038.png" id="40_xodn1"]
+[ext_resource type="Texture2D" uid="uid://774rlxk7v3bc" path="res://Assets/UI/SaltIdle/Salt Health UI039.png" id="41_nqjd4"]
+[ext_resource type="Texture2D" uid="uid://d073gk7fteqar" path="res://Assets/UI/SaltIdle/Salt Health UI040.png" id="42_nkcdg"]
+[ext_resource type="Texture2D" uid="uid://dngo6ohhafwgh" path="res://Assets/UI/SaltIdle/Salt Health UI041.png" id="43_c4nj1"]
+[ext_resource type="Texture2D" uid="uid://bxceh53yeunfh" path="res://Assets/UI/SaltIdle/Salt Health UI042.png" id="44_qr0wd"]
+[ext_resource type="Texture2D" uid="uid://cb5fivkr8v4o4" path="res://Assets/UI/SaltIdle/Salt Health UI043.png" id="45_eisag"]
+[ext_resource type="Texture2D" uid="uid://18s4hn3w2onr" path="res://Assets/UI/SaltIdle/Salt Health UI044.png" id="46_t1bub"]
+[ext_resource type="Texture2D" uid="uid://cpt8ndl8eoav5" path="res://Assets/UI/SaltIdle/Salt Health UI045.png" id="47_vn3nb"]
+[ext_resource type="Texture2D" uid="uid://t3t7mw6654tm" path="res://Assets/UI/SaltIdle/Salt Health UI046.png" id="48_6jlcm"]
+[ext_resource type="Texture2D" uid="uid://cbbo403s4g6xc" path="res://Assets/UI/SaltIdle/Salt Health UI047.png" id="49_bx574"]
+[ext_resource type="Texture2D" uid="uid://ccl5ycgn8ehlq" path="res://Assets/UI/SaltIdle/Salt Health UI048.png" id="50_luasf"]
+[ext_resource type="Texture2D" uid="uid://dqx4fndr3m15f" path="res://Assets/UI/SaltIdle/Salt Health UI049.png" id="51_6uvw4"]
+[ext_resource type="Texture2D" uid="uid://ce8ihscf20ejl" path="res://Assets/UI/SaltIdle/Salt Health UI050.png" id="52_6rubj"]
+[ext_resource type="Texture2D" uid="uid://dthsb6f3cohvs" path="res://Assets/UI/SaltIdle/Salt Health UI051.png" id="53_vfjux"]
+[ext_resource type="Texture2D" uid="uid://820omawg40n6" path="res://Assets/UI/SaltIdle/Salt Health UI052.png" id="54_ctoem"]
+[ext_resource type="Texture2D" uid="uid://562kychp2j6m" path="res://Assets/UI/SaltIdle/Salt Health UI053.png" id="55_e5bc7"]
+[ext_resource type="Texture2D" uid="uid://b3iwc83smgtr0" path="res://Assets/UI/SaltIdle/Salt Health UI054.png" id="56_ubwvt"]
+[ext_resource type="Texture2D" uid="uid://cr7okxphsp3gt" path="res://Assets/UI/SaltIdle/Salt Health UI055.png" id="57_1c6ji"]
+[ext_resource type="Texture2D" uid="uid://wngjpbrqi3fn" path="res://Assets/UI/SaltIdle/Salt Health UI056.png" id="58_5me20"]
+[ext_resource type="Texture2D" uid="uid://dn6pvms3mombr" path="res://Assets/UI/SaltIdle/Salt Health UI057.png" id="59_qdd1t"]
+[ext_resource type="Texture2D" uid="uid://1r735xuccnbk" path="res://Assets/UI/SaltIdle/Salt Health UI058.png" id="60_0hfqm"]
+[ext_resource type="Texture2D" uid="uid://cc8cjdd37a5v5" path="res://Assets/UI/SaltIdle/Salt Health UI059.png" id="61_mtyxj"]
+[ext_resource type="Texture2D" uid="uid://dqrrgux24mn1s" path="res://Assets/UI/SaltIdle/Salt Health UI060.png" id="62_f2hxk"]
+[ext_resource type="Texture2D" uid="uid://cu318itgc0db1" path="res://Assets/UI/SaltIdle/Salt Health UI061.png" id="63_df6y6"]
+[ext_resource type="Texture2D" uid="uid://f3cqoweo2m7s" path="res://Assets/UI/SaltIdle/Salt Health UI062.png" id="64_u8b58"]
+[ext_resource type="Texture2D" uid="uid://rjd4h44n2ndq" path="res://Assets/UI/SaltIdle/Salt Health UI063.png" id="65_r3u7m"]
+[ext_resource type="Texture2D" uid="uid://c2obifskjttg7" path="res://Assets/UI/SaltIdle/Salt Health UI064.png" id="66_rqwxb"]
+[ext_resource type="Texture2D" uid="uid://bdf68ytvhdi7b" path="res://Assets/UI/SaltIdle/Salt Health UI065.png" id="67_xr83y"]
+[ext_resource type="Texture2D" uid="uid://dirxhnnmdr6mj" path="res://Assets/UI/SaltIdle/Salt Health UI066.png" id="68_m350l"]
+[ext_resource type="Texture2D" uid="uid://1skm1g1dyu1t" path="res://Assets/UI/SaltIdle/Salt Health UI067.png" id="69_eeb4c"]
+[ext_resource type="Texture2D" uid="uid://dohytrjjwy04u" path="res://Assets/UI/SaltIdle/Salt Health UI068.png" id="70_ydeev"]
+[ext_resource type="Texture2D" uid="uid://18cb873rmu1s" path="res://Assets/UI/SaltIdle/Salt Health UI069.png" id="71_t7fy1"]
+[ext_resource type="Texture2D" uid="uid://bb26hq4fdvyc1" path="res://Assets/UI/SaltIdle/Salt Health UI070.png" id="72_51ck8"]
+[ext_resource type="Texture2D" uid="uid://cxa3vqudd8sua" path="res://Assets/UI/SaltIdle/Salt Health UI071.png" id="73_ujw7l"]
+[ext_resource type="Texture2D" uid="uid://brjk7eutqxaxs" path="res://Assets/UI/SaltIdle/Salt Health UI072.png" id="74_3icsa"]
+[ext_resource type="Texture2D" uid="uid://cwhf1i78ovh1c" path="res://Assets/UI/SaltIdle/Salt Health UI073.png" id="75_vdu3a"]
+[ext_resource type="Texture2D" uid="uid://87gderme1ngk" path="res://Assets/UI/SaltIdle/Salt Health UI074.png" id="76_3hkjc"]
+[ext_resource type="Texture2D" uid="uid://b3j8erb85rsnv" path="res://Assets/UI/SaltIdle/Salt Health UI075.png" id="77_sp4na"]
+[ext_resource type="Texture2D" uid="uid://bj5i8535q51yx" path="res://Assets/UI/SaltIdle/Salt Health UI076.png" id="78_gokle"]
+[ext_resource type="Texture2D" uid="uid://c0dq0ly4ljm7c" path="res://Assets/UI/SaltIdle/Salt Health UI077.png" id="79_miwfw"]
+[ext_resource type="Texture2D" uid="uid://cmh6cmjdn7kiq" path="res://Assets/UI/SaltIdle/Salt Health UI078.png" id="80_j8btt"]
+[ext_resource type="Texture2D" uid="uid://cdst1h84g6ly5" path="res://Assets/UI/SaltIdle/Salt Health UI079.png" id="81_a1vo2"]
+[ext_resource type="Texture2D" uid="uid://cav1q80d67rnx" path="res://Assets/UI/SaltIdle/Salt Health UI080.png" id="82_8gj3b"]
+[ext_resource type="Texture2D" uid="uid://b8yw2256licd0" path="res://Assets/UI/SaltIdle/Salt Health UI081.png" id="83_8t6b4"]
+[ext_resource type="Texture2D" uid="uid://bhond8nu8h38e" path="res://Assets/UI/SaltIdle/Salt Health UI082.png" id="84_io3rt"]
+[ext_resource type="Texture2D" uid="uid://bmhevahup180r" path="res://Assets/UI/SaltIdle/Salt Health UI083.png" id="85_jbl8d"]
+[ext_resource type="Texture2D" uid="uid://db5pc7m6rn416" path="res://Assets/UI/SaltIdle/Salt Health UI084.png" id="86_dlcn5"]
+[ext_resource type="Texture2D" uid="uid://dlxhdaso5tm1b" path="res://Assets/UI/SaltIdle/Salt Health UI085.png" id="87_cmfca"]
+[ext_resource type="Texture2D" uid="uid://d11mucjcvvl76" path="res://Assets/UI/SaltIdle/Salt Health UI086.png" id="88_d3xq6"]
+[ext_resource type="Texture2D" uid="uid://cph3ooy50m086" path="res://Assets/UI/SaltIdle/Salt Health UI087.png" id="89_m811n"]
+[ext_resource type="Texture2D" uid="uid://bqswoj24pgxim" path="res://Assets/UI/SaltIdle/Salt Health UI088.png" id="90_dv8pp"]
+[ext_resource type="Texture2D" uid="uid://di7gfwnryeymd" path="res://Assets/UI/SaltIdle/Salt Health UI089.png" id="91_70jun"]
+[ext_resource type="Texture2D" uid="uid://bj1d7iuo42poj" path="res://Assets/UI/SaltIdle/Salt Health UI090.png" id="92_fa8nh"]
+[ext_resource type="Texture2D" uid="uid://qhyudsuaxg6r" path="res://Assets/UI/SaltIdle/Salt Health UI091.png" id="93_rcduf"]
+[ext_resource type="Texture2D" uid="uid://ckglvtfpv1v7f" path="res://Assets/UI/SaltIdle/Salt Health UI092.png" id="94_gnej0"]
+[ext_resource type="Texture2D" uid="uid://b2rxyrjq5bfyi" path="res://Assets/UI/SaltIdle/Salt Health UI093.png" id="95_wlg1t"]
+[ext_resource type="Texture2D" uid="uid://d2dhqnbcwmya8" path="res://Assets/UI/SaltIdle/Salt Health UI094.png" id="96_ywojv"]
+[ext_resource type="Texture2D" uid="uid://cp6v6go8f2ljc" path="res://Assets/UI/SaltIdle/Salt Health UI095.png" id="97_n16ld"]
+[ext_resource type="Texture2D" uid="uid://svb13xvm8jup" path="res://Assets/UI/SaltIdle/Salt Health UI096.png" id="98_1m5pf"]
+[ext_resource type="Texture2D" uid="uid://xvoboiv63vyb" path="res://Assets/UI/SaltIdle/Salt Health UI097.png" id="99_l68of"]
+[ext_resource type="Texture2D" uid="uid://8fyu2lfsc3qu" path="res://Assets/UI/SaltIdle/Salt Health UI098.png" id="100_rm3hg"]
+[ext_resource type="Texture2D" uid="uid://byvj466sr5omr" path="res://Assets/UI/SaltIdle/Salt Health UI099.png" id="101_scm1v"]
+[ext_resource type="Texture2D" uid="uid://bta6j0qvuf35o" path="res://Assets/UI/SaltIdle/Salt Health UI100.png" id="102_pc4um"]
+[ext_resource type="Texture2D" uid="uid://c7lllknq84rit" path="res://Assets/UI/SaltIdle/Salt Health UI101.png" id="103_v88ja"]
+[ext_resource type="Texture2D" uid="uid://cqv8f2wdyged6" path="res://Assets/UI/SaltIdle/Salt Health UI102.png" id="104_k72lm"]
+[ext_resource type="Texture2D" uid="uid://dred4d7hsr3jd" path="res://Assets/UI/SaltIdle/Salt Health UI103.png" id="105_keqrg"]
+[ext_resource type="Texture2D" uid="uid://dogcmbse136ny" path="res://Assets/UI/SaltIdle/Salt Health UI104.png" id="106_vvwwg"]
+[ext_resource type="Texture2D" uid="uid://bgwhja2yaxn6v" path="res://Assets/UI/SaltIdle/Salt Health UI105.png" id="107_nrkvq"]
+[ext_resource type="Texture2D" uid="uid://bjcl1k3wnauuj" path="res://Assets/UI/SaltIdle/Salt Health UI106.png" id="108_ecq37"]
+[ext_resource type="Texture2D" uid="uid://4ohiemfx3fxu" path="res://Assets/UI/SaltIdle/Salt Health UI107.png" id="109_bpfpg"]
+[ext_resource type="Texture2D" uid="uid://yftq6fqj0l47" path="res://Assets/UI/SaltIdle/Salt Health UI108.png" id="110_apumv"]
+[ext_resource type="Texture2D" uid="uid://doqphvpyv1liq" path="res://Assets/UI/SaltIdle/Salt Health UI109.png" id="111_e3ag2"]
+[ext_resource type="Texture2D" uid="uid://blwwbsnbbl7nu" path="res://Assets/UI/SaltIdle/Salt Health UI110.png" id="112_eoj0h"]
+[ext_resource type="Texture2D" uid="uid://blf2noe5dktwt" path="res://Assets/UI/SaltIdle/Salt Health UI111.png" id="113_3yt4f"]
+[ext_resource type="Texture2D" uid="uid://ch0w4e07j03sk" path="res://Assets/UI/SaltIdle/Salt Health UI112.png" id="114_a2duj"]
+[ext_resource type="Texture2D" uid="uid://d2ju7luijnpa2" path="res://Assets/UI/SaltIdle/Salt Health UI113.png" id="115_sgthn"]
+[ext_resource type="Texture2D" uid="uid://n7bvp8dpeumj" path="res://Assets/UI/SaltIdle/Salt Health UI114.png" id="116_q6umw"]
+[ext_resource type="Texture2D" uid="uid://4c8d66s43a2v" path="res://Assets/UI/SaltIdle/Salt Health UI115.png" id="117_bgbr4"]
+[ext_resource type="Texture2D" uid="uid://dqc8ot7j0fwcj" path="res://Assets/UI/SaltIdle/Salt Health UI116.png" id="118_75dg0"]
+[ext_resource type="Texture2D" uid="uid://cuxj3plaesjjm" path="res://Assets/UI/SaltIdle/Salt Health UI117.png" id="119_dd3gb"]
+[ext_resource type="Texture2D" uid="uid://66des5vibxi8" path="res://Assets/UI/SaltIdle/Salt Health UI118.png" id="120_2hmff"]
+[ext_resource type="Texture2D" uid="uid://dp16grh0tj8tt" path="res://Assets/UI/SaltIdle/Salt Health UI119.png" id="121_ia201"]
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_ds6hc"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": ExtResource("2_51myt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("3_a1wl1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("4_n6kig")
+}, {
+"duration": 1.0,
+"texture": ExtResource("5_5u46o")
+}, {
+"duration": 1.0,
+"texture": ExtResource("6_kwafg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("7_i16r6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("8_fr07i")
+}, {
+"duration": 1.0,
+"texture": ExtResource("9_4uiqn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("10_iqrkx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("11_iyqa4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("12_pxck8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("13_lt8yy")
+}, {
+"duration": 1.0,
+"texture": ExtResource("14_2wu57")
+}, {
+"duration": 1.0,
+"texture": ExtResource("15_t1cmh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("16_muuut")
+}, {
+"duration": 1.0,
+"texture": ExtResource("17_3fyok")
+}, {
+"duration": 1.0,
+"texture": ExtResource("18_5mc4b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("19_gsgaa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("20_hg155")
+}, {
+"duration": 1.0,
+"texture": ExtResource("21_6in0q")
+}, {
+"duration": 1.0,
+"texture": ExtResource("22_7ulm6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("23_g31aj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("24_ynlnr")
+}, {
+"duration": 1.0,
+"texture": ExtResource("25_rd2ev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("26_iyktu")
+}, {
+"duration": 1.0,
+"texture": ExtResource("27_8lgnx")
+}, {
+"duration": 1.0,
+"texture": ExtResource("28_qjr65")
+}, {
+"duration": 1.0,
+"texture": ExtResource("29_8lysg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("30_rinag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("31_rq2b3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("32_rjcdh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("33_ahdrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("34_jj3m3")
+}, {
+"duration": 1.0,
+"texture": ExtResource("35_3idsp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("36_7yhtw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("37_ng1jl")
+}, {
+"duration": 1.0,
+"texture": ExtResource("38_j5sle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("39_tjh4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("40_xodn1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("41_nqjd4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("42_nkcdg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("43_c4nj1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("44_qr0wd")
+}, {
+"duration": 1.0,
+"texture": ExtResource("45_eisag")
+}, {
+"duration": 1.0,
+"texture": ExtResource("46_t1bub")
+}, {
+"duration": 1.0,
+"texture": ExtResource("47_vn3nb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("48_6jlcm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("49_bx574")
+}, {
+"duration": 1.0,
+"texture": ExtResource("50_luasf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("51_6uvw4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("52_6rubj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("53_vfjux")
+}, {
+"duration": 1.0,
+"texture": ExtResource("54_ctoem")
+}, {
+"duration": 1.0,
+"texture": ExtResource("55_e5bc7")
+}, {
+"duration": 1.0,
+"texture": ExtResource("56_ubwvt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("57_1c6ji")
+}, {
+"duration": 1.0,
+"texture": ExtResource("58_5me20")
+}, {
+"duration": 1.0,
+"texture": ExtResource("59_qdd1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("60_0hfqm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("61_mtyxj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("62_f2hxk")
+}, {
+"duration": 1.0,
+"texture": ExtResource("63_df6y6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("64_u8b58")
+}, {
+"duration": 1.0,
+"texture": ExtResource("65_r3u7m")
+}, {
+"duration": 1.0,
+"texture": ExtResource("66_rqwxb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("67_xr83y")
+}, {
+"duration": 1.0,
+"texture": ExtResource("68_m350l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("69_eeb4c")
+}, {
+"duration": 1.0,
+"texture": ExtResource("70_ydeev")
+}, {
+"duration": 1.0,
+"texture": ExtResource("71_t7fy1")
+}, {
+"duration": 1.0,
+"texture": ExtResource("72_51ck8")
+}, {
+"duration": 1.0,
+"texture": ExtResource("73_ujw7l")
+}, {
+"duration": 1.0,
+"texture": ExtResource("74_3icsa")
+}, {
+"duration": 1.0,
+"texture": ExtResource("75_vdu3a")
+}, {
+"duration": 1.0,
+"texture": ExtResource("76_3hkjc")
+}, {
+"duration": 1.0,
+"texture": ExtResource("77_sp4na")
+}, {
+"duration": 1.0,
+"texture": ExtResource("78_gokle")
+}, {
+"duration": 1.0,
+"texture": ExtResource("79_miwfw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("80_j8btt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("81_a1vo2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("82_8gj3b")
+}, {
+"duration": 1.0,
+"texture": ExtResource("83_8t6b4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("84_io3rt")
+}, {
+"duration": 1.0,
+"texture": ExtResource("85_jbl8d")
+}, {
+"duration": 1.0,
+"texture": ExtResource("86_dlcn5")
+}, {
+"duration": 1.0,
+"texture": ExtResource("87_cmfca")
+}, {
+"duration": 1.0,
+"texture": ExtResource("88_d3xq6")
+}, {
+"duration": 1.0,
+"texture": ExtResource("89_m811n")
+}, {
+"duration": 1.0,
+"texture": ExtResource("90_dv8pp")
+}, {
+"duration": 1.0,
+"texture": ExtResource("91_70jun")
+}, {
+"duration": 1.0,
+"texture": ExtResource("92_fa8nh")
+}, {
+"duration": 1.0,
+"texture": ExtResource("93_rcduf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("94_gnej0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("95_wlg1t")
+}, {
+"duration": 1.0,
+"texture": ExtResource("96_ywojv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("97_n16ld")
+}, {
+"duration": 1.0,
+"texture": ExtResource("98_1m5pf")
+}, {
+"duration": 1.0,
+"texture": ExtResource("99_l68of")
+}, {
+"duration": 1.0,
+"texture": ExtResource("100_rm3hg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("101_scm1v")
+}, {
+"duration": 1.0,
+"texture": ExtResource("102_pc4um")
+}, {
+"duration": 1.0,
+"texture": ExtResource("103_v88ja")
+}, {
+"duration": 1.0,
+"texture": ExtResource("104_k72lm")
+}, {
+"duration": 1.0,
+"texture": ExtResource("105_keqrg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("106_vvwwg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("107_nrkvq")
+}, {
+"duration": 1.0,
+"texture": ExtResource("108_ecq37")
+}, {
+"duration": 1.0,
+"texture": ExtResource("109_bpfpg")
+}, {
+"duration": 1.0,
+"texture": ExtResource("110_apumv")
+}, {
+"duration": 1.0,
+"texture": ExtResource("111_e3ag2")
+}, {
+"duration": 1.0,
+"texture": ExtResource("112_eoj0h")
+}, {
+"duration": 1.0,
+"texture": ExtResource("113_3yt4f")
+}, {
+"duration": 1.0,
+"texture": ExtResource("114_a2duj")
+}, {
+"duration": 1.0,
+"texture": ExtResource("115_sgthn")
+}, {
+"duration": 1.0,
+"texture": ExtResource("116_q6umw")
+}, {
+"duration": 1.0,
+"texture": ExtResource("117_bgbr4")
+}, {
+"duration": 1.0,
+"texture": ExtResource("118_75dg0")
+}, {
+"duration": 1.0,
+"texture": ExtResource("119_dd3gb")
+}, {
+"duration": 1.0,
+"texture": ExtResource("120_2hmff")
+}, {
+"duration": 1.0,
+"texture": ExtResource("121_ia201")
+}],
+"loop": true,
+"name": &"Idle",
+"speed": 60.0
+}]
 
 [node name="GUI" type="Node2D"]
 script = ExtResource("1_xin5q")
@@ -8,62 +496,70 @@ script = ExtResource("1_xin5q")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
-offset_right = 92.0
+offset_right = 40.0
 offset_bottom = 40.0
 
-[node name="ColorRect" type="ColorRect" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 2.08165e-12)
+[node name="Control" type="Control" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 2.08165e-12)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="ColorRect2" type="ColorRect" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 2.08165e-12)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/HBoxContainer/Control"]
+position = Vector2(49.2, 49.2)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_ds6hc")
+animation = &"Idle"
+frame_progress = 0.192183
+
+[node name="Control2" type="Control" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 2.08165e-12)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="ColorRect3" type="ColorRect" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 2.08165e-12)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/HBoxContainer/Control2"]
+position = Vector2(49.2, 49.2)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_ds6hc")
+animation = &"Idle"
+frame_progress = 0.882325
+
+[node name="Control3" type="Control" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 2.08165e-12)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="ColorRect4" type="ColorRect" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 2.08165e-12)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/HBoxContainer/Control3"]
+position = Vector2(49.2, 49.2)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_ds6hc")
+animation = &"Idle"
+frame_progress = 0.882325
+
+[node name="Control4" type="Control" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 2.08165e-12)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="ColorRect5" type="ColorRect" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 2.08165e-12)
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/HBoxContainer/Control4"]
+position = Vector2(49.2, 49.2)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_ds6hc")
+animation = &"Idle"
+frame_progress = 0.882325
+
+[node name="Control5" type="Control" parent="CanvasLayer/HBoxContainer"]
+custom_minimum_size = Vector2(100, 2.08165e-12)
 layout_mode = 2
+size_flags_horizontal = 0
+size_flags_vertical = 0
 
-[node name="ColorRect6" type="ColorRect" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 2.08165e-12)
-layout_mode = 2
-
-[node name="ColorRect7" type="ColorRect" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 2.08165e-12)
-layout_mode = 2
-
-[node name="ColorRect8" type="ColorRect" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 2.08165e-12)
-layout_mode = 2
-
-[node name="ColorRect9" type="ColorRect" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 2.08165e-12)
-layout_mode = 2
-
-[node name="ColorRect10" type="ColorRect" parent="CanvasLayer/HBoxContainer"]
-custom_minimum_size = Vector2(20, 2.08165e-12)
-layout_mode = 2
-
-[node name="Darkness" type="ColorRect" parent="CanvasLayer"]
-visible = false
-custom_minimum_size = Vector2(2.08165e-12, 590)
-anchors_preset = 12
-anchor_top = 1.0
-anchor_right = 1.0
-anchor_bottom = 1.0
-grow_horizontal = 2
-grow_vertical = 0
-color = Color(0, 0, 0, 0.552941)
-
-[node name="LightTimer" type="Timer" parent="."]
-wait_time = 3.0
-one_shot = true
-
-[connection signal="timeout" from="LightTimer" to="." method="_on_light_timer_timeout"]
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="CanvasLayer/HBoxContainer/Control5"]
+position = Vector2(49.2, 49.2)
+scale = Vector2(0.4, 0.4)
+sprite_frames = SubResource("SpriteFrames_ds6hc")
+animation = &"Idle"
+frame_progress = 0.882325
