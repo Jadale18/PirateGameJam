@@ -9,14 +9,17 @@ script = ExtResource("1_xin5q")
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="HBoxContainer" type="HBoxContainer" parent="CanvasLayer"]
+process_mode = 1
 offset_right = 40.0
 offset_bottom = 40.0
+mouse_filter = 2
 
 [node name="Control" type="Control" parent="CanvasLayer/HBoxContainer"]
 custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
@@ -35,6 +38,7 @@ custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control2" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
@@ -53,6 +57,7 @@ custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control3" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
@@ -71,6 +76,7 @@ custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control4" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
@@ -90,6 +96,7 @@ custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control5" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
@@ -109,6 +116,7 @@ custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control6" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
@@ -128,6 +136,7 @@ custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control7" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
@@ -147,6 +156,7 @@ custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control8" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
@@ -166,6 +176,7 @@ custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control9" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
@@ -185,6 +196,7 @@ custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control10" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
@@ -204,6 +216,7 @@ custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control11" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
@@ -223,6 +236,7 @@ custom_minimum_size = Vector2(50, 2.08165e-12)
 layout_mode = 2
 size_flags_horizontal = 0
 size_flags_vertical = 0
+mouse_filter = 2
 
 [node name="HealthAnims2" parent="CanvasLayer/HBoxContainer/Control12" instance=ExtResource("2_vfsam")]
 position = Vector2(49.2, 49.2)
