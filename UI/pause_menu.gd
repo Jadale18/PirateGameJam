@@ -1,22 +1,16 @@
 extends Control
 
-var pausable = false
+var pausable = true
+var paused = false
 
 func _process(delta):
-	if Input.is_action_just_pressed("Pause") and pausable:
+	if Input.is_action_just_pressed("Pause") and pausable and not paused:
 		visible = true
 		get_tree().paused = true
 		pausable = false
-
-func _on_resume_pressed():
+		paused = true
+	elif Input.is_action_just_pressed("Pause") and paused:
 		visible = false
 		get_tree().paused = false
 		pausable = true
-
-
-func _on_settings_pressed():
-	print('settings')
-
-
-func _on_quit_pressed():
-	print('quit to menu')
+		paused = false
