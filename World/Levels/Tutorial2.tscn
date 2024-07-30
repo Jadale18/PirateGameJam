@@ -154,17 +154,29 @@ position = Vector2(1440, -356)
 [node name="Spike3" parent="NormalSpikes/TallSpike7" instance=ExtResource("5_2me3p")]
 position = Vector2(0, -24)
 
-[node name="Portal" parent="." instance=ExtResource("5_ottq7")]
+[node name="ToTutorial1" parent="." instance=ExtResource("5_ottq7")]
 position = Vector2(20, -195)
 
-[node name="Portal" parent="Portal" index="0"]
+[node name="Portal" parent="ToTutorial1" index="0"]
 portal_exit = "res://World/Levels/Tutorial1.tscn"
-portal_spawn = Vector2(1479, -203)
+portal_spawn = Vector2(1479, -150)
+
+[node name="CollisionShape2D" parent="ToTutorial1/Portal" index="0"]
+position = Vector2(11, 0)
+
+[node name="ToTowerBase" parent="." instance=ExtResource("5_ottq7")]
+position = Vector2(1516, -194)
+
+[node name="Portal" parent="ToTowerBase" index="0"]
+position = Vector2(-6, -1)
+portal_exit = "res://World/Levels/TowerBase.tscn"
+portal_spawn = Vector2(62, -150)
 
 [node name="Character" parent="." instance=ExtResource("6_wb3k2")]
 position = Vector2(909, -1028)
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(62, -195)
+position = Vector2(1472, -195)
 
-[editable path="Portal"]
+[editable path="ToTutorial1"]
+[editable path="ToTowerBase"]

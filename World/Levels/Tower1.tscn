@@ -1,4 +1,4 @@
-[gd_scene load_steps=12 format=3 uid="uid://bbpsd4td5sxe8"]
+[gd_scene load_steps=14 format=3 uid="uid://bbpsd4td5sxe8"]
 
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_cof8m"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_qjyqc"]
@@ -11,6 +11,8 @@
 [ext_resource type="PackedScene" uid="uid://r5l1istgki27" path="res://World/Interactables/WaterTablet.tscn" id="9_5s8ti"]
 [ext_resource type="PackedScene" uid="uid://cdf6d7tfuepyb" path="res://World/Interactables/FireTablet.tscn" id="10_q8rn0"]
 [ext_resource type="PackedScene" uid="uid://dajn7co2bu6e2" path="res://World/Interactables/CrossTablet.tscn" id="11_hkgwy"]
+[ext_resource type="PackedScene" uid="uid://w3eb10mo07sc" path="res://World/Interactables/Portals.tscn" id="12_jqbt2"]
+[ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="13_i1nfo"]
 
 [node name="Tower1" type="Node2D"]
 
@@ -52,17 +54,52 @@ layer_0/tile_data = PackedInt32Array(-262109, 131082, 1, -262110, 65546, 1, -262
 [node name="HiddenTiles" parent="." instance=ExtResource("1_qjyqc")]
 layer_0/tile_data = PackedInt32Array(-262136, 65542, 2, -327672, 131078, 2, -393208, 131078, 2, -458744, 131078, 2, -524280, 131078, 2, -589816, 131078, 2, -655352, 131078, 2, -720888, 131078, 2, -786424, 131078, 2, -851960, 131078, 2, -917496, 131078, 2, -262137, 65542, 2, -327673, 65542, 2, -393209, 65542, 2, -458745, 65542, 2, -524281, 65542, 2, -589817, 65542, 2, -655353, 65542, 2, -720889, 65542, 2, -786425, 65542, 2, -851961, 65542, 2, -917497, 65542, 2, -262138, 65542, 2, -327674, 65542, 2, -393210, 65542, 2, -458746, 65542, 2, -524282, 65542, 2, -589818, 65542, 2, -655354, 65542, 2, -720890, 65542, 2, -786426, 65542, 2, -851962, 65542, 2, -917498, 65542, 2, -262139, 65542, 2, -327675, 65542, 2, -393211, 65542, 2, -458747, 65542, 2, -524283, 65542, 2, -589819, 65542, 2, -655355, 65542, 2, -720891, 65542, 2, -786427, 65542, 2, -851963, 65542, 2, -917499, 65542, 2, -262140, 65542, 2, -327676, 65542, 2, -393212, 65542, 2, -458748, 65542, 2, -524284, 65542, 2, -589820, 65542, 2, -655356, 65542, 2, -720892, 65542, 2, -786428, 65542, 2, -851964, 65542, 2, -917500, 65542, 2, -262141, 65542, 2, -327677, 65542, 2, -393213, 65542, 2, -458749, 65542, 2, -524285, 65542, 2, -589821, 65542, 2, -655357, 65542, 2, -720893, 65542, 2, -786429, 65542, 2, -851965, 65542, 2, -917501, 65542, 2, -262142, 65542, 2, -327678, 65542, 2, -393214, 65542, 2, -458750, 65542, 2, -524286, 65542, 2, -589822, 65542, 2, -655358, 65542, 2, -720894, 65542, 2, -786430, 65542, 2, -851966, 65542, 2, -917502, 65542, 2, -196601, 65542, 2, -983033, 65542, 2, -196602, 65542, 2, -983034, 65542, 2, -196603, 65542, 2, -983035, 65542, 2, -196604, 65542, 2, -983036, 65542, 2, -196605, 65542, 2, -983037, 65542, 2, -196606, 65542, 2, -983038, 65542, 2, -131064, 65542, 2, -196600, 65542, 2, -131065, 65542, 2, -131066, 65542, 2, -131067, 65542, 2)
 
-[node name="EarthTablet" parent="." instance=ExtResource("8_3vmur")]
+[node name="Tablets" type="Node2D" parent="."]
+
+[node name="EarthTablet" parent="Tablets" instance=ExtResource("8_3vmur")]
 position = Vector2(512, -664)
 
-[node name="AirTablet" parent="." instance=ExtResource("7_3urin")]
+[node name="AirTablet" parent="Tablets" instance=ExtResource("7_3urin")]
 position = Vector2(1076, -664)
 
-[node name="WaterTablet" parent="." instance=ExtResource("9_5s8ti")]
+[node name="WaterTablet" parent="Tablets" instance=ExtResource("9_5s8ti")]
 position = Vector2(794, -356)
 
-[node name="FireTablet" parent="." instance=ExtResource("10_q8rn0")]
+[node name="FireTablet" parent="Tablets" instance=ExtResource("10_q8rn0")]
 position = Vector2(794, -972)
 
-[node name="CrossTablet" parent="." instance=ExtResource("11_hkgwy")]
+[node name="CrossTablet" parent="Tablets" instance=ExtResource("11_hkgwy")]
 position = Vector2(794, -664)
+
+[node name="ToTowerBase" parent="." instance=ExtResource("12_jqbt2")]
+position = Vector2(778, -37)
+rotation = 1.5708
+
+[node name="Portal" parent="ToTowerBase" index="0"]
+portal_exit = "res://World/Levels/TowerBase.tscn"
+portal_spawn = Vector2(792, -1141)
+
+[node name="CollisionShape2D" parent="ToTowerBase/Portal" index="0"]
+position = Vector2(21, -15)
+
+[node name="ToTower3" parent="." instance=ExtResource("12_jqbt2")]
+position = Vector2(1488, -1054)
+
+[node name="CollisionShape2D" parent="ToTower3/Portal" index="0"]
+position = Vector2(21, -15)
+
+[node name="ToTower2" parent="." instance=ExtResource("12_jqbt2")]
+position = Vector2(8, -1061)
+
+[node name="CollisionShape2D" parent="ToTower2/Portal" index="0"]
+position = Vector2(21, -15)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(790, -183)
+
+[node name="Character" parent="." instance=ExtResource("13_i1nfo")]
+position = Vector2(796, -760)
+
+[editable path="ToTowerBase"]
+[editable path="ToTower3"]
+[editable path="ToTower2"]
