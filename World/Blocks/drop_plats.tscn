@@ -1,7 +1,0 @@
-[gd_scene load_steps=2 format=3 uid="uid://uuapv72uja2g"]
-
-[ext_resource type="Texture2D" uid="uid://bdxec4vhx36ou" path="res://Assets/World/Blocks/Drop_platform_tower.png" id="1_u2r72"]
-
-[node name="DropPlatformTower" type="Sprite2D"]
-scale = Vector2(0.1, 0.1)
-texture = ExtResource("1_u2r72")

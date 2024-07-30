@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://bbpsd4td5sxe8"]
+[gd_scene load_steps=12 format=3 uid="uid://bbpsd4td5sxe8"]
 
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_cof8m"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_qjyqc"]
@@ -6,7 +6,6 @@
 [ext_resource type="Texture2D" uid="uid://ctqb0woe63nn7" path="res://Assets/World/BG_Elements/on_orb.png" id="3_15s2x"]
 [ext_resource type="Texture2D" uid="uid://cerdun4kn4flj" path="res://Assets/World/BG_Elements/Tower_Rooms_1.png" id="3_memw5"]
 [ext_resource type="Texture2D" uid="uid://ckhdritjrrgi3" path="res://Assets/World/References/tower_room_1.png" id="4_itfgp"]
-[ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="6_fus0x"]
 [ext_resource type="PackedScene" uid="uid://durlrlr8ban2k" path="res://World/Interactables/AirTablet.tscn" id="7_3urin"]
 [ext_resource type="PackedScene" uid="uid://bs4mv0s10pmmr" path="res://World/Interactables/EarthTablet.tscn" id="8_3vmur"]
 [ext_resource type="PackedScene" uid="uid://r5l1istgki27" path="res://World/Interactables/WaterTablet.tscn" id="9_5s8ti"]
@@ -67,6 +66,3 @@ position = Vector2(794, -972)
 
 [node name="CrossTablet" parent="." instance=ExtResource("11_hkgwy")]
 position = Vector2(794, -664)
-
-[node name="Character" parent="." instance=ExtResource("6_fus0x")]
-position = Vector2(522, -165)

@@ -1,9 +1,11 @@
-[gd_scene load_steps=5 format=3 uid="uid://p4r7w4t7qewf"]
+[gd_scene load_steps=7 format=3 uid="uid://p4r7w4t7qewf"]
 
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_b4sdv"]
 [ext_resource type="Texture2D" uid="uid://dshwe4rjie0lb" path="res://Assets/World/BG_Elements/V3.png" id="1_itlh5"]
 [ext_resource type="PackedScene" uid="uid://b1k4m2xf10lkj" path="res://World/Hazards/spike.tscn" id="2_v60ti"]
 [ext_resource type="PackedScene" uid="uid://b7q2dumunkj15" path="res://World/Hazards/tall_spike.tscn" id="5_2me3p"]
+[ext_resource type="PackedScene" uid="uid://w3eb10mo07sc" path="res://World/Interactables/Portals.tscn" id="5_ottq7"]
+[ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="6_wb3k2"]
 
 [node name="Node2D" type="Node2D"]
 
@@ -151,3 +153,15 @@ position = Vector2(1440, -356)
 
 [node name="Spike3" parent="NormalSpikes/TallSpike7" instance=ExtResource("5_2me3p")]
 position = Vector2(0, -24)
+
+[node name="Portal" parent="." instance=ExtResource("5_ottq7")]
+position = Vector2(20, -195)
+
+[node name="Portal" parent="Portal" index="0"]
+portal_exit = "res://World/Levels/Tutorial1.tscn"
+portal_spawn = Vector2(1479, -203)
+
+[node name="Character" parent="." instance=ExtResource("6_wb3k2")]
+position = Vector2(909, -1028)
+
+[editable path="Portal"]

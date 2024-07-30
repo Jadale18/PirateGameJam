@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://w3eb10mo07sc"]
+
+[ext_resource type="Script" path="res://World/Interactables/Portal.gd" id="1_tpx0u"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_h61ox"]
+size = Vector2(38, 225)
+
+[node name="Portal" type="Area2D"]
+
+[node name="Portal" type="Area2D" parent="."]
+script = ExtResource("1_tpx0u")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Portal"]
+shape = SubResource("RectangleShape2D_h61ox")
+
+[connection signal="body_entered" from="Portal" to="Portal" method="_on_body_entered"]

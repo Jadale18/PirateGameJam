@@ -25,6 +25,8 @@ var jump_buffer = false
 
 func _ready():
 	$Anims.play("Idle")
+	add_to_group("Player")
+	position = Global.character_position
 
 func _physics_process(delta):
 	if $Anims.animation != "Jump":
