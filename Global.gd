@@ -21,3 +21,4 @@ func damage():
 
 func obtain_health():
 	max_life += 1
+	current_life_total = max_life

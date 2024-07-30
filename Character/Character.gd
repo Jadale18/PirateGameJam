@@ -122,7 +122,8 @@ func _physics_process(delta):
 
 func take_damage():
 	Global.damage()
-	current_life -= 1
+	if current_life != Global.current_life_total:
+		current_life = Global.current_life_total
 
 func ledge_detect():
 	hit_point_1 = $LedgeChecker.get_collision_point()
