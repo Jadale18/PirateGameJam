@@ -1,6 +1,6 @@
 extends Node
 
-var character_position
+var character_position = Vector2(89,-150)
 var current_animation
 var facing
 var current_level = 1
