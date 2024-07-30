@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cdf6d7tfuepyb"]
+
+[ext_resource type="Texture2D" uid="uid://c6mbschhppkn1" path="res://Assets/World/Interactables/Fire_Tablet_Interactable.png" id="1_yv55a"]
+
+[node name="FireTablet" type="Node2D"]
+
+[node name="FireTabletInteractable" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_yv55a")

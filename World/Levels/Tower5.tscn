@@ -1,9 +1,10 @@
-[gd_scene load_steps=7 format=3 uid="uid://c4y3exotpailc"]
+[gd_scene load_steps=8 format=3 uid="uid://c4y3exotpailc"]
 
 [ext_resource type="Texture2D" uid="uid://canwbbdn0s1o6" path="res://Assets/World/References/8_Tower_Room_5.png" id="1_4tspy"]
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_06njt"]
 [ext_resource type="Texture2D" uid="uid://y6eirtgaypgy" path="res://Assets/World/BG_Elements/off_orb.png" id="2_cvd4g"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="2_kh0is"]
+[ext_resource type="Texture2D" uid="uid://ctqb0woe63nn7" path="res://Assets/World/BG_Elements/on_orb.png" id="3_00u7j"]
 [ext_resource type="Texture2D" uid="uid://8ebvanolvh0" path="res://Assets/World/BG_Elements/Tower_Rooms_5.png" id="3_k7gje"]
 [ext_resource type="PackedScene" uid="uid://b7q2dumunkj15" path="res://World/Hazards/tall_spike.tscn" id="3_nka18"]
 
@@ -21,6 +22,12 @@ texture = ExtResource("1_06njt")
 position = Vector2(772.4, -607)
 scale = Vector2(0.91, 0.917)
 texture = ExtResource("2_cvd4g")
+
+[node name="OnOrb" type="Sprite2D" parent="Background"]
+visible = false
+position = Vector2(772.4, -607)
+scale = Vector2(0.91, 0.917)
+texture = ExtResource("3_00u7j")
 
 [node name="TowerBG" type="Sprite2D" parent="Background"]
 position = Vector2(772.4, -607)

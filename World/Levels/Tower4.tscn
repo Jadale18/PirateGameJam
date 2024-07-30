@@ -1,11 +1,17 @@
-[gd_scene load_steps=7 format=3 uid="uid://cfneoa8tuh83g"]
+[gd_scene load_steps=13 format=3 uid="uid://cfneoa8tuh83g"]
 
 [ext_resource type="Texture2D" uid="uid://c2eglwjrbi3v2" path="res://Assets/World/References/7_Tower_Room_4.png" id="1_bmxpj"]
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_ucqjw"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="2_a0o6k"]
 [ext_resource type="Texture2D" uid="uid://y6eirtgaypgy" path="res://Assets/World/BG_Elements/off_orb.png" id="2_knb2a"]
+[ext_resource type="Texture2D" uid="uid://ctqb0woe63nn7" path="res://Assets/World/BG_Elements/on_orb.png" id="3_7q78w"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="3_tnmo5"]
 [ext_resource type="Texture2D" uid="uid://cegg5ntl6uh" path="res://Assets/World/BG_Elements/Tower_Rooms_4.png" id="3_xvcep"]
+[ext_resource type="PackedScene" uid="uid://bs4mv0s10pmmr" path="res://World/Interactables/EarthTablet.tscn" id="8_lreon"]
+[ext_resource type="PackedScene" uid="uid://durlrlr8ban2k" path="res://World/Interactables/AirTablet.tscn" id="9_c0sl3"]
+[ext_resource type="PackedScene" uid="uid://r5l1istgki27" path="res://World/Interactables/WaterTablet.tscn" id="10_rqy0d"]
+[ext_resource type="PackedScene" uid="uid://cdf6d7tfuepyb" path="res://World/Interactables/FireTablet.tscn" id="11_prwih"]
+[ext_resource type="PackedScene" uid="uid://dajn7co2bu6e2" path="res://World/Interactables/CrossTablet.tscn" id="12_ef3pg"]
 
 [node name="Tower4" type="Node2D"]
 
@@ -22,12 +28,18 @@ position = Vector2(772.4, -607)
 scale = Vector2(0.91, 0.917)
 texture = ExtResource("2_knb2a")
 
+[node name="OnOrb" type="Sprite2D" parent="Background"]
+position = Vector2(772.4, -607)
+scale = Vector2(0.91, 0.917)
+texture = ExtResource("3_7q78w")
+
 [node name="TowerBG" type="Sprite2D" parent="Background"]
 position = Vector2(772.4, -607)
 scale = Vector2(0.91, 0.917391)
 texture = ExtResource("3_xvcep")
 
 [node name="6TowerRoom3" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(767, -664)
 scale = Vector2(2.062, 2.062)
 texture = ExtResource("1_bmxpj")
@@ -45,6 +57,21 @@ layer_0/tile_data = PackedInt32Array(-1900487, 65542, 2, -1966023, 65542, 2, -20
 
 [node name="TileMap" parent="Shadow" instance=ExtResource("2_a0o6k")]
 layer_0/tile_data = PackedInt32Array(-1900514, 131074, 3, -1966050, 131074, 1, -1900515, 65538, 3, -1966051, 65538, 1, -1900516, 65538, 3, -1966052, 65538, 1, -1900517, 2, 3, -1966053, 2, 1, -1572841, 131074, 3, -1638377, 131074, 1, -1572842, 65538, 3, -1638378, 65538, 1, -1572843, 65538, 3, -1638379, 65538, 1, -1572844, 2, 3, -1638380, 2, 1, -1114093, 131074, 3, -1179629, 131074, 1, -1114094, 65538, 3, -1179630, 65538, 1, -1114095, 65538, 3, -1179631, 65538, 1, -1114096, 2, 3, -1179632, 2, 1, -655337, 131074, 3, -720873, 131074, 1, -655338, 65538, 3, -720874, 65538, 1, -655339, 65538, 3, -720875, 65538, 1, -655340, 2, 3, -720876, 2, 1, -327650, 131074, 3, -393186, 131074, 1, -327651, 65538, 3, -393187, 65538, 1, -327652, 65538, 3, -393188, 65538, 1, -327653, 2, 3, -393189, 2, 1, -655323, 131074, 3, -720859, 131074, 1, -655324, 65538, 3, -720860, 65538, 1, -655325, 65538, 3, -720861, 65538, 1, -655326, 2, 3, -720862, 2, 1, -1114071, 131074, 3, -1179607, 131074, 1, -1114072, 65538, 3, -1179608, 65538, 1, -1114073, 65538, 3, -1179609, 65538, 1, -1114074, 2, 3, -1179610, 2, 1, -1572827, 131074, 3, -1638363, 131074, 1, -1572828, 65538, 3, -1638364, 65538, 1, -1572829, 65538, 3, -1638365, 65538, 1, -1572830, 2, 3, -1638366, 2, 1, -2031586, 131074, 0, -2031587, 65538, 0, -2031588, 65538, 0, -2031589, 2, 0, -1703913, 131074, 0, -1703914, 65538, 0, -1703915, 65538, 0, -1703916, 2, 0, -1245165, 131074, 0, -1245166, 65538, 0, -1245167, 65538, 0, -1245168, 2, 0, -1703899, 131074, 0, -1703900, 65538, 0, -1703901, 65538, 0, -1703902, 2, 0, -1245143, 131074, 0, -1245144, 65538, 0, -1245145, 65538, 0, -1245146, 2, 0, -786395, 131074, 0, -786396, 65538, 0, -786397, 65538, 0, -786398, 2, 0, -786409, 131074, 0, -786410, 65538, 0, -786411, 65538, 0, -786412, 2, 0, -458722, 131074, 0, -458723, 65538, 0, -458724, 65538, 0, -458725, 2, 0)
+
+[node name="EarthTablet" parent="." instance=ExtResource("8_lreon")]
+position = Vector2(462, -511)
+
+[node name="AirTablet" parent="." instance=ExtResource("9_c0sl3")]
+position = Vector2(1026, -511)
+
+[node name="WaterTablet" parent="." instance=ExtResource("10_rqy0d")]
+position = Vector2(744, -203)
+
+[node name="FireTablet" parent="." instance=ExtResource("11_prwih")]
+position = Vector2(744, -819)
+
+[node name="CrossTablet" parent="." instance=ExtResource("12_ef3pg")]
+position = Vector2(744, -511)
 
 [node name="Character" parent="." instance=ExtResource("3_tnmo5")]
 position = Vector2(168, -267)
