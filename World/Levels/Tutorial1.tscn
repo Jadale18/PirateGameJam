@@ -1,4 +1,4 @@
-[gd_scene load_steps=5 format=3 uid="uid://dkega7n1b6e4k"]
+[gd_scene load_steps=6 format=3 uid="uid://dkega7n1b6e4k"]
 
 [ext_resource type="Texture2D" uid="uid://dg1u4wst5l8q6" path="res://Assets/World/BG_Elements/V4.png" id="1_8w8cj"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_wke5o"]
@@ -26,14 +26,10 @@ position = Vector2(1516, -205)
 portal_exit = "res://World/Levels/Tutorial2.tscn"
 portal_spawn = Vector2(62, -195)
 
-[node name="Character" parent="." instance=ExtResource("3_vymie")]
-
-position = Vector2(1264, -185)
-
-[editable path="Portal"]
-
-position = Vector2(194, -230)
-
 [node name="HealthUpgrade" parent="." instance=ExtResource("4_n272j")]
 position = Vector2(400, -170)
 
+[node name="Character" parent="." instance=ExtResource("3_vymie")]
+position = Vector2(706, -1110)
+
+[editable path="Portal"]
