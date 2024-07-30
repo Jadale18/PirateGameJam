@@ -9,7 +9,6 @@
 [ext_resource type="PackedScene" uid="uid://bn800t6i65hkj" path="res://UI/textbox.tscn" id="7_a1oq8"]
 [ext_resource type="PackedScene" uid="uid://8c2437a5vj08" path="res://World/Interactables/lore.tscn" id="7_agm36"]
 
-
 [node name="World" type="Node2D"]
 
 [node name="InvisibleTiles" parent="." instance=ExtResource("1_28hdn")]
@@ -48,7 +47,7 @@ position = Vector2(-12.5955, -267.655)
 [node name="Character" parent="GUI" instance=ExtResource("1_fw4kl")]
 position = Vector2(205.598, 107.736)
 
-[node name="Camera2D" type="Camera2D" parent="GUI/Character"]
+[node name="Camera2D2" type="Camera2D" parent="GUI/Character"]
 position = Vector2(394.62, 74.126)
 
 [node name="Shadow" parent="GUI" instance=ExtResource("5_gw4fn")]
