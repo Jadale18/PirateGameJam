@@ -164,4 +164,7 @@ portal_spawn = Vector2(1479, -203)
 [node name="Character" parent="." instance=ExtResource("6_wb3k2")]
 position = Vector2(909, -1028)
 
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(62, -195)
+
 [editable path="Portal"]
