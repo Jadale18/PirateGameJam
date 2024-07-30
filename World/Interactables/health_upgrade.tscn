@@ -1,6 +1,6 @@
 [gd_scene load_steps=9 format=3 uid="uid://hvw2s3j0lnfu"]
 
-[ext_resource type="Script" path="res://HealthUpgrade.gd" id="1_rjv0c"]
+[ext_resource type="Script" path="res://World/Interactables/HealthUpgrade.gd" id="1_rjv0c"]
 [ext_resource type="PackedScene" uid="uid://0clj6a6fgcup" path="res://UI/health_anims.tscn" id="2_on106"]
 [ext_resource type="FontFile" uid="uid://b35ikwltmsrxc" path="res://Assets/Font/CormorantGaramond-Regular.ttf" id="3_ru23l"]
 

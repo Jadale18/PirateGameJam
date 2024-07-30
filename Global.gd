@@ -7,6 +7,8 @@ var facing
 var max_life = 4
 var current_life_total = 4
 
+var light_up = false
+
 #func change_level():
 	#var current_level_path = "/root/GameScene/VBoxContainer/TopViewportContainer/TopViewport/CurrentLevel"
 	#var next_path = load(str("res://World/Levels/level", current_level + 1, ".tscn"))
