@@ -1,12 +1,140 @@
-[gd_scene load_steps=6 format=3 uid="uid://d3kwibkb3dplh"]
+[gd_scene load_steps=14 format=3 uid="uid://d3kwibkb3dplh"]
 
+[ext_resource type="Script" path="res://World/Levels/Tower9.gd" id="1_3diix"]
 [ext_resource type="Texture2D" uid="uid://dkc155edx1mfi" path="res://Assets/World/References/12_Tower_Room_9.png" id="1_4sc7g"]
 [ext_resource type="Texture2D" uid="uid://bpcss8wojmr7p" path="res://Assets/World/BG_Elements/Room_9.png" id="1_eehy1"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="2_gspta"]
 [ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="3_4ojy4"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="4_x2usv"]
 
+[sub_resource type="Animation" id="Animation_t7eds"]
+resource_name = "MercuryScene"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_u12s5"]
+resource_name = "Mercury"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(780, -766)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cutscene/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hsh5l"]
+resource_name = "Mercury2"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Character:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(780, -766)]
+}
+
+[sub_resource type="Animation" id="Animation_cdmv5"]
+resource_name = "Mercury3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1.49012e-08)]
+}
+
+[sub_resource type="Animation" id="Animation_hmvl7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Character:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(795, -786)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_77nap"]
+_data = {
+"FadeOut": SubResource("Animation_t7eds"),
+"Mercury1": SubResource("Animation_u12s5"),
+"Mercury2": SubResource("Animation_hsh5l"),
+"Mercury3": SubResource("Animation_cdmv5"),
+"RESET": SubResource("Animation_hmvl7")
+}
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_xg284"]
+size = Vector2(140, 29)
+
 [node name="Tower9" type="Node2D"]
+script = ExtResource("1_3diix")
 
 [node name="Background" type="Node2D" parent="."]
 position = Vector2(0, -22)
@@ -53,10 +181,42 @@ portal_spawn = Vector2(1470, -630)
 position = Vector2(21, -15)
 
 [node name="Character" parent="." instance=ExtResource("4_x2usv")]
-position = Vector2(365, -589)
+position = Vector2(795, -786)
 
 [node name="Foreground Tunnel" parent="." instance=ExtResource("2_gspta")]
 layer_0/tile_data = PackedInt32Array(-327679, 131076, 2, -393215, 131076, 1, -458751, 131076, 1, -524287, 131076, 1, -589823, 131076, 0, -327680, 65540, 2, -393216, 65540, 1, -458752, 65540, 1, -524288, 65540, 1, -589824, 65540, 0, -262145, 65540, 2, -327681, 65540, 1, -393217, 65540, 1, -458753, 65540, 1, -524289, 65540, 0, -262146, 65540, 2, -327682, 65540, 1, -393218, 65540, 1, -458754, 65540, 1, -524290, 65540, 0, -262147, 4, 2, -327683, 4, 1, -393219, 4, 1, -458755, 4, 1, -524291, 4, 0, -327619, 131076, 2, -393155, 131076, 1, -458691, 131076, 1, -524227, 131076, 1, -589763, 131076, 0, -327620, 65540, 2, -393156, 65540, 1, -458692, 65540, 1, -524228, 65540, 1, -589764, 65540, 0, -327621, 65540, 2, -393157, 65540, 1, -458693, 65540, 1, -524229, 65540, 1, -589765, 65540, 0, -327622, 4, 2, -393158, 4, 1, -458694, 4, 1, -524230, 4, 1, -589766, 4, 0)
+
+[node name="Cutscene" type="Node2D" parent="."]
+process_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cutscene"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_77nap")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Cutscene"]
+custom_minimum_size = Vector2(1156, 1156)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 202.0
+offset_top = -1234.0
+offset_right = 1358.0
+offset_bottom = -78.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
+[node name="Finish" type="Area2D" parent="."]
+position = Vector2(791, -1144)
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Finish"]
+position = Vector2(2, 25)
+shape = SubResource("RectangleShape2D_xg284")
+
+[connection signal="animation_finished" from="Cutscene/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
+[connection signal="area_entered" from="Finish" to="." method="_on_finish_area_entered"]
 
 [editable path="ToTower8"]
 [editable path="ToTower7"]
