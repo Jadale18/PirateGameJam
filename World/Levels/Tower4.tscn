@@ -1,4 +1,4 @@
-[gd_scene load_steps=19 format=3 uid="uid://cfneoa8tuh83g"]
+[gd_scene load_steps=27 format=3 uid="uid://cfneoa8tuh83g"]
 
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_ucqjw"]
 [ext_resource type="Script" path="res://World/Levels/Tower4.gd" id="1_ww3wb"]
@@ -9,15 +9,23 @@
 [ext_resource type="PackedScene" uid="uid://hvw2s3j0lnfu" path="res://World/Interactables/health_upgrade.tscn" id="7_w6fac"]
 [ext_resource type="PackedScene" uid="uid://bs4mv0s10pmmr" path="res://World/Interactables/EarthTablet.tscn" id="8_lreon"]
 [ext_resource type="PackedScene" uid="uid://durlrlr8ban2k" path="res://World/Interactables/AirTablet.tscn" id="9_c0sl3"]
+[ext_resource type="Script" path="res://World/Interactables/CopperTablet.gd" id="9_vfy1l"]
 [ext_resource type="PackedScene" uid="uid://r5l1istgki27" path="res://World/Interactables/WaterTablet.tscn" id="10_rqy0d"]
 [ext_resource type="PackedScene" uid="uid://cdf6d7tfuepyb" path="res://World/Interactables/FireTablet.tscn" id="11_prwih"]
 [ext_resource type="PackedScene" uid="uid://dajn7co2bu6e2" path="res://World/Interactables/CrossTablet.tscn" id="12_ef3pg"]
 [ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="12_x7h8h"]
+[ext_resource type="Script" path="res://World/Interactables/IronTablet.gd" id="13_hd48m"]
 [ext_resource type="PackedScene" uid="uid://8c2437a5vj08" path="res://World/Interactables/lore.tscn" id="14_3igss"]
 [ext_resource type="PackedScene" uid="uid://bqfalxfx0w0f0" path="res://World/Interactables/checkpoint.tscn" id="15_8wa27"]
 [ext_resource type="PackedScene" uid="uid://bn800t6i65hkj" path="res://UI/textbox.tscn" id="16_wmnrd"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="18_d2ea1"]
 [ext_resource type="PackedScene" uid="uid://b5gn4arko8ewd" path="res://World/Interactables/door_button.tscn" id="18_w4gro"]
+[ext_resource type="PackedScene" uid="uid://nxbuen3vs5k0" path="res://World/Interactables/CopperTablet.tscn" id="19_ub6va"]
+[ext_resource type="PackedScene" uid="uid://h80udby8yrx1" path="res://World/Interactables/JupiterTablet.tscn" id="20_ewqt0"]
+[ext_resource type="PackedScene" uid="uid://bpetxo127ef4e" path="res://World/Interactables/IronTablet.tscn" id="21_3lt6m"]
+[ext_resource type="PackedScene" uid="uid://cs5simpjv5xo0" path="res://World/Interactables/MercuryTablet.tscn" id="22_3j82q"]
+[ext_resource type="AudioStream" uid="uid://dea5momolo8d1" path="res://Assets/Audio/SFX/Refraction(Reward).ogg" id="23_5grwm"]
+[ext_resource type="AudioStream" uid="uid://tsqxaoiryuys" path="res://Assets/Audio/SFX/ShadowHurt.ogg" id="24_e2nth"]
 
 [node name="Tower4" type="Node2D"]
 script = ExtResource("1_ww3wb")
@@ -58,10 +66,23 @@ layer_0/tile_data = PackedInt32Array(-2293721, 131082, 1, -2293722, 65546, 1, -2
 position = Vector2(1382, -797)
 
 [node name="Shadow" type="Node2D" parent="."]
-visible = false
 
 [node name="TileMap" parent="Shadow" instance=ExtResource("2_a0o6k")]
 layer_0/tile_data = PackedInt32Array(-1900514, 131074, 3, -1966050, 131074, 1, -1900515, 65538, 3, -1966051, 65538, 1, -1900516, 65538, 3, -1966052, 65538, 1, -1900517, 2, 3, -1966053, 2, 1, -1572841, 131074, 3, -1638377, 131074, 1, -1572842, 65538, 3, -1638378, 65538, 1, -1572843, 65538, 3, -1638379, 65538, 1, -1572844, 2, 3, -1638380, 2, 1, -1114093, 131074, 3, -1179629, 131074, 1, -1114094, 65538, 3, -1179630, 65538, 1, -1114095, 65538, 3, -1179631, 65538, 1, -1114096, 2, 3, -1179632, 2, 1, -655337, 131074, 3, -720873, 131074, 1, -655338, 65538, 3, -720874, 65538, 1, -655339, 65538, 3, -720875, 65538, 1, -655340, 2, 3, -720876, 2, 1, -327650, 131074, 3, -393186, 131074, 1, -327651, 65538, 3, -393187, 65538, 1, -327652, 65538, 3, -393188, 65538, 1, -327653, 2, 3, -393189, 2, 1, -655323, 131074, 3, -720859, 131074, 1, -655324, 65538, 3, -720860, 65538, 1, -655325, 65538, 3, -720861, 65538, 1, -655326, 2, 3, -720862, 2, 1, -1114071, 131074, 3, -1179607, 131074, 1, -1114072, 65538, 3, -1179608, 65538, 1, -1114073, 65538, 3, -1179609, 65538, 1, -1114074, 2, 3, -1179610, 2, 1, -1572827, 131074, 3, -1638363, 131074, 1, -1572828, 65538, 3, -1638364, 65538, 1, -1572829, 65538, 3, -1638365, 65538, 1, -1572830, 2, 3, -1638366, 2, 1, -2031586, 131074, 0, -2031587, 65538, 0, -2031588, 65538, 0, -2031589, 2, 0, -1703913, 131074, 0, -1703914, 65538, 0, -1703915, 65538, 0, -1703916, 2, 0, -1245165, 131074, 0, -1245166, 65538, 0, -1245167, 65538, 0, -1245168, 2, 0, -1703899, 131074, 0, -1703900, 65538, 0, -1703901, 65538, 0, -1703902, 2, 0, -1245143, 131074, 0, -1245144, 65538, 0, -1245145, 65538, 0, -1245146, 2, 0, -786395, 131074, 0, -786396, 65538, 0, -786397, 65538, 0, -786398, 2, 0, -786409, 131074, 0, -786410, 65538, 0, -786411, 65538, 0, -786412, 2, 0, -458722, 131074, 0, -458723, 65538, 0, -458724, 65538, 0, -458725, 2, 0)
+
+[node name="CopperTablet" parent="." instance=ExtResource("19_ub6va")]
+position = Vector2(923, -330)
+script = ExtResource("9_vfy1l")
+
+[node name="JupiterTablet" parent="." instance=ExtResource("20_ewqt0")]
+position = Vector2(924, -688)
+
+[node name="IronTablet" parent="." instance=ExtResource("21_3lt6m")]
+position = Vector2(566, -689)
+script = ExtResource("13_hd48m")
+
+[node name="MercuryTablet" parent="." instance=ExtResource("22_3j82q")]
+position = Vector2(564, -330)
 
 [node name="EarthTablet" parent="." instance=ExtResource("8_lreon")]
 position = Vector2(462, -511)
@@ -180,9 +201,27 @@ layer_0/tile_data = PackedInt32Array(-1900487, 65542, 2, -1966023, 65542, 2, -20
 [node name="Foreground Tunnel" parent="." instance=ExtResource("2_a0o6k")]
 layer_0/tile_data = PackedInt32Array(-2359293, 131076, 2, -2424829, 131076, 1, -2490365, 131076, 1, -2555901, 131076, 1, -2621437, 131076, 0, -2359294, 65540, 2, -2424830, 65540, 1, -2490366, 65540, 1, -2555902, 65540, 1, -2621438, 65540, 0, -2359295, 65540, 2, -2424831, 65540, 1, -2490367, 65540, 1, -2555903, 65540, 1, -2621439, 65540, 0, -2359296, 65540, 2, -2424832, 65540, 1, -2490368, 65540, 1, -2555904, 65540, 1, -2621440, 65540, 0, -2293761, 4, 2, -2359297, 4, 1, -2424833, 4, 1, -2490369, 4, 1, -2555905, 4, 0, -2359236, 131076, 2, -2424772, 131076, 1, -2490308, 131076, 1, -2555844, 131076, 1, -2621380, 131076, 0, -2359237, 65540, 2, -2424773, 65540, 1, -2490309, 65540, 1, -2555845, 65540, 1, -2621381, 65540, 0, -2359238, 65540, 2, -2424774, 65540, 1, -2490310, 65540, 1, -2555846, 65540, 1, -2621382, 65540, 0, -2359239, 65540, 2, -2424775, 65540, 1, -2490311, 65540, 1, -2555847, 65540, 1, -2621383, 65540, 0, -2359240, 4, 2, -2424776, 4, 1, -2490312, 4, 1, -2555848, 4, 1, -2621384, 4, 0, -327620, 131076, 2, -393156, 131076, 1, -458692, 131076, 1, -524228, 131076, 1, -589764, 131076, 0, -327621, 65540, 2, -393157, 65540, 1, -458693, 65540, 1, -524229, 65540, 1, -589765, 65540, 0, -327622, 65540, 2, -393158, 65540, 1, -458694, 65540, 1, -524230, 65540, 1, -589766, 65540, 0, -327623, 65540, 2, -393159, 65540, 1, -458695, 65540, 1, -524231, 65540, 1, -589767, 65540, 0, -327624, 4, 2, -393160, 4, 1, -458696, 4, 1, -524232, 4, 1, -589768, 4, 0, -327679, 131076, 2, -393215, 131076, 1, -458751, 131076, 1, -524287, 131076, 1, -589823, 131076, 0, -327680, 65540, 2, -393216, 65540, 1, -458752, 65540, 1, -524288, 65540, 1, -589824, 65540, 0, -262145, 4, 2, -327681, 4, 1, -393217, 4, 1, -458753, 4, 1, -524289, 4, 0, -3080185, 131077, 2, -3145721, 131077, 1, -3211257, 131077, 1, -3276793, 131077, 0, -3080186, 65541, 2, -3145722, 65541, 1, -3211258, 65541, 1, -3276794, 65541, 0, -3080187, 65541, 2, -3145723, 65541, 1, -3211259, 65541, 1, -3276795, 65541, 0, -3080188, 65541, 2, -3145724, 65541, 1, -3211260, 65541, 1, -3276796, 65541, 0, -3080189, 5, 2, -3145725, 5, 1, -3211261, 5, 1, -3276797, 5, 0, -3080136, 131077, 2, -3145672, 131077, 1, -3211208, 131077, 1, -3276744, 131077, 1, -3342280, 131077, 0, -3080137, 65541, 2, -3145673, 65541, 1, -3211209, 65541, 1, -3276745, 65541, 1, -3342281, 65541, 0, -3080138, 65541, 2, -3145674, 65541, 1, -3211210, 65541, 1, -3276746, 65541, 1, -3342282, 65541, 0, -3080139, 65541, 2, -3145675, 65541, 1, -3211211, 65541, 1, -3276747, 65541, 1, -3342283, 65541, 0, -3080140, 5, 2, -3145676, 5, 1, -3211212, 5, 1, -3276748, 5, 1, -3342284, 5, 0)
 
+[node name="PuzzleDoor" parent="." instance=ExtResource("2_a0o6k")]
+layer_0/tile_data = PackedInt32Array(-2293745, 65539, 3, -2359281, 65539, 1, -2424817, 65539, 1, -2490353, 65539, 2, -2555889, 65539, 2, -2621425, 65539, 0, -2293746, 3, 3, -2359282, 3, 1, -2424818, 3, 2, -2490354, 3, 1, -2555890, 3, 1, -2621426, 3, 0)
+
 [node name="Character" parent="." instance=ExtResource("18_d2ea1")]
 position = Vector2(735, -642)
 
+[node name="Success" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("23_5grwm")
+volume_db = -15.0
+
+[node name="Fail" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("24_e2nth")
+
+[connection signal="activated" from="CopperTablet" to="." method="_on_copper_tablet_activated"]
+[connection signal="activated" from="JupiterTablet" to="." method="_on_jupiter_tablet_activated"]
+[connection signal="activated" from="IronTablet" to="." method="_on_iron_tablet_activated"]
+[connection signal="activated" from="MercuryTablet" to="." method="_on_mercury_tablet_activated"]
+[connection signal="activated" from="EarthTablet" to="." method="_on_earth_tablet_activated"]
+[connection signal="activated" from="AirTablet" to="." method="_on_air_tablet_activated"]
+[connection signal="activated" from="WaterTablet" to="." method="_on_water_tablet_activated"]
+[connection signal="activated" from="FireTablet" to="." method="_on_fire_tablet_activated"]
 [connection signal="loretime" from="Lore" to="Textbox" method="_on_lore_loretime"]
 [connection signal="button_down" from="Door5Button" to="Door5" method="_on_door_5_button_button_down"]
 [connection signal="button_down" from="Door6Button" to="Door6" method="_on_door_6_button_button_down"]

@@ -1,7 +1,7 @@
 extends Node
 
 var escaping = false
-
+var puzzle_door = false
 var character_position = Vector2(65,-150)
 var respawn_pos = Vector2(65,-150)
 var current_animation
