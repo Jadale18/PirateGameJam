@@ -38,8 +38,6 @@ func _on_lore_loretime(num):
 	mum_num = randi_range(0,5)
 	get_node(mum_list[mum_num]).play()
 	
-	
-	
 
 
 func _on_wait_timer_timeout():

@@ -15,6 +15,7 @@ var tut2_door = 0
 var light_up = false
 
 func change_level(new_level, shadow_exit, portal_spawn):
+	MainMusic.play_roomtransition()
 	call_deferred("_deferred_change_level", new_level, shadow_exit, portal_spawn)
 
 func _deferred_change_level(new_level, shadow_exit, portal_spawn):
