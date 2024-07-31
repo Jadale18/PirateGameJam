@@ -111,7 +111,7 @@ func _physics_process(delta):
 		$Mercury.play("default")
 		checking_input = false
 		Global.light_up = true
-		$SFX/ShadowHurt.play()
+		$SFX/MercFizzle.play()
 		take_damage()
 		
 	if Input.is_action_just_pressed("Interact") and is_on_floor() and checking_input:
