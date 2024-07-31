@@ -331,7 +331,7 @@ color = Color(0, 0, 0, 0)
 [connection signal="activated" from="Tablets/WaterTablet" to="." method="_on_water_tablet_activated"]
 [connection signal="activated" from="Tablets/FireTablet" to="." method="_on_fire_tablet_activated"]
 [connection signal="loretime" from="Lore" to="Textbox" method="_on_lore_loretime"]
-[connection signal="loretime" from="Lore2" to="Textbox" method="_on_lore_2_loretime"]
+[connection signal="loretime" from="Lore2" to="Textbox" method="_on_lore_loretime"]
 [connection signal="animation_finished" from="Cutscene/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 
 [editable path="ToTowerBase"]
