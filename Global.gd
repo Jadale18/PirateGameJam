@@ -7,6 +7,7 @@ var facing
 #var current_level = 1
 var max_life = 4
 var current_life_total = 4
+var topviewporty = 1152
 
 var light_up = false
 
@@ -32,3 +33,7 @@ func damage():
 func obtain_health():
 	max_life += 1
 	current_life_total = max_life
+
+func update_topviewport():
+	var topview = get_node("/root/GameScene/VBoxContainer/TopViewportContainer/TopViewport")
+	topview.size.y = topviewporty
