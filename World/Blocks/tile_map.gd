@@ -57,3 +57,9 @@ func _on_door_button_button_down():
 	if Global.tut2_door != 1:
 		Global.tut2_door = 1
 	queue_free()
+
+
+func _on_obelisk_activated():
+	if Global.dumb_doors[10] != 1:
+		Global.dumb_doors[10] = 1
+	queue_free()
