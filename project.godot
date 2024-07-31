@@ -25,6 +25,7 @@ PauseMenu="*res://UI/pause_menu.tscn"
 window/size/viewport_height=1152
 window/stretch/mode="viewport"
 mouse_cursor/custom_image="res://Assets/UI/Menu/Menu_Cursor.png"
+mouse_cursor/custom_image_hotspot=Vector2(128, 128)
 
 [input]
 
