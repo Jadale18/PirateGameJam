@@ -1,6 +1,7 @@
-[gd_scene load_steps=7 format=3 uid="uid://dkega7n1b6e4k"]
+[gd_scene load_steps=8 format=3 uid="uid://dkega7n1b6e4k"]
 
 [ext_resource type="Texture2D" uid="uid://dg1u4wst5l8q6" path="res://Assets/World/BG_Elements/V4.png" id="1_8w8cj"]
+[ext_resource type="Script" path="res://World/Levels/Tutorial1.gd" id="1_pa0d2"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_wke5o"]
 [ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="3_oaoqv"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="3_vymie"]
@@ -8,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://bn800t6i65hkj" path="res://UI/textbox.tscn" id="6_hjw7m"]
 
 [node name="Level1" type="Node2D"]
+script = ExtResource("1_pa0d2")
 
 [node name="V4" type="Sprite2D" parent="."]
 position = Vector2(768, -615.5)
@@ -35,6 +37,12 @@ portal_spawn = Vector2(62, -150)
 [node name="Lore" parent="." instance=ExtResource("6_b2t4a")]
 position = Vector2(125, -423)
 
+[node name="Lore2" parent="." instance=ExtResource("6_b2t4a")]
+visible = false
+position = Vector2(343, -147)
+monitoring = false
+num = 8
+
 [node name="Textbox" parent="." instance=ExtResource("6_hjw7m")]
 
 [node name="Character" parent="." instance=ExtResource("3_vymie")]
@@ -47,5 +55,6 @@ position = Vector2(1470, -149)
 layer_0/tile_data = PackedInt32Array(-327619, 131076, 2, -393155, 131076, 1, -458691, 131076, 1, -524227, 131076, 1, -589763, 131076, 1, -655299, 131076, 1, -720835, 131076, 1, -786371, 131076, 0, -327620, 65540, 2, -393156, 65540, 1, -458692, 65540, 1, -524228, 65540, 1, -589764, 65540, 1, -655300, 65540, 1, -720836, 65540, 1, -786372, 65540, 0, -327621, 65540, 2, -393157, 65540, 1, -458693, 65540, 1, -524229, 65540, 1, -589765, 65540, 1, -655301, 65540, 1, -720837, 65540, 1, -786373, 65540, 0, -327622, 4, 2, -393158, 4, 1, -458694, 4, 1, -524230, 4, 1, -589766, 4, 1, -655302, 4, 1, -720838, 4, 1, -786374, 4, 0)
 
 [connection signal="loretime" from="Lore" to="Textbox" method="_on_lore_loretime"]
+[connection signal="loretime" from="Lore2" to="Textbox" method="_on_lore_2_loretime"]
 
 [editable path="Portal"]
