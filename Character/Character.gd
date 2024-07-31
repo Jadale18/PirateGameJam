@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 600.0
+const SPEED = 200.0
 const JUMP_VELOCITY = -575.0
 var current_life = 4
 
@@ -24,6 +24,8 @@ var last_floor = true
 var jump_buffer = false
 var foot = "right"
 var invincible = false
+var escaping = false
+var eclipsed = false
 
 func _ready():
 	$Anims.play("Idle")
@@ -31,6 +33,12 @@ func _ready():
 	position = Global.character_position
 
 func _physics_process(delta):
+	if Global.escaping and not eclipsed:
+		$Anims.queue_free()
+		$Anims.name = "A"
+		$CombinedAnims.visible = true
+		$CombinedAnims.name = "Anims"
+		eclipsed = true
 	if $Anims.animation != "Jump":
 		jumping = false
 	coyote()
@@ -228,6 +236,8 @@ func _on_anims_animation_finished():
 		$Anims.play("Idle")
 		if is_on_floor():
 			falling = false
+	elif $Anims.animation == "Death":
+		get_tree().change_scene_to_file("res://UI/main_menu.tscn")
 
 func _on_ledge_buffer_timeout():
 	detecting_ledge = true
