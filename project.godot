@@ -19,6 +19,7 @@ config/icon="res://icon.svg"
 
 Global="*res://Global.gd"
 PauseMenu="*res://UI/pause_menu.tscn"
+MainMusic="*res://UI/main_music.tscn"
 
 [display]
 
