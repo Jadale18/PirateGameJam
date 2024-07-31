@@ -2274,6 +2274,10 @@ flip_v = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = 0
+limit_right = 1536
+limit_bottom = 1225
 drag_vertical_enabled = true
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_area_2d_area_entered"]

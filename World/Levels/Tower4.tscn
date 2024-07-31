@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://cfneoa8tuh83g"]
+[gd_scene load_steps=14 format=3 uid="uid://cfneoa8tuh83g"]
 
 [ext_resource type="Texture2D" uid="uid://c2eglwjrbi3v2" path="res://Assets/World/References/7_Tower_Room_4.png" id="1_bmxpj"]
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_ucqjw"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://cdf6d7tfuepyb" path="res://World/Interactables/FireTablet.tscn" id="11_prwih"]
 [ext_resource type="PackedScene" uid="uid://dajn7co2bu6e2" path="res://World/Interactables/CrossTablet.tscn" id="12_ef3pg"]
 [ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="12_x7h8h"]
+[ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="13_y0ai5"]
 
 [node name="Tower4" type="Node2D"]
 
@@ -39,7 +40,10 @@ position = Vector2(772.4, -607)
 scale = Vector2(0.91, 0.917391)
 texture = ExtResource("3_xvcep")
 
+[node name="Background Tunnel" parent="Background" instance=ExtResource("2_a0o6k")]
+
 [node name="6TowerRoom3" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(767, -664)
 scale = Vector2(2.062, 2.062)
 texture = ExtResource("1_bmxpj")
@@ -141,8 +145,11 @@ portal_spawn = Vector2(1391, -162)
 [node name="CollisionShape2D" parent="ToTower8/Portal" index="0"]
 position = Vector2(21, -15)
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(62, -970)
+[node name="Character" parent="." instance=ExtResource("13_y0ai5")]
+position = Vector2(731, -629)
+
+[node name="Foreground Tunnel" parent="." instance=ExtResource("2_a0o6k")]
+position = Vector2(0, 9)
 
 [editable path="ToTower2"]
 [editable path="ToTower3"]
