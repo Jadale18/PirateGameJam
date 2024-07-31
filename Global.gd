@@ -9,6 +9,7 @@ var max_life = 4
 var current_life_total = 4
 var topviewporty = 1152
 var health_upgrades = [0, 0, 0, 0, 0, 0, 0, 0]
+var dumb_doors = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
 
 var light_up = false
 

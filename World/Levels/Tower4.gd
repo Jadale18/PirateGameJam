@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var doors = []
 # Called when the node enters the scene tree for the first time.
 func _ready():
 	if Global.health_upgrades[3] == 1:
