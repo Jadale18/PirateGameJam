@@ -20,10 +20,15 @@ func _process(delta):
 	if len(current_sol) == 2:
 		if current_sol[0] in m_solution and current_sol[1] in m_solution:
 			merc()
+			$Success.play()
 		elif current_sol[0] in salt_solution and current_sol[1] in salt_solution:
 			salt()
+			$Success.play()
 		elif current_sol[0] in sulf_solution and current_sol[1] in sulf_solution:
 			sulf()
+			$Success.play()
+		else:
+			$Fail.play()
 		current_sol = []
 		$Tablets/EarthTablet.reset()
 		$Tablets/FireTablet.reset()

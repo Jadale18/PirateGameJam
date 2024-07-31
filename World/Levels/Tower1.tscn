@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://bbpsd4td5sxe8"]
+[gd_scene load_steps=33 format=3 uid="uid://bbpsd4td5sxe8"]
 
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_cof8m"]
 [ext_resource type="Script" path="res://World/Levels/Tower1.gd" id="1_hrc2t"]
@@ -24,6 +24,8 @@
 [ext_resource type="Texture2D" uid="uid://clkuhhaw1mkqa" path="res://Assets/World/Interactables/Salt_Key_Tablet_Orb_Deactivated_Room_1.png" id="17_7q5yp"]
 [ext_resource type="Texture2D" uid="uid://wh16w2scrb8u" path="res://Assets/World/Interactables/Mercury_Key_Tablet_Orb_Deactivated_Room_1.png" id="18_420ht"]
 [ext_resource type="PackedScene" uid="uid://bn800t6i65hkj" path="res://UI/textbox.tscn" id="22_tf1kb"]
+[ext_resource type="AudioStream" uid="uid://dea5momolo8d1" path="res://Assets/Audio/SFX/Refraction(Reward).ogg" id="25_5vbhx"]
+[ext_resource type="AudioStream" uid="uid://tsqxaoiryuys" path="res://Assets/Audio/SFX/ShadowHurt.ogg" id="26_br2yy"]
 
 [sub_resource type="Animation" id="Animation_t7eds"]
 resource_name = "MercuryScene"
@@ -324,6 +326,13 @@ offset_bottom = -4.0
 grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
+
+[node name="Success" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("25_5vbhx")
+volume_db = -15.0
+
+[node name="Fail" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("26_br2yy")
 
 [connection signal="button_down" from="Door1Button" to="T3Door" method="_on_door_1_button_button_down"]
 [connection signal="activated" from="Tablets/EarthTablet" to="." method="_on_earth_tablet_activated"]
