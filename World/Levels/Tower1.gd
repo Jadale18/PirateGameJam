@@ -8,6 +8,7 @@ var current_sol = []
 
 
 func _ready():
+	MainMusic.play_noonshadow()
 	if Global.health_upgrades[0] == 1 and $Background/OffOrb:
 		$Background/OffOrb.queue_free()
 	if Global.dumb_doors[0] == 1:
