@@ -50,8 +50,8 @@ _data = [Vector2(0.00293255, 1), 0.0, 0.0, 0, 0, Vector2(0.740469, 0.648432), 0.
 point_count = 3
 
 [sub_resource type="Gradient" id="Gradient_h4kdb"]
-offsets = PackedFloat32Array(0, 0.516026)
-colors = PackedColorArray(0.607456, 0.702211, 0.534861, 1, 1, 1, 1, 0.784314)
+offsets = PackedFloat32Array(0, 0.983974)
+colors = PackedColorArray(1, 0.145098, 0.356863, 1, 1, 1, 1, 0.784314)
 
 [node name="Checkpoint" type="Area2D"]
 script = ExtResource("1_gtqk5")
@@ -120,7 +120,6 @@ gravity = Vector2(2.08165e-12, -150)
 scale_amount_min = 2.0
 scale_amount_max = 5.0
 scale_amount_curve = SubResource("Curve_wieyo")
-color = Color(0.113725, 1, 0.756863, 0.784314)
 color_ramp = SubResource("Gradient_h4kdb")
 
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
