@@ -23,6 +23,7 @@ var facing_left = -1
 var last_floor = true
 var jump_buffer = false
 var foot = "right"
+var invincible = false
 
 func _ready():
 	$Anims.play("Idle")
@@ -57,7 +58,6 @@ func _physics_process(delta):
 		falling = true
 		jump_buffer = false
 		$Anims.play("Jump")
-		$AnimationPlayer.play("Shadow_fade")
 		landing = false
 	if is_on_floor() and not climbing:
 		$Shadow.modulate = Color(1,1,1,1)
@@ -70,7 +70,6 @@ func _physics_process(delta):
 		jumping = true
 		falling = true
 		jump_buffer = false
-		$AnimationPlayer.play("Shadow_fade")
 	elif Input.is_action_just_pressed("ui_accept"):
 		jump_buffer = true
 		$JumpBuffer.start()
@@ -102,6 +101,7 @@ func _physics_process(delta):
 	
 	if Input.is_action_just_pressed("Take Damage") and is_on_floor() and checking_input:
 		animating = true
+		$AnimationPlayer.play("invincible")
 		$Anims.play("Self_Damage")
 		$Mercury.visible = true
 		$Mercury.frame = 0
@@ -148,6 +148,8 @@ func _physics_process(delta):
 
 func take_damage():
 	Global.damage()
+	$IFrames.start()
+	invincible = true
 	if current_life != Global.current_life_total:
 		current_life = Global.current_life_total
 
@@ -176,7 +178,7 @@ func coyote():
 	last_floor = is_on_floor()
 
 func _on_area_2d_area_entered(area):
-	if "Spike" in area.name:
+	if "Spike" in area.name and not invincible:
 		$AnimationPlayer.play("fade_out")
 		animating = true
 		$Anims.play("Damaged")
@@ -250,3 +252,9 @@ func _on_walk_timer_timeout():
 	elif foot == "left":
 		$SFX/Footstep2.play()
 		foot = "right"
+
+
+func _on_i_frames_timeout():
+	invincible = false
+	$AnimationPlayer.stop()
+	$Anims.modulate = Color(1,1,1,1)
