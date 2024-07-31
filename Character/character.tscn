@@ -1,4 +1,4 @@
-[gd_scene load_steps=1365 format=3 uid="uid://b5btof2wbb7bl"]
+[gd_scene load_steps=1366 format=3 uid="uid://b5btof2wbb7bl"]
 
 [ext_resource type="Script" path="res://Character/Character.gd" id="1_fifik"]
 [ext_resource type="Texture2D" uid="uid://cpdl2hd2oi6xn" path="res://Assets/CharacterSprites/Air_Idle.png" id="2_jswb8"]
@@ -8603,11 +8603,29 @@ tracks/0/keys = {
 "values": [Color(1, 1, 1, 1), Color(1, 1, 1, 0)]
 }
 
+[sub_resource type="Animation" id="Animation_oem65"]
+resource_name = "invincible"
+length = 0.6
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Anims:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.3, 0.6),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(1, 1, 1, 1), Color(0, 0, 0, 1), Color(0.993372, 0.993372, 0.993372, 1)]
+}
+
 [sub_resource type="AnimationLibrary" id="AnimationLibrary_2p3g1"]
 _data = {
 "RESET": SubResource("Animation_ur1sa"),
 "Shadow_fade": SubResource("Animation_qpldd"),
-"fade_out": SubResource("Animation_jhxrw")
+"fade_out": SubResource("Animation_jhxrw"),
+"invincible": SubResource("Animation_oem65")
 }
 
 [node name="Character" type="CharacterBody2D"]
@@ -8730,6 +8748,10 @@ libraries = {
 "": SubResource("AnimationLibrary_2p3g1")
 }
 
+[node name="IFrames" type="Timer" parent="."]
+wait_time = 2.0
+one_shot = true
+
 [connection signal="area_entered" from="CharArea" to="." method="_on_area_2d_area_entered"]
 [connection signal="animation_finished" from="Anims" to="." method="_on_anims_animation_finished"]
 [connection signal="timeout" from="LedgeBuffer" to="." method="_on_ledge_buffer_timeout"]
@@ -8737,3 +8759,4 @@ libraries = {
 [connection signal="timeout" from="JumpBuffer" to="." method="_on_jump_buffer_timeout"]
 [connection signal="animation_finished" from="Mercury" to="." method="_on_mercury_animation_finished"]
 [connection signal="timeout" from="WalkTimer" to="." method="_on_walk_timer_timeout"]
+[connection signal="timeout" from="IFrames" to="." method="_on_i_frames_timeout"]
