@@ -4,6 +4,7 @@ var max_life = 4
 var current_life_total = 4
 
 func _ready():
+	MainMusic.stop_music()
 	MainMusic.play_dawn()
 	for child in $CanvasLayer/HBoxContainer.get_children():
 		child.get_child(0).play("Empty")
