@@ -1,0 +1,17 @@
+[gd_scene load_steps=3 format=3 uid="uid://bqfalxfx0w0f0"]
+
+[ext_resource type="Texture2D" uid="uid://bmnclhftll5ec" path="res://Assets/World/Interactables/Checkpoint_Statue.png" id="1_62x1w"]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cw4t6"]
+radius = 56.0
+height = 152.0
+
+[node name="Checkpoint" type="Area2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(-7, -18)
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("1_62x1w")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+shape = SubResource("CapsuleShape2D_cw4t6")
