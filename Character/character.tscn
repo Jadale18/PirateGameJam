@@ -1,4 +1,4 @@
-[gd_scene load_steps=1722 format=3 uid="uid://b5btof2wbb7bl"]
+[gd_scene load_steps=1723 format=3 uid="uid://b5btof2wbb7bl"]
 
 [ext_resource type="Script" path="res://Character/Character.gd" id="1_fifik"]
 [ext_resource type="Texture2D" uid="uid://cpdl2hd2oi6xn" path="res://Assets/CharacterSprites/Air_Idle.png" id="2_jswb8"]
@@ -336,6 +336,7 @@
 [ext_resource type="AudioStream" uid="uid://dea5momolo8d1" path="res://Assets/Audio/SFX/Refraction(Reward).ogg" id="321_tv4mr"]
 [ext_resource type="AudioStream" uid="uid://bw47lwpumw6ex" path="res://Assets/Audio/SFX/ShadowDeath.ogg" id="322_xslu4"]
 [ext_resource type="AudioStream" uid="uid://tsqxaoiryuys" path="res://Assets/Audio/SFX/ShadowHurt.ogg" id="323_2fuw0"]
+[ext_resource type="AudioStream" uid="uid://dgjyn3wvwosdl" path="res://Assets/Audio/SFX/MercuryFizzle.ogg" id="337_5ljjr"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_66fy6"]
 atlas = ExtResource("3_h6jg8")
@@ -11201,6 +11202,10 @@ volume_db = -3.0
 [node name="ShadowHurt" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("323_2fuw0")
 volume_db = 2.0
+
+[node name="MercFizzle" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("337_5ljjr")
+volume_db = -7.0
 
 [node name="WalkTimer" type="Timer" parent="."]
 wait_time = 0.6
