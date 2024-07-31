@@ -1,9 +1,10 @@
-[gd_scene load_steps=5 format=3 uid="uid://b8n0xot5y4pcl"]
+[gd_scene load_steps=6 format=3 uid="uid://b8n0xot5y4pcl"]
 
 [ext_resource type="Script" path="res://UI/main_music.gd" id="1_8xqvx"]
 [ext_resource type="AudioStream" uid="uid://d3pegjsm08c4j" path="res://Assets/Audio/Music/Dawn.ogg" id="1_h1igm"]
 [ext_resource type="AudioStream" uid="uid://cnyowi2o5sesg" path="res://Assets/Audio/Music/Noonshadow.ogg" id="2_ovljd"]
 [ext_resource type="AudioStream" uid="uid://dkw65u52x343w" path="res://Assets/Audio/Music/AToweringTale.ogg" id="4_kmi1q"]
+[ext_resource type="AudioStream" uid="uid://bf2a6mvfr8da1" path="res://Assets/Audio/SFX/RoomTransition(1).ogg" id="5_3d8is"]
 
 [node name="MainMusic" type="Node2D"]
 script = ExtResource("1_8xqvx")
@@ -16,3 +17,6 @@ stream = ExtResource("2_ovljd")
 
 [node name="AToweringTale" type="AudioStreamPlayer" parent="."]
 stream = ExtResource("4_kmi1q")
+
+[node name="RoomTransition" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_3d8is")

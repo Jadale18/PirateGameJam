@@ -1,4 +1,4 @@
-[gd_scene load_steps=9 format=3 uid="uid://p4r7w4t7qewf"]
+[gd_scene load_steps=10 format=3 uid="uid://p4r7w4t7qewf"]
 
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_b4sdv"]
 [ext_resource type="Script" path="res://World/Levels/Tutorial2.gd" id="1_c33cc"]
@@ -8,6 +8,7 @@
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="6_wb3k2"]
 [ext_resource type="PackedScene" uid="uid://b5gn4arko8ewd" path="res://World/Interactables/door_button.tscn" id="7_5l8fb"]
 [ext_resource type="PackedScene" uid="uid://8c2437a5vj08" path="res://World/Interactables/lore.tscn" id="7_inf7a"]
+[ext_resource type="PackedScene" uid="uid://bn800t6i65hkj" path="res://UI/textbox.tscn" id="7_liv4b"]
 
 [node name="Node2D" type="Node2D"]
 script = ExtResource("1_c33cc")
@@ -79,6 +80,10 @@ portal_spawn = Vector2(62, -150)
 [node name="Lore" parent="." instance=ExtResource("7_inf7a")]
 position = Vector2(154, -600)
 num = 1
+
+[node name="Textbox" parent="." instance=ExtResource("7_liv4b")]
+position = Vector2(399, -490)
+scale = Vector2(1, 1)
 
 [node name="DoorButton" parent="." instance=ExtResource("7_5l8fb")]
 position = Vector2(1421, -720)
@@ -192,6 +197,7 @@ position = Vector2(1059, -55)
 [node name="Spike23" parent="Spikes/SpikePit" instance=ExtResource("2_v60ti")]
 position = Vector2(1086, -55)
 
+[connection signal="loretime" from="Lore" to="Textbox" method="_on_lore_loretime"]
 [connection signal="button_down" from="DoorButton" to="Door" method="_on_door_button_button_down"]
 
 [editable path="ToTutorial1"]
