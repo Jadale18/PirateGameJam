@@ -57,7 +57,12 @@ func _physics_process(delta):
 		falling = true
 		jump_buffer = false
 		$Anims.play("Jump")
+		$AnimationPlayer.play("Shadow_fade")
 		landing = false
+	if is_on_floor() and not climbing:
+		$Shadow.modulate = Color(1,1,1,1)
+	else:
+		$Shadow.modulate = Color(1,1,1,0)
 
 	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or not $CoyoteTime.is_stopped()) and checking_input:
 		$SFX/Footjump.play()
@@ -65,6 +70,7 @@ func _physics_process(delta):
 		jumping = true
 		falling = true
 		jump_buffer = false
+		$AnimationPlayer.play("Shadow_fade")
 	elif Input.is_action_just_pressed("ui_accept"):
 		jump_buffer = true
 		$JumpBuffer.start()
