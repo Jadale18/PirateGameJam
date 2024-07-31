@@ -3543,6 +3543,10 @@ one_shot = true
 
 [node name="Camera2D" type="Camera2D" parent="."]
 zoom = Vector2(2, 2)
+limit_left = 0
+limit_top = -1224
+limit_right = 1536
+limit_bottom = 0
 drag_vertical_enabled = true
 
 [node name="DropBuffer" type="Timer" parent="."]

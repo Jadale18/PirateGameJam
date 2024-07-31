@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://phsi26ft1axf"]
+[gd_scene load_steps=9 format=3 uid="uid://phsi26ft1axf"]
 
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_4p1e6"]
 [ext_resource type="Texture2D" uid="uid://cm3wwlykpkayk" path="res://Assets/World/References/10_Tower_Room_7.png" id="1_x82u6"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://ctqb0woe63nn7" path="res://Assets/World/BG_Elements/on_orb.png" id="3_n18ni"]
 [ext_resource type="Texture2D" uid="uid://bq3ibxi3k4gqb" path="res://Assets/World/BG_Elements/Tower_Rooms_7.png" id="4_m2xha"]
 [ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="7_r88t6"]
+[ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="8_5sddc"]
 
 [node name="Tower7" type="Node2D"]
 
@@ -33,7 +34,10 @@ position = Vector2(772.4, -607)
 scale = Vector2(0.91, 0.917391)
 texture = ExtResource("4_m2xha")
 
+[node name="Background Tunnel" parent="Background" instance=ExtResource("2_8sgqw")]
+
 [node name="6TowerRoom3" type="Sprite2D" parent="."]
+visible = false
 position = Vector2(765, -660)
 scale = Vector2(2.062, 2.062)
 texture = ExtResource("1_x82u6")
@@ -77,6 +81,7 @@ position = Vector2(1495, -607)
 [node name="Portal" parent="ToTower8" index="0"]
 portal_exit = "res://World/Levels/Tower8.tscn"
 shadow_exit = "res://World/ShadowLevels/SH_Tower8.tscn"
+portal_spawn = Vector2(62, -690)
 
 [node name="CollisionShape2D" parent="ToTower8/Portal" index="0"]
 position = Vector2(21, -15)
@@ -86,9 +91,16 @@ position = Vector2(1495, -1056)
 
 [node name="Portal" parent="ToTower9" index="0"]
 portal_exit = "res://World/Levels/Tower9.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_Tower9.tscn"
+portal_spawn = Vector2(62, -1090)
 
 [node name="CollisionShape2D" parent="ToTower9/Portal" index="0"]
 position = Vector2(21, -15)
+
+[node name="Character" parent="." instance=ExtResource("8_5sddc")]
+position = Vector2(742, -534)
+
+[node name="Foreground Tunnel" parent="." instance=ExtResource("2_8sgqw")]
 
 [editable path="ToTower5"]
 [editable path="ToTower4"]
