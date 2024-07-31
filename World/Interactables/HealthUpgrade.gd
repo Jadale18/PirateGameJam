@@ -12,6 +12,8 @@ func _process(delta):
 		$HealthAnims.play("Damage")
 		$RichTextLabel.visible = false
 		$CPUParticles2D.emitting = false
+		$AudioStreamPlayer.play()
+		$Timer.start()
 
 
 func _on_area_entered(area):
@@ -19,10 +21,11 @@ func _on_area_entered(area):
 	$RichTextLabel.visible = true
 
 
-func _on_health_anims_animation_finished():
-	queue_free()
-
 
 func _on_area_exited(area):
 	checking_input = false
 	$RichTextLabel.visible = false
+
+
+func _on_timer_timeout():
+	queue_free()

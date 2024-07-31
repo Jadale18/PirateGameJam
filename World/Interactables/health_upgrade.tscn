@@ -1,8 +1,9 @@
-[gd_scene load_steps=9 format=3 uid="uid://hvw2s3j0lnfu"]
+[gd_scene load_steps=10 format=3 uid="uid://hvw2s3j0lnfu"]
 
 [ext_resource type="Script" path="res://World/Interactables/HealthUpgrade.gd" id="1_rjv0c"]
 [ext_resource type="PackedScene" uid="uid://0clj6a6fgcup" path="res://UI/health_anims.tscn" id="2_on106"]
 [ext_resource type="FontFile" uid="uid://b35ikwltmsrxc" path="res://Assets/Font/CormorantGaramond-Regular.ttf" id="3_ru23l"]
+[ext_resource type="AudioStream" uid="uid://dea5momolo8d1" path="res://Assets/Audio/SFX/Refraction(Reward).ogg" id="4_i1yme"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_jwwop"]
 radius = 110.05
@@ -88,6 +89,13 @@ scale_amount_min = 2.0
 scale_amount_max = 5.0
 scale_amount_curve = SubResource("Curve_2b8fi")
 
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_i1yme")
+volume_db = -15.0
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 4.16
+
 [connection signal="area_entered" from="." to="." method="_on_area_entered"]
 [connection signal="area_exited" from="." to="." method="_on_area_exited"]
-[connection signal="animation_finished" from="HealthAnims" to="." method="_on_health_anims_animation_finished"]
+[connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

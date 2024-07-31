@@ -3542,23 +3542,23 @@ volume_db = 20.0
 
 [node name="LightDeath" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("319_iycyd")
-volume_db = 6.0
+volume_db = -5.0
 
 [node name="LightHurt" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("320_glsgb")
-volume_db = 6.0
+volume_db = -5.0
 
 [node name="Reward" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("321_tv4mr")
-volume_db = 20.0
+volume_db = -15.0
 
 [node name="ShadowDeath" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("322_xslu4")
-volume_db = 20.0
+volume_db = -3.0
 
 [node name="ShadowHurt" type="AudioStreamPlayer" parent="SFX"]
 stream = ExtResource("323_2fuw0")
-volume_db = 10.0
+volume_db = 2.0
 
 [node name="WalkTimer" type="Timer" parent="."]
 wait_time = 0.6
