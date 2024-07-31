@@ -5,6 +5,8 @@ extends Node2D
 func _ready():
 	if Global.health_upgrades[5] == 1:
 		$Background/OffOrb.queue_free()
+	if Global.dumb_doors[8] == 1:
+		$Door8.queue_free()
 
 
 # Called every frame. 'delta' is the elapsed time since the previous frame.
