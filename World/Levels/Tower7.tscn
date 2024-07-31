@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://phsi26ft1axf"]
+[gd_scene load_steps=14 format=3 uid="uid://phsi26ft1axf"]
 
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_4p1e6"]
 [ext_resource type="Script" path="res://World/Levels/Tower7.gd" id="1_s53ug"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://hvw2s3j0lnfu" path="res://World/Interactables/health_upgrade.tscn" id="8_o7nrs"]
 [ext_resource type="PackedScene" uid="uid://bqfalxfx0w0f0" path="res://World/Interactables/checkpoint.tscn" id="10_ao4u3"]
 [ext_resource type="PackedScene" uid="uid://b1k4m2xf10lkj" path="res://World/Hazards/spike.tscn" id="12_n2i5s"]
+[ext_resource type="PackedScene" uid="uid://b5gn4arko8ewd" path="res://World/Interactables/door_button.tscn" id="13_jo1vb"]
 
 [node name="Tower7" type="Node2D"]
 script = ExtResource("1_s53ug")
@@ -427,6 +428,18 @@ position = Vector2(302, -60)
 [node name="Spike35" parent="Spikes/SpikePit" instance=ExtResource("12_n2i5s")]
 position = Vector2(273, -60)
 
+[node name="Door9Button" parent="." instance=ExtResource("13_jo1vb")]
+position = Vector2(1402, -390)
+
+[node name="Door9" parent="." instance=ExtResource("2_8sgqw")]
+layer_0/tile_data = PackedInt32Array(-917453, 65539, 3, -982989, 65539, 1, -1048525, 65539, 1, -1114061, 65539, 2, -1179597, 65539, 1, -1245133, 65539, 1, -1310669, 65539, 0, -917454, 3, 3, -982990, 3, 1, -1048526, 3, 1, -1114062, 3, 2, -1179598, 3, 1, -1245134, 3, 2, -1310670, 3, 0)
+
+[node name="Door10" parent="." instance=ExtResource("2_8sgqw")]
+layer_0/tile_data = PackedInt32Array(-2621385, 65539, 3, -2686921, 65539, 1, -2752457, 65539, 1, -2817993, 65539, 2, -2883529, 65539, 2, -2949065, 65539, 0, -2621386, 3, 3, -2686922, 3, 2, -2752458, 3, 1, -2817994, 3, 1, -2883530, 3, 2, -2949066, 3, 0)
+
+[node name="Door10Button" parent="." instance=ExtResource("13_jo1vb")]
+position = Vector2(1457, -1054)
+
 [node name="Character" parent="." instance=ExtResource("8_5sddc")]
 position = Vector2(742, -534)
 
@@ -435,6 +448,9 @@ layer_0/tile_data = PackedInt32Array(-2686916, 131076, 2, -2752452, 131076, 1, -
 
 [node name="HiddenTiles" parent="." instance=ExtResource("2_8sgqw")]
 layer_0/tile_data = PackedInt32Array(-2228218, 131074, 2, -2293754, 131074, 2, -2359290, 131074, 2, -2424826, 131074, 2, -2490362, 65538, 2, -2555898, 65538, 2, -2621434, 65538, 2, -2228219, 65538, 2, -2293755, 65538, 2, -2359291, 65538, 2, -2424827, 65538, 2, -2490363, 65538, 2, -2555899, 65538, 2, -2621435, 65538, 2, -2228220, 65538, 2, -2293756, 65538, 2, -2359292, 65538, 2, -2424828, 65538, 2, -2490364, 65538, 2, -2555900, 65538, 2, -2621436, 65538, 2, -2228221, 65538, 2, -2293757, 65538, 2, -2359293, 65538, 2, -2424829, 65538, 2, -2490365, 65538, 2, -2555901, 65538, 2, -2621437, 65538, 2, -2228222, 65538, 2, -2293758, 65538, 2, -2359294, 65538, 2, -2424830, 65538, 2, -2490366, 65538, 2, -2555902, 65538, 2, -2621438, 65538, 2, -2686971, 65538, 2, -2686972, 65538, 2, -2686973, 65538, 2, -2686974, 65538, 2, -2228223, 65538, 2, -2293759, 65538, 2, -2359295, 65538, 2, -2424831, 65538, 2, -2490367, 65538, 2, -2555903, 65538, 2, -2621439, 65538, 2, -2686975, 65538, 2, -2555897, 65538, 2, -2621433, 65538, 2, -2555896, 65538, 2, -2490360, 65538, 3, -2490361, 65538, 3, -2752507, 65538, 2, -2818043, 65538, 2, -2883579, 65538, 2, -2752508, 65538, 2, -2818044, 65538, 2, -2883580, 65538, 2, -2752509, 65538, 2, -2818045, 65538, 2, -2883581, 65538, 2, -2752510, 65538, 2, -2818046, 65538, 2, -2883582, 65538, 2, -2752511, 65538, 2, -2818047, 65538, 2, -2883583, 65538, 2, -2686970, 65538, 2)
+
+[connection signal="button_down" from="Door9Button" to="Door9" method="_on_door_9_button_button_down"]
+[connection signal="button_down" from="Door10Button" to="Door10" method="_on_door_10_button_button_down"]
 
 [editable path="ToTower5"]
 [editable path="ToTower4"]

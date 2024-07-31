@@ -1,6 +1,7 @@
-[gd_scene load_steps=8 format=3 uid="uid://p4r7w4t7qewf"]
+[gd_scene load_steps=9 format=3 uid="uid://p4r7w4t7qewf"]
 
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_b4sdv"]
+[ext_resource type="Script" path="res://World/Levels/Tutorial2.gd" id="1_c33cc"]
 [ext_resource type="Texture2D" uid="uid://dshwe4rjie0lb" path="res://Assets/World/BG_Elements/V3.png" id="1_itlh5"]
 [ext_resource type="PackedScene" uid="uid://b1k4m2xf10lkj" path="res://World/Hazards/spike.tscn" id="2_v60ti"]
 [ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="5_ottq7"]
@@ -9,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://8c2437a5vj08" path="res://World/Interactables/lore.tscn" id="7_inf7a"]
 
 [node name="Node2D" type="Node2D"]
+script = ExtResource("1_c33cc")
 
 [node name="V3" type="Sprite2D" parent="."]
 position = Vector2(768, -612)
