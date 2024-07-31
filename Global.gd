@@ -18,7 +18,7 @@ func _deferred_change_level(new_level, shadow_exit, portal_spawn):
 	subviewport.get_child(0).queue_free()
 	var next_scene = load(new_level)
 	character_position = portal_spawn
-	respawn_pos = portal_spawnß
+	respawn_pos = portal_spawn
 	subviewport.add_child(next_scene.instantiate())
 	
 	var shadow_subviewport = get_node("/root/GameScene/VBoxContainer/BottomViewportContainer/BottomViewport")

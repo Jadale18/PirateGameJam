@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=3 uid="uid://dytaw7axsp7xb"]
+[gd_scene load_steps=17 format=3 uid="uid://dytaw7axsp7xb"]
 
 [ext_resource type="Texture2D" uid="uid://coincny2j2t8u" path="res://Assets/World/Blocks/Grass_block_2.png" id="1_qbtty"]
 [ext_resource type="Texture2D" uid="uid://c7rts82id34mw" path="res://Assets/BlackSquare.png" id="2_w3xek"]
@@ -7,6 +7,7 @@
 [ext_resource type="Texture2D" uid="uid://blsob4xekev1u" path="res://Assets/World/Blocks/Doors.png" id="5_fjfoh"]
 [ext_resource type="Texture2D" uid="uid://gngljud43qfx" path="res://Assets/World/Blocks/Hidden_Bricks.png" id="6_8s2o5"]
 [ext_resource type="Texture2D" uid="uid://bxyoxtmk8qms7" path="res://Assets/World/Blocks/outside_drop_platforms.png" id="6_ocb4w"]
+[ext_resource type="Script" path="res://World/Blocks/tile_map.gd" id="8_7wk8o"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_q0y3s"]
 texture = ExtResource("1_qbtty")
@@ -883,3 +884,4 @@ tile_proxies/coords_level = [[3, Vector2i(0, 0)], [10, Vector2i(0, 0)], [3, Vect
 scale = Vector2(0.1, 0.1)
 tile_set = SubResource("TileSet_tqoj6")
 format = 2
+script = ExtResource("8_7wk8o")

@@ -1,0 +1,28 @@
+[gd_scene load_steps=5 format=3 uid="uid://b5gn4arko8ewd"]
+
+[ext_resource type="Script" path="res://World/Interactables/door_button.gd" id="1_r2r07"]
+[ext_resource type="Texture2D" uid="uid://dc56ycip7oypn" path="res://Assets/World/Interactables/Button_Pressed.png" id="2_qi1cg"]
+[ext_resource type="Texture2D" uid="uid://b40ge0mlran0v" path="res://Assets/World/Interactables/Button_Unpressed.png" id="3_dd5cr"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_kwa2a"]
+size = Vector2(73.5, 31)
+
+[node name="DoorButton" type="Area2D"]
+scale = Vector2(0.4, 0.4)
+script = ExtResource("1_r2r07")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+visible = false
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("2_qi1cg")
+
+[node name="Sprite2D2" type="Sprite2D" parent="."]
+scale = Vector2(0.3, 0.3)
+texture = ExtResource("3_dd5cr")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0.25, 63.5)
+shape = SubResource("RectangleShape2D_kwa2a")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
