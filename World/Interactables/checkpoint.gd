@@ -26,3 +26,4 @@ func _on_area_entered(area):
 func _on_area_exited(area):
 	checking_input = false
 	$RichTextLabel.visible = false
+
