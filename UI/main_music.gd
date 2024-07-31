@@ -6,6 +6,10 @@ func play_dawn():
 func play_noonshadow():
 	$NoonShadow.play()
 
+func play_atoweringtale():
+	$AToweringTale.play()
+
 func stop_music():
 	$Dawn.stop()
 	$NoonShadow.stop()
+	$AToweringTale.stop()
