@@ -1,5 +1,8 @@
 extends Node2D
 
+var mum_num = 0
+var mum_list = ["Mumble1", "Mumble2", "Mumble3", "Mumble4", "Mumble5", "Mumble6"]
+
 var everything = ["…SIMPLICITY AT THE INCEPTION. TERRA, IGNIS, AQVA, AER. OF THESE BASE ELEMENTS ARE ALL THINGS…",
 	".. I HAD NOTHING BVT DIRT AND STONE, BVT FROM DIRT AND STONE CAN FINER THINGS BE TRANSMVTED….",
 	"…WATCHING THE CATERPILLAR BECOME THE BVTTERFLY AND MOTH. CHRYSOPOEIA WAS MY AMBITION. LEAD TO GOLD. BVT LEAD I HAD NOT. NAVGHT BVT DIRT AND STONE…",
@@ -24,6 +27,7 @@ func _on_timer_timeout():
 		$CanvasLayer/Timer.start()
 	else:
 		$WaitTimer.start()
+		get_node(mum_list[mum_num]).stop()
 
 
 func _on_lore_loretime(num):
@@ -31,9 +35,19 @@ func _on_lore_loretime(num):
 	$CanvasLayer/RichTextLabel.visible_characters = 0
 	$CanvasLayer.visible = true
 	$CanvasLayer/Timer.start()
+	mum_num = randi_range(0,5)
+	get_node(mum_list[mum_num]).play()
+	
+	
+	
 
 
 func _on_wait_timer_timeout():
 	$CanvasLayer/RichTextLabel.visible_characters = 0
 	$CanvasLayer.visible = false
 
+
+
+func _on_mumble_finished():
+	mum_num = randi_range(0,5)
+	get_node(mum_list[mum_num]).play()
