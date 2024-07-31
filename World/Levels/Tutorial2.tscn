@@ -4,7 +4,7 @@
 [ext_resource type="Texture2D" uid="uid://dshwe4rjie0lb" path="res://Assets/World/BG_Elements/V3.png" id="1_itlh5"]
 [ext_resource type="PackedScene" uid="uid://b1k4m2xf10lkj" path="res://World/Hazards/spike.tscn" id="2_v60ti"]
 [ext_resource type="PackedScene" uid="uid://b7q2dumunkj15" path="res://World/Hazards/tall_spike.tscn" id="5_2me3p"]
-[ext_resource type="PackedScene" uid="uid://w3eb10mo07sc" path="res://World/Interactables/Portals.tscn" id="5_ottq7"]
+[ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="5_ottq7"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="6_wb3k2"]
 
 [node name="Node2D" type="Node2D"]
@@ -159,7 +159,8 @@ position = Vector2(20, -195)
 
 [node name="Portal" parent="ToTutorial1" index="0"]
 portal_exit = "res://World/Levels/Tutorial1.tscn"
-portal_spawn = Vector2(1479, -150)
+shadow_exit = "res://World/ShadowLevels/SH_Tutorial1.tscn"
+portal_spawn = Vector2(1470, -150)
 
 [node name="CollisionShape2D" parent="ToTutorial1/Portal" index="0"]
 position = Vector2(11, 0)
@@ -170,6 +171,7 @@ position = Vector2(1516, -194)
 [node name="Portal" parent="ToTowerBase" index="0"]
 position = Vector2(-6, -1)
 portal_exit = "res://World/Levels/TowerBase.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_TowerBase.tscn"
 portal_spawn = Vector2(62, -150)
 
 [node name="Character" parent="." instance=ExtResource("6_wb3k2")]

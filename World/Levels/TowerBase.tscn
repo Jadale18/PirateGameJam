@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_2bsgr"]
 [ext_resource type="Texture2D" uid="uid://dshwe4rjie0lb" path="res://Assets/World/BG_Elements/V3.png" id="1_hntel"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="2_68nxh"]
-[ext_resource type="PackedScene" uid="uid://w3eb10mo07sc" path="res://World/Interactables/Portals.tscn" id="4_s1mb0"]
+[ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="4_s1mb0"]
 
 [node name="TowerBase" type="Node2D"]
 
@@ -24,7 +24,8 @@ position = Vector2(20, -195)
 [node name="Portal" parent="ToTutorial2" index="0"]
 position = Vector2(13, -2)
 portal_exit = "res://World/Levels/Tutorial2.tscn"
-portal_spawn = Vector2(1479, -150)
+shadow_exit = "res://World/ShadowLevels/SH_Tutorial2.tscn"
+portal_spawn = Vector2(1470, -150)
 
 [node name="ToTower1" parent="." instance=ExtResource("4_s1mb0")]
 position = Vector2(794, -1215)
@@ -32,10 +33,11 @@ rotation = 1.5708
 
 [node name="Portal" parent="ToTower1" index="0"]
 portal_exit = "res://World/Levels/Tower1.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_Tower1.tscn"
 portal_spawn = Vector2(790, -183)
 
-[node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(791, -1141)
+[node name="CollisionShape2D" parent="ToTower1/Portal" index="0"]
+position = Vector2(7.00012, 0)
 
 [editable path="ToTutorial2"]
 [editable path="ToTower1"]

@@ -322,6 +322,8 @@ position = Vector2(1494, -145)
 
 [node name="Portal" parent="ToTower1" index="0"]
 portal_exit = "res://World/Levels/Tower1.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_Tower1.tscn"
+portal_spawn = Vector2(62, -1070)
 
 [node name="CollisionShape2D" parent="ToTower1/Portal" index="0"]
 position = Vector2(21, -15)
@@ -331,6 +333,8 @@ position = Vector2(1494, -670)
 
 [node name="Portal" parent="ToTower3" index="0"]
 portal_exit = "res://World/Levels/Tower3.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_Tower3.tscn"
+portal_spawn = Vector2(62, -690)
 
 [node name="CollisionShape2D" parent="ToTower3/Portal" index="0"]
 position = Vector2(21, -15)
@@ -340,6 +344,8 @@ position = Vector2(1494, -1060)
 
 [node name="Portal" parent="ToTower4" index="0"]
 portal_exit = "res://World/Levels/Tower4.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_Tower4.tscn"
+portal_spawn = Vector2(62, -150)
 
 [node name="CollisionShape2D" parent="ToTower4/Portal" index="0"]
 position = Vector2(21, -15)
@@ -350,9 +356,20 @@ rotation = 1.5708
 
 [node name="Portal" parent="ToTower5" index="0"]
 portal_exit = "res://World/Levels/Tower5.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_Tower5.tscn"
+portal_spawn = Vector2(136, -161)
 
 [node name="CollisionShape2D" parent="ToTower5/Portal" index="0"]
 position = Vector2(21, -15)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(1470, -690)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(1470, -150)
+
+[node name="Marker2D3" type="Marker2D" parent="."]
+position = Vector2(1470, -1080)
 
 [editable path="ToTower1"]
 [editable path="ToTower3"]
