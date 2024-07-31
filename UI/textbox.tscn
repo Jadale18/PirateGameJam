@@ -1,8 +1,14 @@
-[gd_scene load_steps=4 format=3 uid="uid://bn800t6i65hkj"]
+[gd_scene load_steps=10 format=3 uid="uid://bn800t6i65hkj"]
 
 [ext_resource type="Script" path="res://UI/textbox.gd" id="1_jt4ht"]
 [ext_resource type="FontFile" uid="uid://b35ikwltmsrxc" path="res://Assets/Font/CormorantGaramond-Regular.ttf" id="2_yxuyf"]
 [ext_resource type="Texture2D" uid="uid://cfubeh1mory6i" path="res://Assets/UI/Emerald_Tablet_UI.png" id="3_t7gpq"]
+[ext_resource type="AudioStream" uid="uid://bsoehql6vwebo" path="res://Assets/Audio/SFX/Mumbles1.ogg" id="4_aqfc5"]
+[ext_resource type="AudioStream" uid="uid://b4sukt7fpt18l" path="res://Assets/Audio/SFX/Mumbles2.ogg" id="5_wg326"]
+[ext_resource type="AudioStream" uid="uid://b8c0ykjyhmfwn" path="res://Assets/Audio/SFX/Mumbles3.ogg" id="6_rhn5k"]
+[ext_resource type="AudioStream" uid="uid://bnua3wvbouwkq" path="res://Assets/Audio/SFX/Mumbles4.ogg" id="7_h5rll"]
+[ext_resource type="AudioStream" uid="uid://c2b3isxrm0ot3" path="res://Assets/Audio/SFX/Mumbles5.ogg" id="8_ib8td"]
+[ext_resource type="AudioStream" uid="uid://tnqeplctr0ak" path="res://Assets/Audio/SFX/Mumbles6.ogg" id="9_uyvp4"]
 
 [node name="Textbox" type="Node2D"]
 script = ExtResource("1_jt4ht")
@@ -41,5 +47,35 @@ visible_ratio = 0.0
 [node name="WaitTimer" type="Timer" parent="."]
 one_shot = true
 
+[node name="Mumble1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_aqfc5")
+volume_db = -13.0
+
+[node name="Mumble2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_wg326")
+volume_db = -13.0
+
+[node name="Mumble3" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_rhn5k")
+volume_db = -13.0
+
+[node name="Mumble4" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_h5rll")
+volume_db = -13.0
+
+[node name="Mumble5" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_ib8td")
+volume_db = -13.0
+
+[node name="Mumble6" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_uyvp4")
+volume_db = -13.0
+
 [connection signal="timeout" from="CanvasLayer/Timer" to="." method="_on_timer_timeout"]
 [connection signal="timeout" from="WaitTimer" to="." method="_on_wait_timer_timeout"]
+[connection signal="finished" from="Mumble1" to="." method="_on_mumble_finished"]
+[connection signal="finished" from="Mumble2" to="." method="_on_mumble_finished"]
+[connection signal="finished" from="Mumble3" to="." method="_on_mumble_finished"]
+[connection signal="finished" from="Mumble4" to="." method="_on_mumble_finished"]
+[connection signal="finished" from="Mumble5" to="." method="_on_mumble_finished"]
+[connection signal="finished" from="Mumble6" to="." method="_on_mumble_finished"]
