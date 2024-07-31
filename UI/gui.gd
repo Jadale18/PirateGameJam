@@ -15,6 +15,8 @@ func _process(delta):
 		damage_taken()
 	elif Global.max_life > max_life:
 		max_life_increased()
+	elif Global.current_life_total > current_life_total:
+		heal()
 
 func damage_taken():
 	current_life_total -= 1
@@ -29,6 +31,11 @@ func max_life_increased():
 	max_life += 1
 	current_life_total = max_life
 
+func heal():
+	current_life_total = Global.current_life_total
+	for child in $CanvasLayer/HBoxContainer.get_children():
+		child.get_child(0).play("Empty")
+		child.get_child(1).play("Idle")
 
 
 
