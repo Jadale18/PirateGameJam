@@ -1,9 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://cg2rfigvlmkwc"]
+[gd_scene load_steps=4 format=3 uid="uid://cg2rfigvlmkwc"]
 
+[ext_resource type="Script" path="res://World/Interactables/obelisk.gd" id="1_jxc0y"]
 [ext_resource type="Texture2D" uid="uid://c7nr83hdv34ve" path="res://Assets/World/Interactables/Room_8_Key_Base.png" id="1_shbs6"]
 
-[node name="Obelisk" type="Area2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_qyhi0"]
+size = Vector2(50, 103)
 
-[node name="Room8KeyBase" type="Sprite2D" parent="."]
+[node name="Obelisk" type="Area2D"]
+scale = Vector2(1.5, 1.5)
+script = ExtResource("1_jxc0y")
+
+[node name="ObeliskInteractable" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_shbs6")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, -7.5)
+shape = SubResource("RectangleShape2D_qyhi0")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

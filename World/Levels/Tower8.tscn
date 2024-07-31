@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=3 uid="uid://c1pjerscp67pt"]
+[gd_scene load_steps=14 format=3 uid="uid://c1pjerscp67pt"]
 
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_2ga5k"]
 [ext_resource type="Texture2D" uid="uid://l5nxb7v5ob1" path="res://Assets/World/References/11_Tower_Room_8.png" id="1_c211c"]
@@ -12,6 +12,7 @@
 [ext_resource type="PackedScene" uid="uid://hvw2s3j0lnfu" path="res://World/Interactables/health_upgrade.tscn" id="9_rm2ki"]
 [ext_resource type="PackedScene" uid="uid://8c2437a5vj08" path="res://World/Interactables/lore.tscn" id="10_day5g"]
 [ext_resource type="PackedScene" uid="uid://bqfalxfx0w0f0" path="res://World/Interactables/checkpoint.tscn" id="11_y6ly3"]
+[ext_resource type="PackedScene" uid="uid://cg2rfigvlmkwc" path="res://World/Interactables/obelisk.tscn" id="13_a4vgr"]
 
 [node name="Tower8" type="Node2D"]
 script = ExtResource("1_elkft")
@@ -113,11 +114,19 @@ position = Vector2(918, -592)
 [node name="Checkpoint" parent="." instance=ExtResource("11_y6ly3")]
 position = Vector2(844, -168)
 
+[node name="Obelisk" parent="." instance=ExtResource("13_a4vgr")]
+position = Vector2(845, -763)
+
+[node name="FinalDoor" parent="." instance=ExtResource("2_5sv5e")]
+layer_0/tile_data = PackedInt32Array(-1834986, 65539, 3, -1900522, 65539, 1, -1966058, 65539, 1, -2031594, 65539, 2, -2097130, 65539, 1, -2162666, 65539, 2, -2228202, 65539, 1, -2293738, 65539, 1, -2359274, 65539, 1, -2424810, 65539, 1, -2490346, 65539, 2, -2555882, 65539, 2, -2621418, 65539, 2, -2686954, 65539, 2, -2752490, 65539, 1, -2818026, 65539, 2, -2883562, 65539, 1, -2949098, 65539, 0, -1834987, 3, 3, -1900523, 3, 2, -1966059, 3, 1, -2031595, 3, 2, -2097131, 3, 1, -2162667, 3, 1, -2228203, 3, 2, -2293739, 3, 1, -2359275, 3, 2, -2424811, 3, 2, -2490347, 3, 2, -2555883, 3, 2, -2621419, 3, 2, -2686955, 3, 1, -2752491, 3, 2, -2818027, 3, 2, -2883563, 3, 1, -2949099, 3, 0)
+
 [node name="Character" parent="." instance=ExtResource("8_sdyma")]
 position = Vector2(711, -863)
 
 [node name="Foreground Tunnel" parent="." instance=ExtResource("2_5sv5e")]
 layer_0/tile_data = PackedInt32Array(-2686973, 131076, 2, -2752509, 131076, 1, -2818045, 131076, 1, -2883581, 131076, 1, -2949117, 131076, 0, -2686974, 65540, 2, -2752510, 65540, 1, -2818046, 65540, 1, -2883582, 65540, 1, -2949118, 65540, 0, -2686975, 65540, 2, -2752511, 65540, 1, -2818047, 65540, 1, -2883583, 65540, 1, -2949119, 65540, 0, -2686976, 65540, 2, -2752512, 65540, 1, -2818048, 65540, 1, -2883584, 65540, 1, -2949120, 65540, 0, -2621441, 4, 2, -2686977, 4, 1, -2752513, 4, 1, -2818049, 4, 1, -2883585, 4, 0, -1441789, 131076, 2, -1507325, 131076, 1, -1572861, 131076, 1, -1638397, 131076, 1, -1703933, 131076, 0, -1441790, 65540, 2, -1507326, 65540, 1, -1572862, 65540, 1, -1638398, 65540, 1, -1703934, 65540, 0, -1441791, 65540, 2, -1507327, 65540, 1, -1572863, 65540, 1, -1638399, 65540, 1, -1703935, 65540, 0, -1441792, 65540, 2, -1507328, 65540, 1, -1572864, 65540, 1, -1638400, 65540, 1, -1703936, 65540, 0, -1376257, 4, 2, -1441793, 4, 1, -1507329, 4, 1, -1572865, 4, 1, -1638401, 4, 0, 65543, 131077, 2, 7, 131077, 1, -65529, 131077, 1, -131065, 131077, 0, 65542, 65541, 2, 6, 65541, 1, -65530, 65541, 1, -131066, 65541, 0, 65541, 65541, 2, 5, 65541, 1, -65531, 65541, 1, -131067, 65541, 0, 65540, 65541, 2, 4, 65541, 1, -65532, 65541, 1, -131068, 65541, 0, 65539, 5, 2, 3, 5, 1, -65533, 5, 1, -131069, 5, 0, 65592, 131077, 2, 56, 131077, 1, -65480, 131077, 1, -131016, 131077, 0, 65591, 65541, 2, 55, 65541, 1, -65481, 65541, 1, -131017, 65541, 0, 65590, 65541, 2, 54, 65541, 1, -65482, 65541, 1, -131018, 65541, 0, 65589, 65541, 2, 53, 65541, 1, -65483, 65541, 1, -131019, 65541, 0, 65588, 5, 2, 52, 5, 1, -65484, 5, 1, -131020, 5, 0)
+
+[connection signal="activated" from="Obelisk" to="FinalDoor" method="_on_obelisk_activated"]
 
 [editable path="ToTower9"]
 [editable path="ToTower7"]
