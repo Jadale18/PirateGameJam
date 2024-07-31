@@ -78,6 +78,7 @@ portal_spawn = Vector2(62, -150)
 
 [node name="Lore" parent="." instance=ExtResource("7_inf7a")]
 position = Vector2(154, -600)
+num = 1
 
 [node name="DoorButton" parent="." instance=ExtResource("7_5l8fb")]
 position = Vector2(1421, -720)

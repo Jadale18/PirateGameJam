@@ -284,9 +284,11 @@ monitoring = false
 
 [node name="Lore" parent="." instance=ExtResource("14_2vhvb")]
 position = Vector2(1086, -171)
+num = 3
 
 [node name="Lore2" parent="." instance=ExtResource("14_2vhvb")]
 position = Vector2(791, -667)
+num = 4
 
 [node name="Checkpoint" parent="." instance=ExtResource("15_nrj22")]
 position = Vector2(755, -173)

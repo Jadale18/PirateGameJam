@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dkega7n1b6e4k" path="res://World/Levels/Tutorial1.tscn" id="3_nn55m"]
 [ext_resource type="PackedScene" uid="uid://2e53kir1hppi" path="res://UI/gui.tscn" id="3_v0emb"]
 [ext_resource type="Script" path="res://World/Darkness.gd" id="4_ngf6d"]
-[ext_resource type="PackedScene" uid="uid://dnb5qr45ltuch" path="res://World/ShadowLevels/SH_Tutorial1.tscn" id="4_qrg7o"]
+[ext_resource type="PackedScene" uid="uid://ducv2awyri3mc" path="res://World/ShadowLevels/SH_Tutorial1.tscn" id="4_qrg7o"]
 
 [sub_resource type="Animation" id="Animation_354kx"]
 resource_name = "lightup"
