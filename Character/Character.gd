@@ -41,6 +41,7 @@ func _physics_process(delta):
 		$WalkTimer.stop()
 	if current_life == 0 and not dead:
 		$Anims.play("Death")
+		$AnimationPlayer.play("fade_out")
 		$SFX/LightHurt.stop()
 		$SFX/LightDeath.play()
 		dead = true
