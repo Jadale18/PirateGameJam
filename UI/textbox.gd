@@ -1,6 +1,7 @@
 extends Node2D
 
 var mum_num = 0
+var last_time = false
 var mum_list = ["Mumble1", "Mumble2", "Mumble3", "Mumble4", "Mumble5", "Mumble6"]
 
 var everything = ["…SIMPLICITY AT THE INCEPTION. TERRA, IGNIS, AQVA, AER. OF THESE BASE ELEMENTS ARE ALL THINGS…",
@@ -31,6 +32,8 @@ func _on_timer_timeout():
 
 
 func _on_lore_loretime(num):
+	if num == 8:
+		last_time = true
 	$CanvasLayer/RichTextLabel.text = everything[num]
 	$CanvasLayer/RichTextLabel.visible_characters = 0
 	$CanvasLayer.visible = true
@@ -43,9 +46,15 @@ func _on_lore_loretime(num):
 func _on_wait_timer_timeout():
 	$CanvasLayer/RichTextLabel.visible_characters = 0
 	$CanvasLayer.visible = false
+	if last_time == true:
+		get_tree().change_scene_to_file("res://UI/end_screen.tscn")
 
 
 
 func _on_mumble_finished():
 	mum_num = randi_range(0,5)
 	get_node(mum_list[mum_num]).play()
+
+
+func _on_lore_2_loretime(num):
+	pass # Replace with function body.
