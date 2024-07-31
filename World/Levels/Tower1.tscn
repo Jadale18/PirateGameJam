@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://r5l1istgki27" path="res://World/Interactables/WaterTablet.tscn" id="9_5s8ti"]
 [ext_resource type="PackedScene" uid="uid://cdf6d7tfuepyb" path="res://World/Interactables/FireTablet.tscn" id="10_q8rn0"]
 [ext_resource type="PackedScene" uid="uid://dajn7co2bu6e2" path="res://World/Interactables/CrossTablet.tscn" id="11_hkgwy"]
-[ext_resource type="PackedScene" uid="uid://w3eb10mo07sc" path="res://World/Interactables/Portals.tscn" id="12_jqbt2"]
+[ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="12_jqbt2"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="13_i1nfo"]
 
 [node name="Tower1" type="Node2D"]
@@ -40,7 +40,6 @@ scale = Vector2(0.91, 0.917391)
 texture = ExtResource("3_memw5")
 
 [node name="6TowerRoom3" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(767, -664)
 scale = Vector2(2.062, 2.062)
 texture = ExtResource("4_itfgp")

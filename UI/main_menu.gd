@@ -1,6 +1,7 @@
 extends Control
 
-
+func _ready():
+	$AnimationPlayer.play("Idle")
 
 func _on_start_pressed():
 	get_tree().change_scene_to_file("res://World/test_split.tscn")

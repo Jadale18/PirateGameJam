@@ -1,7 +1,152 @@
-[gd_scene load_steps=3 format=3 uid="uid://n0iytypobdae"]
+[gd_scene load_steps=11 format=3 uid="uid://n0iytypobdae"]
 
 [ext_resource type="Script" path="res://UI/main_menu.gd" id="1_td55x"]
 [ext_resource type="FontFile" uid="uid://b35ikwltmsrxc" path="res://Assets/Font/CormorantGaramond-Regular.ttf" id="2_u8i8x"]
+[ext_resource type="Texture2D" uid="uid://sl4mspuiq835" path="res://Assets/UI/Menu/Menu_Screen_Moon.png" id="3_lk76l"]
+[ext_resource type="Texture2D" uid="uid://cy1pc2ytkihhx" path="res://Assets/UI/Menu/Menu_Screen_Background.png" id="3_ycfc1"]
+[ext_resource type="Texture2D" uid="uid://cksmpi4vs68m5" path="res://Assets/UI/Menu/Menu_Screen_sun.png" id="4_p1jlr"]
+
+[sub_resource type="Curve" id="Curve_lf6oj"]
+_data = [Vector2(0, 1), 0.0, 0.0, 0, 0, Vector2(0.697947, 0.934181), 0.0, 0.0, 0, 0, Vector2(0.98827, 0.0448259), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_tcdgi"]
+offsets = PackedFloat32Array(0, 0.735577, 0.99359)
+colors = PackedColorArray(1, 1, 1, 1, 1, 1, 1, 0.831373, 1, 1, 1, 0)
+
+[sub_resource type="Animation" id="Animation_b0clm"]
+resource_name = "Idke"
+length = 5.0
+loop_mode = 1
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MenuScreenMoon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(205, 550), Vector2(205, 450)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuScreenSun:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(900, 550), Vector2(900, 650)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CPUParticles2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(900, 185), Vector2(900, 285)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CPUParticles2D2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0, 2.5),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Vector2(205, 970), Vector2(205, 870)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0, 1.8, 3.8),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0.415686), Color(0, 0, 0, 0.415686)]
+}
+
+[sub_resource type="Animation" id="Animation_58eku"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("MenuScreenMoon:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(205, 513)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("MenuScreenSun:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(888, 734)]
+}
+tracks/2/type = "value"
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/path = NodePath("CPUParticles2D:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(901, 245.872)]
+}
+tracks/3/type = "value"
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/path = NodePath("CPUParticles2D2:position")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(900, 230.224)]
+}
+tracks/4/type = "value"
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/path = NodePath("ColorRect:color")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_3pfic"]
+_data = {
+"Idle": SubResource("Animation_b0clm"),
+"RESET": SubResource("Animation_58eku")
+}
 
 [node name="MainMenu" type="Control"]
 layout_mode = 3
@@ -12,19 +157,85 @@ grow_horizontal = 2
 grow_vertical = 2
 script = ExtResource("1_td55x")
 
+[node name="MenuScreenBackground" type="Sprite2D" parent="."]
+position = Vector2(579, 571.5)
+scale = Vector2(0.595833, 1.05463)
+texture = ExtResource("3_ycfc1")
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(901, 245.872)
+amount = 20
+spread = 180.0
+gravity = Vector2(2.08165e-12, 2.08165e-12)
+initial_velocity_min = 200.0
+initial_velocity_max = 200.0
+scale_amount_min = 5.0
+scale_amount_max = 20.0
+scale_amount_curve = SubResource("Curve_lf6oj")
+color_ramp = SubResource("Gradient_tcdgi")
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2(900, 230.224)
+amount = 20
+spread = 180.0
+gravity = Vector2(2.08165e-12, 2.08165e-12)
+initial_velocity_min = 200.0
+initial_velocity_max = 200.0
+scale_amount_min = 5.0
+scale_amount_max = 20.0
+scale_amount_curve = SubResource("Curve_lf6oj")
+color_ramp = SubResource("Gradient_tcdgi")
+
+[node name="MenuScreenMoon" type="Sprite2D" parent="."]
+position = Vector2(205, 513)
+texture = ExtResource("3_lk76l")
+
+[node name="MenuScreenSun" type="Sprite2D" parent="."]
+position = Vector2(888, 734)
+texture = ExtResource("4_p1jlr")
+
+[node name="RichTextLabel2" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 82.0
+offset_top = 752.0
+offset_right = 415.0
+offset_bottom = 848.0
+grow_horizontal = 2
+scale = Vector2(1.80969, 1.95912)
+theme_override_fonts/normal_font = ExtResource("2_u8i8x")
+theme_override_font_sizes/normal_font_size = 70
+text = "So Dew
+"
+fit_content = true
+autowrap_mode = 0
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 12
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_top = -542.0
+grow_horizontal = 2
+grow_vertical = 0
+color = Color(0, 0, 0, 1)
+
 [node name="VBoxContainer" type="VBoxContainer" parent="."]
 layout_mode = 1
-anchors_preset = 8
+anchors_preset = 7
 anchor_left = 0.5
-anchor_top = 0.5
+anchor_top = 1.0
 anchor_right = 0.5
-anchor_bottom = 0.5
-offset_left = -120.5
-offset_top = 14.0
-offset_right = 120.5
-offset_bottom = 295.0
+anchor_bottom = 1.0
+offset_left = -194.0
+offset_top = -450.0
+offset_right = 47.0
+offset_bottom = -169.0
 grow_horizontal = 2
-grow_vertical = 2
+grow_vertical = 0
 
 [node name="Start" type="Button" parent="VBoxContainer"]
 layout_mode = 2
@@ -52,18 +263,22 @@ layout_mode = 1
 anchors_preset = 5
 anchor_left = 0.5
 anchor_right = 0.5
-offset_left = -136.0
-offset_top = 160.0
-offset_right = 12.0
-offset_bottom = 256.0
+offset_left = -479.0
+offset_top = 161.0
+offset_right = -146.0
+offset_bottom = 257.0
 grow_horizontal = 2
 scale = Vector2(1.80969, 1.95912)
 theme_override_fonts/normal_font = ExtResource("2_u8i8x")
 theme_override_font_sizes/normal_font_size = 70
-text = "Title
-"
+text = "As Scabby"
 fit_content = true
 autowrap_mode = 0
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_3pfic")
+}
 
 [connection signal="pressed" from="VBoxContainer/Start" to="." method="_on_start_pressed"]
 [connection signal="pressed" from="VBoxContainer/Settings" to="." method="_on_settings_pressed"]
