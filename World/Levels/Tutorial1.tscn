@@ -1,4 +1,4 @@
-[gd_scene load_steps=8 format=3 uid="uid://dkega7n1b6e4k"]
+[gd_scene load_steps=10 format=3 uid="uid://dkega7n1b6e4k"]
 
 [ext_resource type="Texture2D" uid="uid://dg1u4wst5l8q6" path="res://Assets/World/BG_Elements/V4.png" id="1_8w8cj"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_wke5o"]
@@ -7,6 +7,8 @@
 [ext_resource type="PackedScene" uid="uid://hvw2s3j0lnfu" path="res://World/Interactables/health_upgrade.tscn" id="4_n272j"]
 [ext_resource type="PackedScene" uid="uid://8c2437a5vj08" path="res://World/Interactables/lore.tscn" id="6_b2t4a"]
 [ext_resource type="PackedScene" uid="uid://bn800t6i65hkj" path="res://UI/textbox.tscn" id="6_hjw7m"]
+[ext_resource type="PackedScene" uid="uid://bqfalxfx0w0f0" path="res://World/Interactables/checkpoint.tscn" id="8_ywpga"]
+[ext_resource type="PackedScene" uid="uid://b7q2dumunkj15" path="res://World/Hazards/tall_spike.tscn" id="9_4saxw"]
 
 [node name="Level1" type="Node2D"]
 
@@ -32,6 +34,9 @@ portal_spawn = Vector2(62, -150)
 [node name="HealthUpgrade" parent="." instance=ExtResource("4_n272j")]
 position = Vector2(400, -170)
 
+[node name="Checkpoint" parent="." instance=ExtResource("8_ywpga")]
+position = Vector2(656, -169)
+
 [node name="Lore" parent="." instance=ExtResource("6_b2t4a")]
 position = Vector2(516, -151)
 
@@ -42,6 +47,9 @@ position = Vector2(217, -207)
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(1470, -149)
+
+[node name="Spike" parent="." instance=ExtResource("9_4saxw")]
+position = Vector2(1015, -128)
 
 [connection signal="loretime" from="Lore" to="Textbox" method="_on_lore_loretime"]
 

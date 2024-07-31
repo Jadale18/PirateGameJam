@@ -171,6 +171,7 @@ func coyote():
 
 func _on_area_2d_area_entered(area):
 	if "Spike" in area.name:
+		$AnimationPlayer.play("fade_out")
 		animating = true
 		$Anims.play("Damaged")
 		checking_input = false
@@ -201,7 +202,16 @@ func _on_anims_animation_finished():
 		checking_input = true
 		gravity_on = true
 		climbing = false
-	elif $Anims.animation in ["Damaged", "Self_Damage", "Interact"]:
+	elif $Anims.animation in ["Self_Damage", "Interact"]:
+		animating = false
+		checking_input = true
+		$Anims.play("Idle")
+		if is_on_floor():
+			falling = false
+	elif $Anims.animation == "Damaged":
+		global_position = Global.respawn_pos
+		$AnimationPlayer.stop()
+		$Anims.modulate = Color(1,1,1,1)
 		animating = false
 		checking_input = true
 		$Anims.play("Idle")

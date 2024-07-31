@@ -1,6 +1,7 @@
 extends Node
 
 var character_position = Vector2(65,-150)
+var respawn_pos = Vector2(65,-150)
 var current_animation
 var facing
 #var current_level = 1

@@ -1,12 +1,60 @@
-[gd_scene load_steps=3 format=3 uid="uid://bqfalxfx0w0f0"]
+[gd_scene load_steps=11 format=3 uid="uid://bqfalxfx0w0f0"]
 
 [ext_resource type="Texture2D" uid="uid://bmnclhftll5ec" path="res://Assets/World/Interactables/Checkpoint_Statue.png" id="1_62x1w"]
+[ext_resource type="Script" path="res://World/Interactables/checkpoint.gd" id="1_gtqk5"]
+[ext_resource type="FontFile" uid="uid://b35ikwltmsrxc" path="res://Assets/Font/CormorantGaramond-Regular.ttf" id="3_nlpek"]
+[ext_resource type="AudioStream" uid="uid://dea5momolo8d1" path="res://Assets/Audio/SFX/Refraction(Reward).ogg" id="4_ywrag"]
 
 [sub_resource type="CapsuleShape2D" id="CapsuleShape2D_cw4t6"]
 radius = 56.0
 height = 152.0
 
+[sub_resource type="Animation" id="Animation_qqlw3"]
+resource_name = "activate"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0.21, 0.21, 0.21, 1), Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_buc4g"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Sprite2D:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(1, 1, 1, 1)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_ir2kl"]
+_data = {
+"RESET": SubResource("Animation_buc4g"),
+"activate": SubResource("Animation_qqlw3")
+}
+
+[sub_resource type="Curve" id="Curve_wieyo"]
+_data = [Vector2(0.00293255, 1), 0.0, 0.0, 0, 0, Vector2(0.740469, 0.648432), 0.0, 0.0, 0, 0, Vector2(0.985337, 0.0287725), 0.0, 0.0, 0, 0]
+point_count = 3
+
+[sub_resource type="Gradient" id="Gradient_h4kdb"]
+offsets = PackedFloat32Array(0, 0.516026)
+colors = PackedColorArray(0.607456, 0.702211, 0.534861, 1, 1, 1, 1, 0.784314)
+
 [node name="Checkpoint" type="Area2D"]
+script = ExtResource("1_gtqk5")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(-7, -18)
@@ -14,4 +62,66 @@ scale = Vector2(0.3, 0.3)
 texture = ExtResource("1_62x1w")
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+visible = false
 shape = SubResource("CapsuleShape2D_cw4t6")
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+libraries = {
+"": SubResource("AnimationLibrary_ir2kl")
+}
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+visible = false
+offset_left = 45.0
+offset_top = -48.0
+offset_right = 202.0
+offset_bottom = -16.0
+theme_override_fonts/normal_font = ExtResource("3_nlpek")
+theme_override_font_sizes/normal_font_size = 20
+text = "Press \"I\" to activate"
+scroll_active = false
+shortcut_keys_enabled = false
+
+[node name="CPUParticles2D" type="CPUParticles2D" parent="."]
+position = Vector2(26, 70)
+emitting = false
+amount = 30
+one_shot = true
+explosiveness = 0.2
+direction = Vector2(1, -2)
+spread = 20.0
+initial_velocity_min = 500.0
+initial_velocity_max = 500.0
+scale_amount_min = 3.0
+scale_amount_max = 7.0
+
+[node name="CPUParticles2D2" type="CPUParticles2D" parent="."]
+position = Vector2(-24, 70)
+emitting = false
+amount = 30
+one_shot = true
+explosiveness = 0.2
+direction = Vector2(-1, -2)
+spread = 20.0
+initial_velocity_min = 500.0
+initial_velocity_max = 500.0
+scale_amount_min = 3.0
+scale_amount_max = 7.0
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_ywrag")
+volume_db = -15.0
+
+[node name="CPUParticles2D3" type="CPUParticles2D" parent="."]
+amount = 20
+emission_shape = 2
+emission_sphere_radius = 30.0
+gravity = Vector2(2.08165e-12, -150)
+scale_amount_min = 2.0
+scale_amount_max = 5.0
+scale_amount_curve = SubResource("Curve_wieyo")
+color = Color(0.113725, 1, 0.756863, 0.784314)
+color_ramp = SubResource("Gradient_h4kdb")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]
