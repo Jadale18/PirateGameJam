@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://dkega7n1b6e4k"]
+[gd_scene load_steps=7 format=3 uid="uid://dkega7n1b6e4k"]
 
 [ext_resource type="Texture2D" uid="uid://dg1u4wst5l8q6" path="res://Assets/World/BG_Elements/V4.png" id="1_8w8cj"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_wke5o"]
 [ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="3_oaoqv"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="3_vymie"]
 [ext_resource type="PackedScene" uid="uid://hvw2s3j0lnfu" path="res://World/Interactables/health_upgrade.tscn" id="4_n272j"]
+[ext_resource type="PackedScene" uid="uid://8c2437a5vj08" path="res://World/Interactables/lore.tscn" id="6_b2t4a"]
 
 [node name="Level1" type="Node2D"]
 
@@ -35,5 +36,8 @@ position = Vector2(217, -207)
 
 [node name="Marker2D" type="Marker2D" parent="."]
 position = Vector2(1470, -149)
+
+[node name="Lore" parent="." instance=ExtResource("6_b2t4a")]
+position = Vector2(513, -122)
 
 [editable path="Portal"]
