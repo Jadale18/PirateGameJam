@@ -49,7 +49,3 @@ func _on_wait_timer_timeout():
 func _on_mumble_finished():
 	mum_num = randi_range(0,5)
 	get_node(mum_list[mum_num]).play()
-
-
-func _on_lore_2_loretime(num):
-	pass # Replace with function body.
