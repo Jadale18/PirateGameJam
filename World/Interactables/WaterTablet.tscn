@@ -1,9 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://r5l1istgki27"]
+[gd_scene load_steps=4 format=3 uid="uid://r5l1istgki27"]
 
+[ext_resource type="Script" path="res://World/Interactables/WaterTablet.gd" id="1_n0kgw"]
 [ext_resource type="Texture2D" uid="uid://c5witaklu4tb4" path="res://Assets/World/Interactables/Water_Tablet_Interactable.png" id="1_yf7k4"]
 
-[node name="WaterTablet" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_jtp1t"]
+radius = 33.0
+height = 82.0
+
+[node name="WaterTablet" type="Area2D"]
+script = ExtResource("1_n0kgw")
 
 [node name="WaterTabletInteractable" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_yf7k4")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_jtp1t")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

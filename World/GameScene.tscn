@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dkega7n1b6e4k" path="res://World/Levels/Tutorial1.tscn" id="3_nn55m"]
 [ext_resource type="PackedScene" uid="uid://2e53kir1hppi" path="res://UI/gui.tscn" id="3_v0emb"]
 [ext_resource type="Script" path="res://World/Darkness.gd" id="4_ngf6d"]
-[ext_resource type="PackedScene" uid="uid://dnb5qr45ltuch" path="res://World/ShadowLevels/SH_Tutorial1.tscn" id="4_qrg7o"]
+[ext_resource type="PackedScene" uid="uid://ducv2awyri3mc" path="res://World/ShadowLevels/SH_Tutorial1.tscn" id="4_qrg7o"]
 
 [sub_resource type="Animation" id="Animation_354kx"]
 resource_name = "lightup"
@@ -74,8 +74,6 @@ handle_input_locally = false
 size = Vector2i(1152, 576)
 render_target_update_mode = 4
 
-[node name="ShadowLevel1" parent="VBoxContainer/BottomViewportContainer/BottomViewport" instance=ExtResource("4_qrg7o")]
-
 [node name="CanvasLayer" type="CanvasLayer" parent="VBoxContainer/BottomViewportContainer/BottomViewport"]
 script = ExtResource("4_ngf6d")
 
@@ -92,3 +90,5 @@ color = Color(0, 0, 0, 1)
 libraries = {
 "": SubResource("AnimationLibrary_5d05h")
 }
+
+[node name="ShadowLevel1" parent="VBoxContainer/BottomViewportContainer/BottomViewport" instance=ExtResource("4_qrg7o")]

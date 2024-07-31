@@ -11113,7 +11113,6 @@ sprite_frames = SubResource("SpriteFrames_l0d21")
 animation = &"shadowflood"
 
 [node name="Anims" type="AnimatedSprite2D" parent="."]
-scale = Vector2(1, 1)
 sprite_frames = SubResource("SpriteFrames_sucgw")
 animation = &"Walk"
 frame_progress = 0.526801

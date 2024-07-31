@@ -1,9 +1,22 @@
-[gd_scene load_steps=2 format=3 uid="uid://bs4mv0s10pmmr"]
+[gd_scene load_steps=4 format=3 uid="uid://bs4mv0s10pmmr"]
 
 [ext_resource type="Texture2D" uid="uid://ck65k25dyjoyh" path="res://Assets/World/Interactables/Earth_Tablet_Interactable.png" id="1_bbm32"]
+[ext_resource type="Script" path="res://World/Interactables/EarthTablet.gd" id="1_jfnl2"]
 
-[node name="EarthTablet" type="Node2D"]
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_qy0ja"]
+radius = 33.0
+height = 82.0
+
+[node name="EarthTablet" type="Area2D"]
+script = ExtResource("1_jfnl2")
 
 [node name="EarthTabletInteractable" type="Sprite2D" parent="."]
 scale = Vector2(0.1, 0.1)
 texture = ExtResource("1_bbm32")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 7)
+shape = SubResource("CapsuleShape2D_qy0ja")
+
+[connection signal="area_entered" from="." to="." method="_on_area_entered"]
+[connection signal="area_exited" from="." to="." method="_on_area_exited"]

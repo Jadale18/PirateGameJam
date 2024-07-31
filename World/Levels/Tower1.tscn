@@ -1,4 +1,4 @@
-[gd_scene load_steps=18 format=3 uid="uid://bbpsd4td5sxe8"]
+[gd_scene load_steps=30 format=3 uid="uid://bbpsd4td5sxe8"]
 
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_cof8m"]
 [ext_resource type="Script" path="res://World/Levels/Tower1.gd" id="1_hrc2t"]
@@ -14,9 +14,138 @@
 [ext_resource type="PackedScene" uid="uid://cdf6d7tfuepyb" path="res://World/Interactables/FireTablet.tscn" id="10_q8rn0"]
 [ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="12_jqbt2"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="13_i1nfo"]
+[ext_resource type="Texture2D" uid="uid://i20mrchq7ell" path="res://Assets/World/Interactables/Mercury_Key_Tablet_Room_1.png" id="13_xw8d2"]
 [ext_resource type="PackedScene" uid="uid://8c2437a5vj08" path="res://World/Interactables/lore.tscn" id="14_2vhvb"]
+[ext_resource type="Texture2D" uid="uid://cjvgcmp0qyycu" path="res://Assets/World/Interactables/Salt_Key_Tablet_Room_1.png" id="14_sxa5b"]
 [ext_resource type="PackedScene" uid="uid://hvw2s3j0lnfu" path="res://World/Interactables/health_upgrade.tscn" id="14_uck3p"]
+[ext_resource type="Texture2D" uid="uid://dga7jlqbve1rl" path="res://Assets/World/Interactables/Sulfur_Key_Tablet_Room_1.png" id="15_kyeou"]
 [ext_resource type="PackedScene" uid="uid://bqfalxfx0w0f0" path="res://World/Interactables/checkpoint.tscn" id="15_nrj22"]
+[ext_resource type="Texture2D" uid="uid://bgxvpsbctny75" path="res://Assets/World/Interactables/Sulfur_Key_Tablet_Orb_Deactivated_Room_1.png" id="16_p5x7h"]
+[ext_resource type="Texture2D" uid="uid://clkuhhaw1mkqa" path="res://Assets/World/Interactables/Salt_Key_Tablet_Orb_Deactivated_Room_1.png" id="17_7q5yp"]
+[ext_resource type="Texture2D" uid="uid://wh16w2scrb8u" path="res://Assets/World/Interactables/Mercury_Key_Tablet_Orb_Deactivated_Room_1.png" id="18_420ht"]
+
+[sub_resource type="Animation" id="Animation_hmvl7"]
+length = 0.001
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Color(0, 0, 0, 0)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Character:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(795, -786)]
+}
+
+[sub_resource type="Animation" id="Animation_t7eds"]
+resource_name = "MercuryScene"
+length = 0.2
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 0.2),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_u12s5"]
+resource_name = "Mercury"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Character:position")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(780, -766)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Cutscene/ColorRect:color")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+
+[sub_resource type="Animation" id="Animation_hsh5l"]
+resource_name = "Mercury2"
+length = 2.0
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0, 1, 2),
+"transitions": PackedFloat32Array(1, 1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 0), Color(0, 0, 0, 1)]
+}
+tracks/1/type = "value"
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/path = NodePath("Character:position")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/keys = {
+"times": PackedFloat32Array(0),
+"transitions": PackedFloat32Array(1),
+"update": 0,
+"values": [Vector2(780, -766)]
+}
+
+[sub_resource type="Animation" id="Animation_cdmv5"]
+resource_name = "Mercury3"
+tracks/0/type = "value"
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/path = NodePath("Cutscene/ColorRect:color")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/keys = {
+"times": PackedFloat32Array(0.1, 0.9),
+"transitions": PackedFloat32Array(1, 1),
+"update": 0,
+"values": [Color(0, 0, 0, 1), Color(0, 0, 0, 1.49012e-08)]
+}
+
+[sub_resource type="AnimationLibrary" id="AnimationLibrary_77nap"]
+_data = {
+"FadeOut": SubResource("Animation_t7eds"),
+"Mercury1": SubResource("Animation_u12s5"),
+"Mercury2": SubResource("Animation_hsh5l"),
+"Mercury3": SubResource("Animation_cdmv5"),
+"RESET": SubResource("Animation_hmvl7")
+}
 
 [node name="Tower1" type="Node2D"]
 script = ExtResource("1_hrc2t")
@@ -81,6 +210,36 @@ position = Vector2(794, -356)
 [node name="FireTablet" parent="Tablets" instance=ExtResource("10_q8rn0")]
 position = Vector2(794, -972)
 
+[node name="MercuryKeyTabletRoom1" type="Sprite2D" parent="Tablets"]
+position = Vector2(319, -1074)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("13_xw8d2")
+
+[node name="SaltKeyTabletRoom1" type="Sprite2D" parent="Tablets"]
+position = Vector2(395.4, -1073.8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("14_sxa5b")
+
+[node name="SulfurKeyTabletRoom1" type="Sprite2D" parent="Tablets"]
+position = Vector2(471.4, -1073.8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("15_kyeou")
+
+[node name="SulfurKeyTabletOrbDeactivatedRoom1" type="Sprite2D" parent="Tablets"]
+position = Vector2(471.4, -1073.8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("16_p5x7h")
+
+[node name="SaltKeyTabletOrbDeactivatedRoom1" type="Sprite2D" parent="Tablets"]
+position = Vector2(395.4, -1073.8)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("17_7q5yp")
+
+[node name="MercuryKeyTabletOrbDeactivatedRoom1" type="Sprite2D" parent="Tablets"]
+position = Vector2(319, -1074)
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("18_420ht")
+
 [node name="ToTowerBase" parent="." instance=ExtResource("12_jqbt2")]
 position = Vector2(778, -37)
 rotation = 1.5708
@@ -119,27 +278,57 @@ portal_spawn = Vector2(1470, -150)
 position = Vector2(21, -15)
 
 [node name="HealthUpgrade" parent="." instance=ExtResource("14_uck3p")]
-position = Vector2(123, -150)
+visible = false
+position = Vector2(797, -1087)
+monitoring = false
 
 [node name="Lore" parent="." instance=ExtResource("14_2vhvb")]
 position = Vector2(1086, -171)
 
 [node name="Lore2" parent="." instance=ExtResource("14_2vhvb")]
-position = Vector2(327, -1085)
+position = Vector2(791, -667)
 
 [node name="Checkpoint" parent="." instance=ExtResource("15_nrj22")]
 position = Vector2(755, -173)
 
 [node name="Character" parent="." instance=ExtResource("13_i1nfo")]
-position = Vector2(796, -760)
+position = Vector2(795, -786)
 
 [node name="HiddenTiles" parent="." instance=ExtResource("1_qjyqc")]
+visible = false
 layer_0/tile_data = PackedInt32Array(-262136, 65542, 2, -327672, 131078, 2, -393208, 131078, 2, -458744, 131078, 2, -524280, 131078, 2, -589816, 131078, 2, -655352, 131078, 2, -720888, 131078, 2, -786424, 131078, 2, -851960, 131078, 2, -917496, 131078, 2, -262137, 65542, 2, -327673, 65542, 2, -393209, 65542, 2, -458745, 65542, 2, -524281, 65542, 2, -589817, 65542, 2, -655353, 65542, 2, -720889, 65542, 2, -786425, 65542, 2, -851961, 65542, 2, -917497, 65542, 2, -262138, 65542, 2, -327674, 65542, 2, -393210, 65542, 2, -458746, 65542, 2, -524282, 65542, 2, -589818, 65542, 2, -655354, 65542, 2, -720890, 65542, 2, -786426, 65542, 2, -851962, 65542, 2, -917498, 65542, 2, -262139, 65542, 2, -327675, 65542, 2, -393211, 65542, 2, -458747, 65542, 2, -524283, 65542, 2, -589819, 65542, 2, -655355, 65542, 2, -720891, 65542, 2, -786427, 65542, 2, -851963, 65542, 2, -917499, 65542, 2, -262140, 65542, 2, -327676, 65542, 2, -393212, 65542, 2, -458748, 65542, 2, -524284, 65542, 2, -589820, 65542, 2, -655356, 65542, 2, -720892, 65542, 2, -786428, 65542, 2, -851964, 65542, 2, -917500, 65542, 2, -262141, 65542, 2, -327677, 65542, 2, -393213, 65542, 2, -458749, 65542, 2, -524285, 65542, 2, -589821, 65542, 2, -655357, 65542, 2, -720893, 65542, 2, -786429, 65542, 2, -851965, 65542, 2, -917501, 65542, 2, -262142, 65542, 2, -327678, 65542, 2, -393214, 65542, 2, -458750, 65542, 2, -524286, 65542, 2, -589822, 65542, 2, -655358, 65542, 2, -720894, 65542, 2, -786430, 65542, 2, -851966, 65542, 2, -917502, 65542, 2, -196601, 65542, 2, -983033, 65542, 2, -196602, 65542, 2, -983034, 65542, 2, -196603, 65542, 2, -983035, 65542, 2, -196604, 65542, 2, -983036, 65542, 2, -196605, 65542, 2, -983037, 65542, 2, -196606, 65542, 2, -983038, 65542, 2, -131064, 65542, 2, -196600, 65542, 2, -131065, 65542, 2, -131066, 65542, 2, -131067, 65542, 2)
 
 [node name="Foreground Tunnel" parent="." instance=ExtResource("1_qjyqc")]
 layer_0/tile_data = PackedInt32Array(-2686973, 131076, 2, -2752509, 131076, 1, -2818045, 131076, 1, -2883581, 131076, 1, -2949117, 131076, 0, -2686974, 65540, 2, -2752510, 65540, 1, -2818046, 65540, 1, -2883582, 65540, 1, -2949118, 65540, 0, -2686975, 65540, 2, -2752511, 65540, 1, -2818047, 65540, 1, -2883583, 65540, 1, -2949119, 65540, 0, -2686976, 65540, 2, -2752512, 65540, 1, -2818048, 65540, 1, -2883584, 65540, 1, -2949120, 65540, 0, -2621441, 4, 2, -2686977, 4, 1, -2752513, 4, 1, -2818049, 4, 1, -2883585, 4, 0, -2686916, 131076, 2, -2752452, 131076, 1, -2817988, 131076, 1, -2883524, 131076, 1, -2949060, 131076, 0, -2686917, 65540, 2, -2752453, 65540, 1, -2817989, 65540, 1, -2883525, 65540, 1, -2949061, 65540, 0, -2686918, 65540, 2, -2752454, 65540, 1, -2817990, 65540, 1, -2883526, 65540, 1, -2949062, 65540, 0, -2686919, 65540, 2, -2752455, 65540, 1, -2817991, 65540, 1, -2883527, 65540, 1, -2949063, 65540, 0, -2686920, 4, 2, -2752456, 4, 1, -2817992, 4, 1, -2883528, 4, 1, -2949064, 4, 0, 65571, 131077, 2, 35, 131077, 1, -65501, 131077, 1, -131037, 131077, 0, 65570, 65541, 2, 34, 65541, 1, -65502, 65541, 1, -131038, 65541, 0, 65569, 65541, 2, 33, 65541, 1, -65503, 65541, 1, -131039, 65541, 0, 65568, 65541, 2, 32, 65541, 1, -65504, 65541, 1, -131040, 65541, 0, 65567, 65541, 2, 31, 65541, 1, -65505, 65541, 1, -131041, 65541, 0, 65566, 65541, 2, 30, 65541, 1, -65506, 65541, 1, -131042, 65541, 0, 65565, 65541, 2, 29, 65541, 1, -65507, 65541, 1, -131043, 65541, 0, 65564, 65541, 2, 28, 65541, 1, -65508, 65541, 1, -131044, 65541, 0, 65563, 65541, 2, 27, 65541, 1, -65509, 65541, 1, -131045, 65541, 0, 65562, 5, 2, 26, 5, 1, -65510, 5, 1, -131046, 5, 0)
 
+[node name="Cutscene" type="Node2D" parent="."]
+process_mode = 3
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="Cutscene"]
+root_node = NodePath("../..")
+libraries = {
+"": SubResource("AnimationLibrary_77nap")
+}
+
+[node name="ColorRect" type="ColorRect" parent="Cutscene"]
+custom_minimum_size = Vector2(1156, 1156)
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_left = 197.0
+offset_top = -1160.0
+offset_right = 1353.0
+offset_bottom = -4.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0, 0, 0, 0)
+
 [connection signal="button_down" from="DoorButton" to="T3Door" method="_on_door_button_button_down"]
+[connection signal="activated" from="Tablets/EarthTablet" to="." method="_on_earth_tablet_activated"]
+[connection signal="activated" from="Tablets/AirTablet" to="." method="_on_air_tablet_activated"]
+[connection signal="activated" from="Tablets/WaterTablet" to="." method="_on_water_tablet_activated"]
+[connection signal="activated" from="Tablets/FireTablet" to="." method="_on_fire_tablet_activated"]
+[connection signal="animation_finished" from="Cutscene/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 
 [editable path="ToTowerBase"]
 [editable path="ToTower3"]
