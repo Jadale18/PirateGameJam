@@ -1,7 +1,7 @@
 extends CharacterBody2D
 
 
-const SPEED = 600.0
+const SPEED = 200.0
 const JUMP_VELOCITY = -575.0
 var current_life = 4
 
@@ -228,6 +228,8 @@ func _on_anims_animation_finished():
 		$Anims.play("Idle")
 		if is_on_floor():
 			falling = false
+	elif $Anims.animation == "Death":
+		get_tree().change_scene_to_file("res://UI/main_menu.tscn")
 
 func _on_ledge_buffer_timeout():
 	detecting_ledge = true
