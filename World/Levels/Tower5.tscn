@@ -6,7 +6,7 @@
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="2_kh0is"]
 [ext_resource type="Texture2D" uid="uid://ctqb0woe63nn7" path="res://Assets/World/BG_Elements/on_orb.png" id="3_00u7j"]
 [ext_resource type="Texture2D" uid="uid://8ebvanolvh0" path="res://Assets/World/BG_Elements/Tower_Rooms_5.png" id="3_k7gje"]
-[ext_resource type="PackedScene" uid="uid://w3eb10mo07sc" path="res://World/Interactables/Portals.tscn" id="7_2jvyq"]
+[ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="7_2jvyq"]
 
 [node name="Tower5" type="Node2D"]
 
@@ -60,6 +60,8 @@ rotation = 1.5708
 
 [node name="Portal" parent="ToTower2" index="0"]
 portal_exit = "res://World/Levels/Tower2.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_Tower2.tscn"
+portal_spawn = Vector2(140, -1150)
 
 [node name="CollisionShape2D" parent="ToTower2/Portal" index="0"]
 position = Vector2(21, -15)
@@ -69,6 +71,8 @@ position = Vector2(1494, -146)
 
 [node name="Portal" parent="ToTower4" index="0"]
 portal_exit = "res://World/Levels/Tower4.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_Tower4.tscn"
+portal_spawn = Vector2(62, -970)
 
 [node name="CollisionShape2D" parent="ToTower4/Portal" index="0"]
 position = Vector2(21, -15)
@@ -78,6 +82,8 @@ position = Vector2(1494, -650)
 
 [node name="Portal" parent="ToTower6" index="0"]
 portal_exit = "res://World/Levels/Tower6.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_Tower6.tscn"
+portal_spawn = Vector2(62, -690)
 
 [node name="CollisionShape2D" parent="ToTower6/Portal" index="0"]
 position = Vector2(21, -15)
@@ -88,9 +94,14 @@ rotation = 1.5708
 
 [node name="Portal" parent="ToTower7" index="0"]
 portal_exit = "res://World/Levels/Tower7.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_Tower7.tscn"
+portal_spawn = Vector2(136, -161)
 
 [node name="CollisionShape2D" parent="ToTower7/Portal" index="0"]
 position = Vector2(21, -15)
+
+[node name="Marker2D" type="Marker2D" parent="."]
+position = Vector2(1470, -665)
 
 [editable path="ToTower2"]
 [editable path="ToTower4"]

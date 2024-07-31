@@ -11,7 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://r5l1istgki27" path="res://World/Interactables/WaterTablet.tscn" id="9_5s8ti"]
 [ext_resource type="PackedScene" uid="uid://cdf6d7tfuepyb" path="res://World/Interactables/FireTablet.tscn" id="10_q8rn0"]
 [ext_resource type="PackedScene" uid="uid://dajn7co2bu6e2" path="res://World/Interactables/CrossTablet.tscn" id="11_hkgwy"]
-[ext_resource type="PackedScene" uid="uid://w3eb10mo07sc" path="res://World/Interactables/Portals.tscn" id="12_jqbt2"]
+[ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="12_jqbt2"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="13_i1nfo"]
 
 [node name="Tower1" type="Node2D"]
@@ -77,13 +77,19 @@ rotation = 1.5708
 
 [node name="Portal" parent="ToTowerBase" index="0"]
 portal_exit = "res://World/Levels/TowerBase.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_TowerBase.tscn"
 portal_spawn = Vector2(792, -1141)
 
 [node name="CollisionShape2D" parent="ToTowerBase/Portal" index="0"]
-position = Vector2(21, -15)
+position = Vector2(21, -10.5001)
 
 [node name="ToTower3" parent="." instance=ExtResource("12_jqbt2")]
 position = Vector2(1488, -1054)
+
+[node name="Portal" parent="ToTower3" index="0"]
+portal_exit = "res://World/Levels/Tower3.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_Tower3.tscn"
+portal_spawn = Vector2(62, -150)
 
 [node name="CollisionShape2D" parent="ToTower3/Portal" index="0"]
 position = Vector2(21, -15)
@@ -91,11 +97,19 @@ position = Vector2(21, -15)
 [node name="ToTower2" parent="." instance=ExtResource("12_jqbt2")]
 position = Vector2(8, -1061)
 
+[node name="Portal" parent="ToTower2" index="0"]
+portal_exit = "res://World/Levels/Tower2.tscn"
+shadow_exit = "res://World/ShadowLevels/SH_Tower2.tscn"
+portal_spawn = Vector2(1470, -150)
+
 [node name="CollisionShape2D" parent="ToTower2/Portal" index="0"]
 position = Vector2(21, -15)
 
 [node name="Marker2D" type="Marker2D" parent="."]
-position = Vector2(790, -183)
+position = Vector2(71, -1071)
+
+[node name="Marker2D2" type="Marker2D" parent="."]
+position = Vector2(1470, -1070)
 
 [node name="Character" parent="." instance=ExtResource("13_i1nfo")]
 position = Vector2(796, -760)
