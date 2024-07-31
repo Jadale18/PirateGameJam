@@ -2,53 +2,41 @@
 
 [ext_resource type="Script" path="res://UI/textbox.gd" id="1_jt4ht"]
 [ext_resource type="FontFile" uid="uid://b35ikwltmsrxc" path="res://Assets/Font/CormorantGaramond-Regular.ttf" id="2_yxuyf"]
-
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_woj6p"]
-bg_color = Color(0, 0, 0, 1)
-border_width_left = 4
-border_width_top = 4
-border_width_right = 4
-border_width_bottom = 4
+[ext_resource type="Texture2D" uid="uid://cfubeh1mory6i" path="res://Assets/UI/Emerald_Tablet_UI.png" id="3_t7gpq"]
 
 [node name="Textbox" type="Node2D"]
 script = ExtResource("1_jt4ht")
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer"]
 visible = false
-anchors_preset = 10
-anchor_right = 1.0
-offset_bottom = 391.0
+
+[node name="Timer" type="Timer" parent="CanvasLayer"]
+wait_time = 0.05
+one_shot = true
+
+[node name="TextureRect" type="TextureRect" parent="CanvasLayer"]
+modulate = Color(1, 1, 1, 0.52549)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = -376.0
+offset_right = 341.0
+offset_bottom = 330.0
 grow_horizontal = 2
-size_flags_vertical = 0
-theme_override_constants/margin_left = 100
-theme_override_constants/margin_top = 100
-theme_override_constants/margin_right = 100
-theme_override_constants/margin_bottom = 100
+scale = Vector2(1.05901, 1.72)
+texture = ExtResource("3_t7gpq")
+expand_mode = 1
 
-[node name="Panel" type="Panel" parent="CanvasLayer/MarginContainer"]
-layout_mode = 2
-theme_override_styles/panel = SubResource("StyleBoxFlat_woj6p")
-
-[node name="MarginContainer" type="MarginContainer" parent="CanvasLayer/MarginContainer"]
-layout_mode = 2
-theme_override_constants/margin_left = 30
-theme_override_constants/margin_top = 30
-theme_override_constants/margin_right = 30
-theme_override_constants/margin_bottom = 30
-
-[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer/MarginContainer/MarginContainer"]
-layout_mode = 2
+[node name="RichTextLabel" type="RichTextLabel" parent="CanvasLayer"]
+offset_left = 352.0
+offset_top = 104.0
+offset_right = 800.0
+offset_bottom = 464.0
 theme_override_fonts/normal_font = ExtResource("2_yxuyf")
 theme_override_font_sizes/normal_font_size = 45
 text = "This is dialogue. Hee Hee Hoo Haa Hee  Hoo Hoo Heauo!"
 visible_characters = 0
 visible_ratio = 0.0
-
-[node name="Timer" type="Timer" parent="CanvasLayer"]
-wait_time = 0.05
-one_shot = true
 
 [node name="WaitTimer" type="Timer" parent="."]
 one_shot = true
