@@ -8,6 +8,7 @@ var facing
 var max_life = 4
 var current_life_total = 4
 var topviewporty = 1152
+var health_upgrades = [0, 0, 0, 0, 0, 0, 0, 0]
 
 var light_up = false
 
@@ -21,7 +22,6 @@ func _deferred_change_level(new_level, shadow_exit, portal_spawn):
 	character_position = portal_spawn
 	respawn_pos = portal_spawn
 	subviewport.add_child(next_scene.instantiate())
-	
 	var shadow_subviewport = get_node("/root/GameScene/VBoxContainer/BottomViewportContainer/BottomViewport")
 	shadow_subviewport.get_child(0).queue_free()
 	var sh_next_scene = load(shadow_exit)

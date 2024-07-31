@@ -1,7 +1,8 @@
-[gd_scene load_steps=9 format=3 uid="uid://c1pjerscp67pt"]
+[gd_scene load_steps=10 format=3 uid="uid://c1pjerscp67pt"]
 
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_2ga5k"]
 [ext_resource type="Texture2D" uid="uid://l5nxb7v5ob1" path="res://Assets/World/References/11_Tower_Room_8.png" id="1_c211c"]
+[ext_resource type="Script" path="res://World/Levels/Tower8.gd" id="1_elkft"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="2_5sv5e"]
 [ext_resource type="Texture2D" uid="uid://y6eirtgaypgy" path="res://Assets/World/BG_Elements/off_orb.png" id="2_nvmal"]
 [ext_resource type="Texture2D" uid="uid://ctqb0woe63nn7" path="res://Assets/World/BG_Elements/on_orb.png" id="3_yu3qg"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="8_sdyma"]
 
 [node name="Tower8" type="Node2D"]
+script = ExtResource("1_elkft")
 
 [node name="Background" type="Node2D" parent="."]
 position = Vector2(0, -22)
@@ -19,16 +21,15 @@ position = Vector2(772.4, -607)
 scale = Vector2(0.91, 0.917)
 texture = ExtResource("1_2ga5k")
 
+[node name="OnOrb" type="Sprite2D" parent="Background"]
+position = Vector2(772.4, -607)
+scale = Vector2(0.91, 0.917)
+texture = ExtResource("3_yu3qg")
+
 [node name="OffOrb" type="Sprite2D" parent="Background"]
 position = Vector2(772.4, -607)
 scale = Vector2(0.91, 0.917)
 texture = ExtResource("2_nvmal")
-
-[node name="OnOrb" type="Sprite2D" parent="Background"]
-visible = false
-position = Vector2(772.4, -607)
-scale = Vector2(0.91, 0.917)
-texture = ExtResource("3_yu3qg")
 
 [node name="TowerBG" type="Sprite2D" parent="Background"]
 position = Vector2(772.4, -607)

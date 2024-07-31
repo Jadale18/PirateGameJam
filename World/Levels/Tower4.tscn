@@ -1,11 +1,13 @@
-[gd_scene load_steps=14 format=3 uid="uid://cfneoa8tuh83g"]
+[gd_scene load_steps=18 format=3 uid="uid://cfneoa8tuh83g"]
 
 [ext_resource type="Texture2D" uid="uid://c2eglwjrbi3v2" path="res://Assets/World/References/7_Tower_Room_4.png" id="1_bmxpj"]
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_ucqjw"]
+[ext_resource type="Script" path="res://World/Levels/Tower4.gd" id="1_ww3wb"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="2_a0o6k"]
 [ext_resource type="Texture2D" uid="uid://y6eirtgaypgy" path="res://Assets/World/BG_Elements/off_orb.png" id="2_knb2a"]
 [ext_resource type="Texture2D" uid="uid://ctqb0woe63nn7" path="res://Assets/World/BG_Elements/on_orb.png" id="3_7q78w"]
 [ext_resource type="Texture2D" uid="uid://cegg5ntl6uh" path="res://Assets/World/BG_Elements/Tower_Rooms_4.png" id="3_xvcep"]
+[ext_resource type="PackedScene" uid="uid://hvw2s3j0lnfu" path="res://World/Interactables/health_upgrade.tscn" id="7_w6fac"]
 [ext_resource type="PackedScene" uid="uid://bs4mv0s10pmmr" path="res://World/Interactables/EarthTablet.tscn" id="8_lreon"]
 [ext_resource type="PackedScene" uid="uid://durlrlr8ban2k" path="res://World/Interactables/AirTablet.tscn" id="9_c0sl3"]
 [ext_resource type="PackedScene" uid="uid://r5l1istgki27" path="res://World/Interactables/WaterTablet.tscn" id="10_rqy0d"]
@@ -13,8 +15,11 @@
 [ext_resource type="PackedScene" uid="uid://dajn7co2bu6e2" path="res://World/Interactables/CrossTablet.tscn" id="12_ef3pg"]
 [ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="12_x7h8h"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="13_y0ai5"]
+[ext_resource type="PackedScene" uid="uid://8c2437a5vj08" path="res://World/Interactables/lore.tscn" id="14_3igss"]
+[ext_resource type="PackedScene" uid="uid://bqfalxfx0w0f0" path="res://World/Interactables/checkpoint.tscn" id="15_8wa27"]
 
 [node name="Tower4" type="Node2D"]
+script = ExtResource("1_ww3wb")
 
 [node name="Background" type="Node2D" parent="."]
 position = Vector2(0, 9)
@@ -24,16 +29,15 @@ position = Vector2(772.4, -607)
 scale = Vector2(0.91, 0.917)
 texture = ExtResource("1_ucqjw")
 
+[node name="OnOrb" type="Sprite2D" parent="Background"]
+position = Vector2(772.4, -607)
+scale = Vector2(0.91, 0.917)
+texture = ExtResource("3_7q78w")
+
 [node name="OffOrb" type="Sprite2D" parent="Background"]
 position = Vector2(772.4, -607)
 scale = Vector2(0.91, 0.917)
 texture = ExtResource("2_knb2a")
-
-[node name="OnOrb" type="Sprite2D" parent="Background"]
-visible = false
-position = Vector2(772.4, -607)
-scale = Vector2(0.91, 0.917)
-texture = ExtResource("3_7q78w")
 
 [node name="TowerBG" type="Sprite2D" parent="Background"]
 position = Vector2(772.4, -607)
@@ -55,7 +59,11 @@ layer_0/tile_data = PackedInt32Array(-65477, 131074, 3, -131013, 131074, 2, -196
 [node name="DropTiles" parent="." instance=ExtResource("2_a0o6k")]
 layer_0/tile_data = PackedInt32Array(-2293721, 131082, 1, -2293722, 65546, 1, -2293723, 65546, 1, -2293724, 65546, 1, -2293725, 65546, 1, -2293726, 65546, 1, -2293727, 65546, 1, -2293728, 65546, 1, -2293729, 65546, 1, -2293730, 65546, 1, -2293731, 65546, 1, -2293732, 65546, 1, -2293733, 65546, 1, -2293734, 65546, 1, -2293735, 65546, 1, -2293736, 65546, 1, -2293737, 65546, 1, -2293738, 65546, 1, -2293739, 65546, 1, -2293740, 65546, 1, -2293741, 65546, 1, -2293742, 10, 1, -2359257, 131082, 0, -2359258, 65546, 0, -2359259, 65546, 0, -2359260, 65546, 0, -2359261, 65546, 0, -2359262, 65546, 0, -2359263, 65546, 0, -2359264, 65546, 0, -2359265, 65546, 0, -2359266, 65546, 0, -2359267, 65546, 0, -2359268, 65546, 0, -2359269, 65546, 0, -2359270, 65546, 0, -2359271, 65546, 0, -2359272, 65546, 0, -2359273, 65546, 0, -2359274, 65546, 0, -2359275, 65546, 0, -2359276, 65546, 0, -2359277, 65546, 0, -2359278, 10, 0, -2293704, 327690, 1, -2293705, 262154, 1, -2293706, 262154, 1, -2293707, 262154, 1, -2293708, 262154, 1, -2293709, 196618, 1, -1966024, 327690, 3, -2031560, 327690, 2, -2097096, 327690, 2, -2162632, 327690, 2, -2228168, 327690, 2, -1966025, 262154, 3, -2031561, 262154, 2, -2097097, 262154, 2, -2162633, 262154, 2, -2228169, 262154, 2, -1966026, 262154, 3, -2031562, 262154, 2, -2097098, 262154, 2, -2162634, 262154, 2, -2228170, 262154, 2, -1966027, 262154, 3, -2031563, 262154, 2, -2097099, 262154, 2, -2162635, 262154, 2, -2228171, 262154, 2, -1966028, 262154, 3, -2031564, 262154, 2, -2097100, 262154, 2, -2162636, 262154, 2, -2228172, 262154, 2, -1966029, 196618, 3, -2031565, 196618, 2, -2097101, 196618, 2, -2162637, 196618, 2, -2228173, 196618, 2, -2359240, 131082, 0, -2359241, 65546, 0, -2359242, 65546, 0, -2359243, 65546, 0, -2359244, 65546, 0, -2359245, 10, 0, -2359249, 327690, 3, -2424785, 327690, 2, -2490321, 327690, 2, -2555857, 327690, 1, -2359250, 262154, 3, -2424786, 262154, 2, -2490322, 262154, 2, -2555858, 262154, 1, -2359251, 262154, 3, -2424787, 262154, 2, -2490323, 262154, 2, -2555859, 262154, 1, -2359252, 262154, 3, -2424788, 262154, 2, -2490324, 262154, 2, -2555860, 262154, 1, -2359253, 262154, 3, -2424789, 262154, 2, -2490325, 262154, 2, -2555861, 262154, 1, -2359254, 196618, 3, -2424790, 196618, 2, -2490326, 196618, 2, -2555862, 196618, 1, -2621393, 131082, 0, -2621394, 65546, 0, -2621395, 65546, 0, -2621396, 65546, 0, -2621397, 65546, 0, -2621398, 10, 0)
 
+[node name="HealthUpgrade" parent="." instance=ExtResource("7_w6fac")]
+position = Vector2(1382, -797)
+
 [node name="HiddenTiles" parent="." instance=ExtResource("2_a0o6k")]
+visible = false
 layer_0/tile_data = PackedInt32Array(-1900487, 65542, 2, -1966023, 65542, 2, -2031559, 65542, 2, -2097095, 65542, 2, -2162631, 65542, 2, -2228167, 65542, 2, -1900488, 65542, 2, -1966024, 65542, 2, -2031560, 65542, 2, -2097096, 65542, 2, -2162632, 65542, 2, -2228168, 65542, 2, -1900489, 65542, 2, -1966025, 65542, 2, -2031561, 65542, 2, -2097097, 65542, 2, -2162633, 65542, 2, -2228169, 65542, 2, -1900490, 65542, 2, -1966026, 65542, 2, -2031562, 65542, 2, -2097098, 65542, 2, -2162634, 65542, 2, -2228170, 65542, 2, -1900491, 65542, 2, -1966027, 65542, 2, -2031563, 65542, 2, -2097099, 65542, 2, -2162635, 65542, 2, -2228171, 65542, 2, -1900492, 65542, 2, -1966028, 65542, 2, -2031564, 65542, 2, -2097100, 65542, 2, -2162636, 65542, 2, -2228172, 65542, 2, -1900493, 65542, 2, -1966029, 65542, 2, -2031565, 65542, 2, -2097101, 65542, 2, -2162637, 65542, 2, -2228173, 65542, 2, -1900494, 65542, 2, -1966030, 65542, 2, -2031566, 65542, 2, -2097102, 65542, 2, -2162638, 65542, 2, -2228174, 65542, 2, -2162630, 65542, 2, -2097094, 65542, 2, -2031558, 65542, 2, -1966022, 65542, 2, -1900486, 65542, 2)
 
 [node name="Shadow" type="Node2D" parent="."]
@@ -151,6 +159,12 @@ portal_spawn = Vector2(1391, -162)
 
 [node name="CollisionShape2D" parent="ToTower8/Portal" index="0"]
 position = Vector2(21, -15)
+
+[node name="Lore" parent="." instance=ExtResource("14_3igss")]
+position = Vector2(1085, -155)
+
+[node name="Checkpoint" parent="." instance=ExtResource("15_8wa27")]
+position = Vector2(1280, -172)
 
 [node name="Character" parent="." instance=ExtResource("13_y0ai5")]
 position = Vector2(731, -629)
