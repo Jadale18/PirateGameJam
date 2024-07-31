@@ -24,6 +24,8 @@ var last_floor = true
 var jump_buffer = false
 var foot = "right"
 var invincible = false
+var escaping = false
+var eclipsed = false
 
 func _ready():
 	$Anims.play("Idle")
@@ -31,6 +33,10 @@ func _ready():
 	position = Global.character_position
 
 func _physics_process(delta):
+	if Global.escaping and not eclipsed:
+		$Anims.queue_free()
+		$CombinedAnims.visible = true
+		$CombinedAnims.name = "Anims"
 	if $Anims.animation != "Jump":
 		jumping = false
 	coyote()
