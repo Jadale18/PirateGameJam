@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://phsi26ft1axf"]
+[gd_scene load_steps=10 format=3 uid="uid://phsi26ft1axf"]
 
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_4p1e6"]
+[ext_resource type="Script" path="res://World/Levels/Tower7.gd" id="1_s53ug"]
 [ext_resource type="Texture2D" uid="uid://cm3wwlykpkayk" path="res://Assets/World/References/10_Tower_Room_7.png" id="1_x82u6"]
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="2_8sgqw"]
 [ext_resource type="Texture2D" uid="uid://y6eirtgaypgy" path="res://Assets/World/BG_Elements/off_orb.png" id="2_ibxih"]
@@ -10,6 +11,7 @@
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="8_5sddc"]
 
 [node name="Tower7" type="Node2D"]
+script = ExtResource("1_s53ug")
 
 [node name="Background" type="Node2D" parent="."]
 
@@ -18,16 +20,15 @@ position = Vector2(772.4, -607)
 scale = Vector2(0.91, 0.917)
 texture = ExtResource("1_4p1e6")
 
+[node name="OnOrb" type="Sprite2D" parent="Background"]
+position = Vector2(772.4, -607)
+scale = Vector2(0.91, 0.917)
+texture = ExtResource("3_n18ni")
+
 [node name="OffOrb" type="Sprite2D" parent="Background"]
 position = Vector2(772.4, -607)
 scale = Vector2(0.91, 0.917)
 texture = ExtResource("2_ibxih")
-
-[node name="OnOrb" type="Sprite2D" parent="Background"]
-visible = false
-position = Vector2(772.4, -607)
-scale = Vector2(0.91, 0.917)
-texture = ExtResource("3_n18ni")
 
 [node name="TowerBG" type="Sprite2D" parent="Background"]
 position = Vector2(772.4, -607)
@@ -38,7 +39,6 @@ texture = ExtResource("4_m2xha")
 layer_0/tile_data = PackedInt32Array(-2686916, 131076, 2, -2752452, 131076, 1, -2817988, 131076, 1, -2883524, 131076, 1, -2949060, 131076, 0, -2686917, 65540, 2, -2752453, 65540, 1, -2817989, 65540, 1, -2883525, 65540, 1, -2949061, 65540, 0, -2686918, 65540, 2, -2752454, 65540, 1, -2817990, 65540, 1, -2883526, 65540, 1, -2949062, 65540, 0, -2686919, 65540, 2, -2752455, 65540, 1, -2817991, 65540, 1, -2883527, 65540, 1, -2949063, 65540, 0, -2686920, 65540, 2, -2752456, 65540, 1, -2817992, 65540, 1, -2883528, 65540, 1, -2949064, 65540, 0, -2686921, 4, 2, -2752457, 4, 1, -2817993, 4, 1, -2883529, 4, 1, -2949065, 4, 0, -1507268, 131076, 2, -1572804, 131076, 1, -1638340, 131076, 1, -1703876, 131076, 1, -1769412, 131076, 0, -1507269, 65540, 2, -1572805, 65540, 1, -1638341, 65540, 1, -1703877, 65540, 1, -1769413, 65540, 0, -1507270, 65540, 2, -1572806, 65540, 1, -1638342, 65540, 1, -1703878, 65540, 1, -1769414, 65540, 0, -1507271, 4, 2, -1572807, 4, 1, -1638343, 4, 1, -1703879, 4, 1, -1769415, 4, 0, 65543, 131077, 2, 7, 131077, 1, -65529, 131077, 1, -131065, 131077, 1, -196601, 131077, 0, 65542, 65541, 2, 6, 65541, 1, -65530, 65541, 1, -131066, 65541, 1, -196602, 65541, 0, 65541, 65541, 2, 5, 65541, 1, -65531, 65541, 1, -131067, 65541, 1, -196603, 65541, 0, 65540, 65541, 2, 4, 65541, 1, -65532, 65541, 1, -131068, 65541, 1, -196604, 65541, 0, 65539, 5, 2, 3, 5, 1, -65533, 5, 1, -131069, 5, 1, -196605, 5, 0, 65592, 131077, 2, 56, 131077, 1, -65480, 131077, 1, -131016, 131077, 1, -196552, 131077, 0, 65591, 65541, 2, 55, 65541, 1, -65481, 65541, 1, -131017, 65541, 1, -196553, 65541, 0, 65590, 65541, 2, 54, 65541, 1, -65482, 65541, 1, -131018, 65541, 1, -196554, 65541, 0, 65589, 65541, 2, 53, 65541, 1, -65483, 65541, 1, -131019, 65541, 1, -196555, 65541, 0, 65588, 5, 2, 52, 5, 1, -65484, 5, 1, -131020, 5, 1, -196556, 5, 0)
 
 [node name="6TowerRoom3" type="Sprite2D" parent="."]
-visible = false
 position = Vector2(765, -660)
 scale = Vector2(2.062, 2.062)
 texture = ExtResource("1_x82u6")
