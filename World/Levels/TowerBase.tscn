@@ -1,10 +1,11 @@
-[gd_scene load_steps=6 format=3 uid="uid://bhqcn27kkdf4e"]
+[gd_scene load_steps=7 format=3 uid="uid://bhqcn27kkdf4e"]
 
 [ext_resource type="PackedScene" uid="uid://dytaw7axsp7xb" path="res://World/Blocks/tile_map.tscn" id="1_2bsgr"]
 [ext_resource type="Texture2D" uid="uid://dshwe4rjie0lb" path="res://Assets/World/BG_Elements/V3.png" id="1_hntel"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="2_68nxh"]
 [ext_resource type="PackedScene" uid="uid://8c2437a5vj08" path="res://World/Interactables/lore.tscn" id="4_k1mp5"]
 [ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="4_s1mb0"]
+[ext_resource type="PackedScene" uid="uid://bn800t6i65hkj" path="res://UI/textbox.tscn" id="5_8ng1u"]
 
 [node name="TowerBase" type="Node2D"]
 
@@ -45,11 +46,16 @@ position = Vector2(7.00012, 0)
 position = Vector2(794, -387)
 num = 2
 
+[node name="Textbox" parent="." instance=ExtResource("5_8ng1u")]
+position = Vector2(694, -376)
+
 [node name="Character" parent="." instance=ExtResource("2_68nxh")]
 position = Vector2(533, -408)
 
 [node name="Foreground Tunnel" parent="." instance=ExtResource("1_2bsgr")]
 layer_0/tile_data = PackedInt32Array(-327680, 131076, 2, -393216, 131076, 1, -458752, 131076, 1, -524288, 131076, 1, -589824, 131076, 1, -655360, 131076, 1, -720896, 131076, 1, -786432, 131076, 0, -262145, 65540, 2, -327681, 65540, 1, -393217, 65540, 1, -458753, 65540, 1, -524289, 65540, 1, -589825, 65540, 1, -655361, 65540, 1, -720897, 65540, 0, -262146, 65540, 2, -327682, 65540, 1, -393218, 65540, 1, -458754, 65540, 1, -524290, 65540, 1, -589826, 65540, 1, -655362, 65540, 1, -720898, 65540, 0, -262147, 4, 2, -327683, 4, 1, -393219, 4, 1, -458755, 4, 1, -524291, 4, 1, -589827, 4, 1, -655363, 4, 1, -720899, 4, 0, -3080157, 131077, 2, -3145693, 131077, 1, -3211229, 131077, 0, -3080158, 65541, 2, -3145694, 65541, 1, -3211230, 65541, 0, -3080159, 65541, 2, -3145695, 65541, 1, -3211231, 65541, 0, -3080160, 65541, 2, -3145696, 65541, 1, -3211232, 65541, 0, -3080161, 65541, 2, -3145697, 65541, 1, -3211233, 65541, 0, -3080162, 65541, 2, -3145698, 65541, 1, -3211234, 65541, 0, -3080163, 65541, 2, -3145699, 65541, 1, -3211235, 65541, 0, -3080164, 65541, 2, -3145700, 65541, 1, -3211236, 65541, 0, -3080165, 65541, 2, -3145701, 65541, 1, -3211237, 65541, 0, -3080166, 5, 2, -3145702, 5, 1, -3211238, 5, 0)
+
+[connection signal="loretime" from="Lore" to="Textbox" method="_on_lore_loretime"]
 
 [editable path="ToTutorial2"]
 [editable path="ToTower1"]

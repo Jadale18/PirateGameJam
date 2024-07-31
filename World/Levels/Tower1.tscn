@@ -1,4 +1,4 @@
-[gd_scene load_steps=30 format=3 uid="uid://bbpsd4td5sxe8"]
+[gd_scene load_steps=31 format=3 uid="uid://bbpsd4td5sxe8"]
 
 [ext_resource type="Texture2D" uid="uid://cqdqj7ljua22b" path="res://Assets/World/BG_Elements/Tower_Room_skybox.png" id="1_cof8m"]
 [ext_resource type="Script" path="res://World/Levels/Tower1.gd" id="1_hrc2t"]
@@ -23,6 +23,7 @@
 [ext_resource type="Texture2D" uid="uid://bgxvpsbctny75" path="res://Assets/World/Interactables/Sulfur_Key_Tablet_Orb_Deactivated_Room_1.png" id="16_p5x7h"]
 [ext_resource type="Texture2D" uid="uid://clkuhhaw1mkqa" path="res://Assets/World/Interactables/Salt_Key_Tablet_Orb_Deactivated_Room_1.png" id="17_7q5yp"]
 [ext_resource type="Texture2D" uid="uid://wh16w2scrb8u" path="res://Assets/World/Interactables/Mercury_Key_Tablet_Orb_Deactivated_Room_1.png" id="18_420ht"]
+[ext_resource type="PackedScene" uid="uid://bn800t6i65hkj" path="res://UI/textbox.tscn" id="22_tf1kb"]
 
 [sub_resource type="Animation" id="Animation_t7eds"]
 resource_name = "MercuryScene"
@@ -290,6 +291,9 @@ num = 3
 position = Vector2(791, -667)
 num = 4
 
+[node name="Textbox" parent="." instance=ExtResource("22_tf1kb")]
+position = Vector2(760, -392)
+
 [node name="Checkpoint" parent="." instance=ExtResource("15_nrj22")]
 position = Vector2(755, -173)
 
@@ -326,6 +330,8 @@ color = Color(0, 0, 0, 0)
 [connection signal="activated" from="Tablets/AirTablet" to="." method="_on_air_tablet_activated"]
 [connection signal="activated" from="Tablets/WaterTablet" to="." method="_on_water_tablet_activated"]
 [connection signal="activated" from="Tablets/FireTablet" to="." method="_on_fire_tablet_activated"]
+[connection signal="loretime" from="Lore" to="Textbox" method="_on_lore_loretime"]
+[connection signal="loretime" from="Lore2" to="Textbox" method="_on_lore_2_loretime"]
 [connection signal="animation_finished" from="Cutscene/AnimationPlayer" to="." method="_on_animation_player_animation_finished"]
 
 [editable path="ToTowerBase"]

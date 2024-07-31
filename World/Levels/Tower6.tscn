@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=3 uid="uid://jyw2pe316k0h"]
+[gd_scene load_steps=15 format=3 uid="uid://jyw2pe316k0h"]
 
 [ext_resource type="Texture2D" uid="uid://dlcif7uukm4oc" path="res://Assets/World/References/9_Tower_Room_6.png" id="1_7vnf4"]
 [ext_resource type="Script" path="res://World/Levels/Tower6.gd" id="1_v2yr2"]
@@ -10,6 +10,7 @@
 [ext_resource type="PackedScene" uid="uid://psbnlba873n1" path="res://World/Interactables/Portals.tscn" id="7_pq03u"]
 [ext_resource type="PackedScene" uid="uid://b5btof2wbb7bl" path="res://Character/character.tscn" id="8_hiojk"]
 [ext_resource type="PackedScene" uid="uid://8c2437a5vj08" path="res://World/Interactables/lore.tscn" id="10_asbrl"]
+[ext_resource type="PackedScene" uid="uid://bn800t6i65hkj" path="res://UI/textbox.tscn" id="10_r763i"]
 [ext_resource type="PackedScene" uid="uid://hvw2s3j0lnfu" path="res://World/Interactables/health_upgrade.tscn" id="11_rohy1"]
 [ext_resource type="PackedScene" uid="uid://bqfalxfx0w0f0" path="res://World/Interactables/checkpoint.tscn" id="12_7jy37"]
 [ext_resource type="PackedScene" uid="uid://b5gn4arko8ewd" path="res://World/Interactables/door_button.tscn" id="13_i7nll"]
@@ -108,6 +109,9 @@ position = Vector2(40, -13.0002)
 position = Vector2(854, -161)
 num = 7
 
+[node name="Textbox" parent="." instance=ExtResource("10_r763i")]
+position = Vector2(680, -233)
+
 [node name="HealthUpgrade" parent="." instance=ExtResource("11_rohy1")]
 position = Vector2(842, -616)
 
@@ -126,6 +130,7 @@ position = Vector2(647, -664)
 [node name="Foreground Tunnel" parent="." instance=ExtResource("2_pjha5")]
 layer_0/tile_data = PackedInt32Array(-1441791, 65540, 2, -1507327, 65540, 1, -1572863, 65540, 1, -1638399, 65540, 1, -1703935, 65540, 0, -1441792, 65540, 2, -1507328, 65540, 1, -1572864, 65540, 1, -1638400, 65540, 1, -1703936, 65540, 0, -1376257, 4, 2, -1441793, 4, 1, -1507329, 4, 1, -1572865, 4, 1, -1638401, 4, 0, -327677, 131076, 2, -393213, 131076, 1, -458749, 131076, 1, -524285, 131076, 1, -589821, 131076, 1, -655357, 131076, 0, -327678, 65540, 2, -393214, 65540, 1, -458750, 65540, 1, -524286, 65540, 1, -589822, 65540, 1, -655358, 65540, 0, -327679, 65540, 2, -393215, 65540, 1, -458751, 65540, 1, -524287, 65540, 1, -589823, 65540, 1, -655359, 65540, 0, -327680, 65540, 2, -393216, 65540, 1, -458752, 65540, 1, -524288, 65540, 1, -589824, 65540, 1, -655360, 65540, 0, -262145, 4, 2, -327681, 4, 1, -393217, 4, 1, -458753, 4, 1, -524289, 4, 1, -589825, 4, 0, -3014600, 131077, 2, -3080136, 131077, 1, -3145672, 131077, 1, -3211208, 131077, 1, -3276744, 131077, 0, -3014601, 65541, 2, -3080137, 65541, 1, -3145673, 65541, 1, -3211209, 65541, 1, -3276745, 65541, 0, -3014602, 65541, 2, -3080138, 65541, 1, -3145674, 65541, 1, -3211210, 65541, 1, -3276746, 65541, 0, -3014603, 65541, 2, -3080139, 65541, 1, -3145675, 65541, 1, -3211211, 65541, 1, -3276747, 65541, 0, -3014604, 5, 2, -3080140, 5, 1, -3145676, 5, 1, -3211212, 5, 1, -3276748, 5, 0, 131128, 131077, 2, 65592, 131077, 1, 56, 131077, 1, -65480, 131077, 1, -131016, 131077, 0, 131127, 65541, 2, 65591, 65541, 1, 55, 65541, 1, -65481, 65541, 1, -131017, 65541, 0, 131126, 65541, 2, 65590, 65541, 1, 54, 65541, 1, -65482, 65541, 1, -131018, 65541, 0, 131125, 65541, 2, 65589, 65541, 1, 53, 65541, 1, -65483, 65541, 1, -131019, 65541, 0, 131124, 5, 2, 65588, 5, 1, 52, 5, 1, -65484, 5, 1, -131020, 5, 0, -1441790, 131076, 2, -1507326, 131076, 1, -1572862, 131076, 1, -1638398, 131076, 1, -1703934, 131076, 0)
 
+[connection signal="loretime" from="Lore" to="Textbox" method="_on_lore_loretime"]
 [connection signal="button_down" from="Door8Button" to="Door8" method="_on_door_8_button_button_down"]
 
 [editable path="ToTower3"]
