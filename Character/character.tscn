@@ -1,4 +1,4 @@
-[gd_scene load_steps=625 format=3 uid="uid://b5btof2wbb7bl"]
+[gd_scene load_steps=634 format=3 uid="uid://b5btof2wbb7bl"]
 
 [ext_resource type="Script" path="res://Character/Character.gd" id="1_fifik"]
 [ext_resource type="Texture2D" uid="uid://cpdl2hd2oi6xn" path="res://Assets/CharacterSprites/Air_Idle.png" id="2_jswb8"]
@@ -314,6 +314,15 @@
 [ext_resource type="Texture2D" uid="uid://c2uyhqr501p8l" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision297.png" id="312_52heq"]
 [ext_resource type="Texture2D" uid="uid://b5tkhqed78jsc" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision298.png" id="313_sbrmj"]
 [ext_resource type="Texture2D" uid="uid://bakw2k58jwbgp" path="res://Assets/UI/MercuryShadowVision/Mercury Shadow Vision299.png" id="314_xgtvu"]
+[ext_resource type="AudioStream" uid="uid://dg6w6jgreyios" path="res://Assets/Audio/SFX/Footjump.ogg" id="315_ivllc"]
+[ext_resource type="AudioStream" uid="uid://likehbnetnq5" path="res://Assets/Audio/SFX/Footjumpland.ogg" id="316_lqe45"]
+[ext_resource type="AudioStream" uid="uid://be1jfr5wahxml" path="res://Assets/Audio/SFX/Footstep1.ogg" id="317_eptei"]
+[ext_resource type="AudioStream" uid="uid://drqumtdpjwt66" path="res://Assets/Audio/SFX/Footstep2.ogg" id="318_poono"]
+[ext_resource type="AudioStream" uid="uid://b2qcngxegankv" path="res://Assets/Audio/SFX/LightDeath.ogg" id="319_iycyd"]
+[ext_resource type="AudioStream" uid="uid://ogjkouymo571" path="res://Assets/Audio/SFX/LightHurt.ogg" id="320_glsgb"]
+[ext_resource type="AudioStream" uid="uid://dea5momolo8d1" path="res://Assets/Audio/SFX/Refraction(Reward).ogg" id="321_tv4mr"]
+[ext_resource type="AudioStream" uid="uid://bw47lwpumw6ex" path="res://Assets/Audio/SFX/ShadowDeath.ogg" id="322_xslu4"]
+[ext_resource type="AudioStream" uid="uid://tsqxaoiryuys" path="res://Assets/Audio/SFX/ShadowHurt.ogg" id="323_2fuw0"]
 
 [sub_resource type="AtlasTexture" id="AtlasTexture_qg1c4"]
 atlas = ExtResource("2_jswb8")
@@ -3495,7 +3504,7 @@ zoom = Vector2(2, 2)
 drag_vertical_enabled = true
 
 [node name="DropBuffer" type="Timer" parent="."]
-wait_time = 0.23
+wait_time = 0.24
 one_shot = true
 
 [node name="CoyoteTime" type="Timer" parent="."]
@@ -3513,9 +3522,51 @@ sprite_frames = SubResource("SpriteFrames_wg5ss")
 frame = 299
 frame_progress = 1.0
 
+[node name="SFX" type="Node2D" parent="."]
+
+[node name="Footjump" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("315_ivllc")
+volume_db = 24.0
+
+[node name="Footjumpland" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("316_lqe45")
+volume_db = 15.0
+
+[node name="Footstep1" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("317_eptei")
+volume_db = 20.0
+
+[node name="Footstep2" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("318_poono")
+volume_db = 20.0
+
+[node name="LightDeath" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("319_iycyd")
+volume_db = 6.0
+
+[node name="LightHurt" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("320_glsgb")
+volume_db = 6.0
+
+[node name="Reward" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("321_tv4mr")
+volume_db = 20.0
+
+[node name="ShadowDeath" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("322_xslu4")
+volume_db = 20.0
+
+[node name="ShadowHurt" type="AudioStreamPlayer" parent="SFX"]
+stream = ExtResource("323_2fuw0")
+volume_db = 10.0
+
+[node name="WalkTimer" type="Timer" parent="."]
+wait_time = 0.6
+
 [connection signal="area_entered" from="CharArea" to="." method="_on_area_2d_area_entered"]
 [connection signal="animation_finished" from="Anims" to="." method="_on_anims_animation_finished"]
 [connection signal="timeout" from="LedgeBuffer" to="." method="_on_ledge_buffer_timeout"]
 [connection signal="timeout" from="DropBuffer" to="." method="_on_drop_buffer_timeout"]
 [connection signal="timeout" from="JumpBuffer" to="." method="_on_jump_buffer_timeout"]
 [connection signal="animation_finished" from="Mercury" to="." method="_on_mercury_animation_finished"]
+[connection signal="timeout" from="WalkTimer" to="." method="_on_walk_timer_timeout"]

@@ -22,6 +22,7 @@ var climbing = false
 var facing_left = -1
 var last_floor = true
 var jump_buffer = false
+var foot = "right"
 
 func _ready():
 	$Anims.play("Idle")
@@ -36,16 +37,21 @@ func _physics_process(delta):
 		handle_anims()
 	if not is_on_floor() and gravity_on:
 		velocity.y += gravity * delta
+		$WalkTimer.stop()
 	if current_life == 0 and not dead:
 		$Anims.play("Death")
+		$SFX/LightHurt.stop()
+		$SFX/LightDeath.play()
 		dead = true
 		checking_input = false
 	if is_on_floor() and falling and not animating and not jumping and not climbing:
 		landing = true
 		$Anims.play("Land")
+		$SFX/Footjumpland.play()
 		falling = false
 		jumping = false
 	if is_on_floor() and jump_buffer and not climbing:
+		$SFX/Footjump.play()
 		velocity.y = JUMP_VELOCITY * gravity_multiplier
 		jumping = true
 		falling = true
@@ -54,6 +60,7 @@ func _physics_process(delta):
 		landing = false
 
 	if Input.is_action_just_pressed("ui_accept") and (is_on_floor() or not $CoyoteTime.is_stopped()) and checking_input:
+		$SFX/Footjump.play()
 		velocity.y = JUMP_VELOCITY * gravity_multiplier
 		jumping = true
 		falling = true
@@ -64,6 +71,9 @@ func _physics_process(delta):
 
 	var direction = Input.get_axis("ui_left", "ui_right")
 	if direction and checking_input:
+		if $WalkTimer.is_stopped() and is_on_floor():
+			$SFX/Footstep2.play()
+			$WalkTimer.start()
 		velocity.x = direction * SPEED
 		if direction < 0:
 			$Anims.flip_h = true
@@ -78,6 +88,7 @@ func _physics_process(delta):
 			$SpaceChecker.target_position.x = 150
 			facing_left = 1
 	else:
+		$WalkTimer.stop()
 		velocity.x = move_toward(velocity.x, 0, SPEED)
 
 	move_and_slide()
@@ -91,6 +102,7 @@ func _physics_process(delta):
 		$Mercury.play("default")
 		checking_input = false
 		Global.light_up = true
+		$SFX/ShadowHurt.play()
 		take_damage()
 		
 	if Input.is_action_just_pressed("Interact") and is_on_floor() and checking_input:
@@ -162,6 +174,7 @@ func _on_area_2d_area_entered(area):
 		animating = true
 		$Anims.play("Damaged")
 		checking_input = false
+		$SFX/LightHurt.play()
 		take_damage()
 
 func handle_anims():
@@ -212,3 +225,12 @@ func _on_jump_buffer_timeout():
 
 func _on_mercury_animation_finished():
 	$Mercury.visible = false
+
+
+func _on_walk_timer_timeout():
+	if foot == 'right':
+		$SFX/Footstep1.play()
+		foot = "left"
+	elif foot == "left":
+		$SFX/Footstep2.play()
+		foot = "right"
