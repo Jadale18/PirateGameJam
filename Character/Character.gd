@@ -35,8 +35,10 @@ func _ready():
 func _physics_process(delta):
 	if Global.escaping and not eclipsed:
 		$Anims.queue_free()
+		$Anims.name = "A"
 		$CombinedAnims.visible = true
 		$CombinedAnims.name = "Anims"
+		eclipsed = true
 	if $Anims.animation != "Jump":
 		jumping = false
 	coyote()
