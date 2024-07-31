@@ -7,11 +7,16 @@ var sulf_solution = ["Air", "Fire"]
 var current_sol = []
 
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
-func _process(delta):
+func _ready():
 	if Global.health_upgrades[0] == 1 and $Background/OffOrb:
 		$Background/OffOrb.queue_free()
+	if Global.dumb_doors[0] == 1:
+		sols_found = 3
+	if Global.dumb_doors[1] == 1:
+		$T3Door.queue_free()
 
+# Called every frame. 'delta' is the elapsed time since the previous frame.
+func _process(delta):
 	if len(current_sol) == 2:
 		if current_sol[0] in m_solution and current_sol[1] in m_solution:
 			merc()
@@ -26,6 +31,8 @@ func _process(delta):
 		$Tablets/WaterTablet.reset()
 	
 	if sols_found == 3:
+		if Global.dumb_doors[0] != 1:
+			Global.dumb_doors[0] = 1
 		$T2Door.queue_free()
 		sols_found = 0
 
@@ -53,6 +60,7 @@ func salt():
 	salt_solution = []
 	sols_found += 1
 	$Tablets/SaltKeyTabletOrbDeactivatedRoom1.visible = false
+	$Background/OffOrb.queue_free()
 
 func sulf():
 	sulf_solution = []

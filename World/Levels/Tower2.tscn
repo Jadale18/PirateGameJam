@@ -130,7 +130,7 @@ position = Vector2(1494, -670)
 position = Vector2(13, -1)
 portal_exit = "res://World/Levels/Tower3.tscn"
 shadow_exit = "res://World/ShadowLevels/SH_Tower3.tscn"
-portal_spawn = Vector2(62, -690)
+portal_spawn = Vector2(62, -605)
 
 [node name="CollisionShape2D" parent="ToTower3/Portal" index="0"]
 position = Vector2(21, -15)

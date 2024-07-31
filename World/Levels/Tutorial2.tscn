@@ -83,7 +83,6 @@ num = 1
 
 [node name="Textbox" parent="." instance=ExtResource("7_liv4b")]
 position = Vector2(399, -490)
-scale = Vector2(1, 1)
 
 [node name="DoorButton" parent="." instance=ExtResource("7_5l8fb")]
 position = Vector2(1421, -720)
