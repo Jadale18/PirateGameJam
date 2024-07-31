@@ -191,7 +191,7 @@ layer_0/tile_data = PackedInt32Array(-2686967, 65539, 2, -2752503, 65539, 2, -28
 [node name="T3Door" parent="." instance=ExtResource("1_qjyqc")]
 layer_0/tile_data = PackedInt32Array(-2621388, 65539, 3, -2686924, 65539, 1, -2752460, 65539, 1, -2817996, 65539, 2, -2883532, 65539, 1, -2949068, 65539, 0, -2621389, 3, 3, -2686925, 3, 2, -2752461, 3, 2, -2817997, 3, 2, -2883533, 3, 1, -2949069, 3, 0)
 
-[node name="DoorButton" parent="." instance=ExtResource("7_xr8bf")]
+[node name="Door1Button" parent="." instance=ExtResource("7_xr8bf")]
 position = Vector2(1409, -1057)
 
 [node name="DropTiles" parent="." instance=ExtResource("1_qjyqc")]
@@ -325,7 +325,7 @@ grow_horizontal = 2
 grow_vertical = 2
 color = Color(0, 0, 0, 0)
 
-[connection signal="button_down" from="DoorButton" to="T3Door" method="_on_door_button_button_down"]
+[connection signal="button_down" from="Door1Button" to="T3Door" method="_on_door_1_button_button_down"]
 [connection signal="activated" from="Tablets/EarthTablet" to="." method="_on_earth_tablet_activated"]
 [connection signal="activated" from="Tablets/AirTablet" to="." method="_on_air_tablet_activated"]
 [connection signal="activated" from="Tablets/WaterTablet" to="." method="_on_water_tablet_activated"]

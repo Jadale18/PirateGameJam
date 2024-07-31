@@ -1,6 +1,11 @@
 extends TileMap
 
 
+func _on_door_1_button_button_down():
+	if Global.dumb_doors[1] != 1:
+		Global.dumb_doors[1] = 1
+	queue_free()
+
 func _on_door_2_button_button_down():
 	if Global.dumb_doors[2] != 1:
 		Global.dumb_doors[2] = 1
@@ -40,7 +45,6 @@ func _on_door_8_button_button_down():
 		Global.dumb_doors[8] = 1
 	queue_free()
 
-
 func _on_door_9_button_button_down():
 	if Global.dumb_doors[9] != 1:
 		Global.dumb_doors[9] = 1
@@ -60,6 +64,6 @@ func _on_door_button_button_down():
 
 
 func _on_obelisk_activated():
-	if Global.dumb_doors[10] != 1:
-		Global.dumb_doors[10] = 1
+	if Global.dumb_doors[11] != 1:
+		Global.dumb_doors[11] = 1
 	queue_free()
