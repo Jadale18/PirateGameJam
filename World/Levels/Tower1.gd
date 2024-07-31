@@ -1,6 +1,6 @@
 extends Node2D
 
-
+var sols_found = 0
 var m_solution = ["Water", "Air"]
 var salt_solution = ["Water", "Earth"]
 var sulf_solution = ["Air", "Fire"]
@@ -24,7 +24,10 @@ func _process(delta):
 		$Tablets/FireTablet.reset()
 		$Tablets/AirTablet.reset()
 		$Tablets/WaterTablet.reset()
-
+	
+	if sols_found == 3:
+		$T2Door.queue_free()
+		sols_found = 0
 
 func _on_earth_tablet_activated():
 	current_sol.append("Earth")
@@ -41,17 +44,19 @@ func _on_fire_tablet_activated():
 func merc():
 	$Cutscene/AnimationPlayer.play("FadeOut")
 	m_solution = []
+	sols_found += 1
 	$Tablets/MercuryKeyTabletOrbDeactivatedRoom1.visible = false
 
 func salt():
 	$HealthUpgrade.visible = true
 	$HealthUpgrade.monitoring = true
 	salt_solution = []
+	sols_found += 1
 	$Tablets/SaltKeyTabletOrbDeactivatedRoom1.visible = false
 
 func sulf():
-	$T2Door.queue_free()
 	sulf_solution = []
+	sols_found += 1
 	$Tablets/SulfurKeyTabletOrbDeactivatedRoom1.visible = false
 
 func _on_animation_player_animation_finished(anim_name):

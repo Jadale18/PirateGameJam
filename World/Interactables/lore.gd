@@ -1,8 +1,9 @@
 extends Area2D
 
-signal loretime
+signal loretime(num)
 var checking_input = false
 var checked = false
+@export var num = 0
 
 func _ready():
 	$AnimationPlayer.play("idle")
@@ -15,7 +16,7 @@ func _process(delta):
 			$AudioStreamPlayer.play()
 		checking_input = false
 		$RichTextLabel.visible = false
-		emit_signal("loretime")
+		emit_signal("loretime", num)
 
 func _on_area_entered(area):
 	if area.name == "CharArea":

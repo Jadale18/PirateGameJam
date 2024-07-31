@@ -1,7 +1,6 @@
 extends TileMap
 
 
-
 func _on_door_2_button_button_down():
 	if Global.dumb_doors[2] != 1:
 		Global.dumb_doors[2] = 1
