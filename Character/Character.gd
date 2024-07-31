@@ -55,6 +55,8 @@ func _physics_process(delta):
 	if is_on_floor() and jump_buffer and not climbing:
 		$SFX/Footjump.play()
 		velocity.y = JUMP_VELOCITY * gravity_multiplier
+		checking_input = true
+		animating = false
 		jumping = true
 		falling = true
 		jump_buffer = false
