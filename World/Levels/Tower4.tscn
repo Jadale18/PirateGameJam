@@ -158,6 +158,7 @@ position = Vector2(21, -15)
 
 [node name="Lore" parent="." instance=ExtResource("14_3igss")]
 position = Vector2(1085, -155)
+num = 6
 
 [node name="Checkpoint" parent="." instance=ExtResource("15_8wa27")]
 position = Vector2(1280, -172)

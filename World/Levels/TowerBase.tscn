@@ -43,6 +43,7 @@ position = Vector2(7.00012, 0)
 
 [node name="Lore" parent="." instance=ExtResource("4_k1mp5")]
 position = Vector2(794, -387)
+num = 2
 
 [node name="Character" parent="." instance=ExtResource("2_68nxh")]
 position = Vector2(533, -408)
