@@ -1,0 +1,9 @@
+[gd_scene load_steps=2 format=3 uid="uid://cg2rfigvlmkwc"]
+
+[ext_resource type="Texture2D" uid="uid://c7nr83hdv34ve" path="res://Assets/World/Interactables/Room_8_Key_Base.png" id="1_shbs6"]
+
+[node name="Obelisk" type="Area2D"]
+
+[node name="Room8KeyBase" type="Sprite2D" parent="."]
+scale = Vector2(0.1, 0.1)
+texture = ExtResource("1_shbs6")
